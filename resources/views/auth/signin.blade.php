@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<!--
-Author: Keenthemes
-Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express Node.js & Flask Admin Dashboard Theme
-Purchase: https://1.envato.market/EA4JP
-Website: http://www.keenthemes.com
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
--->
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../"/>
 		<title>Sign in - Klevere AI</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+		<meta name="description" content="Klevere AI is an advanced AI writing tool that utilizes Natural Language Processing (NLP) and Machine Learning (ML) technologies to assist users in creating high-quality content. The tool offers a variety of features such as text generation, language modeling, content creation, text summarization, and text classification. With Klevere AI, users can easily generate unique and engaging content for their website, blog, or social media platforms.Klevere AI also offers advanced text analytics and content optimization features, which help users to identify trends and patterns in their writing. Additionally, the tool has a built-in text-to-speech (TTS) feature that can be used to convert written text into speech, making it perfect for creating podcasts or videos." />
+		<meta name="keywords" content="Natural Language Processing (NLP),
+		Machine Learning (ML), Text Generation, Language Modeling,Content Creation,Text Summarization,Text Classification,Text-to-Speech (TTS),Sentiment Analysis,Content Optimization,Automated Writing, AI Writing Assistant,Text Analytics,Content Generation,Language Translation, Speech Recognition,Text-to-Text Generation,Content Management,Text Simplification,Content Generation Platforms" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express Node.js & Flask Admin Dashboard Theme" />
-		<meta property="og:url" content="https://keenthemes.com/metronic" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<meta property="og:title" content="Klevere AI" />
+		<meta property="og:url" content="https://klevere.ai" />
+		<meta property="og:site_name" content="Klevere AI" />
+		<link rel="canonical" href="https://klevere.ai" />
+		<link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
 		<!--begin::Fonts(mandatory for all pages)-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 	</head>
 	<!--end::Head-->
@@ -44,9 +34,9 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Authentication - Sign-in -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Logo-->
-				<a href="../../demo1/dist/index.html" class="d-block d-lg-none mx-auto py-20">
-					<img alt="Logo" src="assets/media/logos/default.svg" class="theme-light-show h-25px" />
-					<img alt="Logo" src="assets/media/logos/default-dark.svg" class="theme-dark-show h-25px" />
+				<a href="#" class="d-block d-lg-none mx-auto py-20">
+					<img alt="Logo" src="{{ asset('assets/media/logos/klevere-logo.svg') }}" class="theme-light-show h-25px" />
+					<img alt="Logo" src="{{ asset('assets/media/logos/default-dark.svg') }}" class="theme-dark-show h-25px" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Aside-->
@@ -61,7 +51,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Sign Up link-->
 							<div class="m-0">
 								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-in-head-desc">Not a Member yet?</span>
-								<a href="../../demo1/dist/authentication/layouts/fancy/sign-up.html" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>
+								<a href="#" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>
 							</div>
 							<!--end::Sign Up link=-->
 						</div>
@@ -69,7 +59,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--begin::Body-->
 						<div class="py-20">
 							<!--begin::Form-->
-							<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="../../demo1/dist/index.html" action="#">
+							<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="" action="#">
 								<!--begin::Body-->
 								<div class="card-body">
 									<!--begin::Heading-->
@@ -99,7 +89,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-10">
 										<div></div>
 										<!--begin::Link-->
-										<a href="../../demo1/dist/authentication/layouts/fancy/reset-password.html" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>
+										<a href="#" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>
 										<!--end::Link-->
 									</div>
 									<!--end::Wrapper-->
@@ -166,12 +156,12 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Javascript-->
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
+		<script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="assets/js/custom/authentication/sign-in/general.js"></script>
-		<script src="assets/js/custom/authentication/sign-in/i18n.js"></script>
+		<script src="{{ asset('assets/js/custom/authentication/sign-in/general.js') }}"></script>
+		<script src="{{ asset('assets/js/custom/authentication/sign-in/i18n.js') }}"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>
