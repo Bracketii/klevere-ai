@@ -53,7 +53,7 @@
                         </div>
                         <!--end::Card title-->
                         <!--begin::Action-->
-                        <a href="../../demo1/dist/account/settings.html" class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
+                        <a href="{{ route('admin.account.settings') }}" class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
                         <!--end::Action-->
                     </div>
                     <!--begin::Card header-->
@@ -135,18 +135,19 @@
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="row mb-10">
+                        <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Allow Changes</label>
-                            <!--begin::Label-->
-                            <!--begin::Label-->
+                            <label class="col-lg-4 fw-semibold text-muted">Subscription</label>
+                            <!--end::Label-->
+                            <!--begin::Col-->
                             <div class="col-lg-8">
-                                <span class="fw-semibold fs-6 text-gray-800">Yes</span>
+                                <span class="fw-bold fs-6 text-gray-800">Starter</span>
                             </div>
-                            <!--begin::Label-->
+                            <!--end::Col-->
                         </div>
                         <!--end::Input group-->
-                        <!--begin::Notice-->
+                    
+                        {{-- <!--begin::Notice-->
                         <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
                             <!--begin::Icon-->
                             <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
@@ -171,7 +172,7 @@
                             </div>
                             <!--end::Wrapper-->
                         </div>
-                        <!--end::Notice-->
+                        <!--end::Notice--> --}}
                     </div>
                     <!--end::Card body-->
                 </div>

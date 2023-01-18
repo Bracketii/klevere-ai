@@ -31,7 +31,7 @@
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="/">
+                    <a class="menu-link" href="{{ route('admin.dashboard') }}">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
                             <span class="svg-icon svg-icon-2">
@@ -52,7 +52,7 @@
                 {{-- begin:Menu item --}}
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="#">
+                    <a class="menu-link" href="{{ route('admin.pricing') }}">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
                             <span class="svg-icon svg-icon-2">
@@ -92,7 +92,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.userlist') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -104,7 +104,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.userroles') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -116,7 +116,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.userpermissions') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -157,7 +157,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.subscriptions') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -175,7 +175,7 @@
                 {{-- begin:Menu item --}}
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="#">
+                    <a class="menu-link" href="{{ route('admin.settings') }}">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
                             <span class="svg-icon svg-icon-2">

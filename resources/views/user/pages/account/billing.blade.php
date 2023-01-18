@@ -16,7 +16,7 @@
                 <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                     <!--begin::Item-->
                     <li class="breadcrumb-item text-muted">
-                        <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+                        <a href="#" class="text-muted text-hover-primary">Home</a>
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
@@ -89,7 +89,7 @@
 													</div>
 													<!--end::Info-->
 													<!--begin::Notice-->
-													<div class="fs-6 text-gray-600 fw-semibold">Extended Pro Package. Up to 100 Agents & 25 Projects</div>
+													<div class="fs-6 text-gray-600 fw-semibold">Extended Pro Package. Up to 10000 Words</div>
 													<!--end::Notice-->
 												</div>
 												<!--end::Col-->
@@ -97,8 +97,8 @@
 												<div class="col-lg-5">
 													<!--begin::Heading-->
 													<div class="d-flex text-muted fw-bold fs-5 mb-3">
-														<span class="flex-grow-1 text-gray-800">Users</span>
-														<span class="text-gray-800">86 of 100 Used</span>
+														<span class="flex-grow-1 text-gray-800">Words</span>
+														<span class="text-gray-800">860 of 10000 Used</span>
 													</div>
 													<!--end::Heading-->
 													<!--begin::Progress-->
@@ -107,7 +107,7 @@
 													</div>
 													<!--end::Progress-->
 													<!--begin::Description-->
-													<div class="fs-6 text-gray-600 fw-semibold mb-10">14 Users remaining until your plan requires update</div>
+													<div class="fs-6 text-gray-600 fw-semibold mb-10">1400 Words remaining until your plan requires update</div>
 													<!--end::Description-->
 													<!--begin::Action-->
 													<div class="d-flex justify-content-end pb-0 px-0">
@@ -475,399 +475,11 @@
 												<!--end::Col-->
 											</div>
 											<!--end::Addresses-->
-											<!--begin::Tax info-->
-											<div class="mt-10">
-												<h3 class="mb-3">Tax Location</h3>
-												<div class="fw-semibold text-gray-600 fs-6">United States - 10% VAT
-												<br />
-												<a class="fw-bold" href="#">More Info</a></div>
-											</div>
-											<!--end::Tax info-->
+											
 										</div>
 										<!--end::Card body-->
 									</div>
-									<!--end::Billing Address-->
-									<!--begin::Billing History-->
-									<div class="card">
-										<!--begin::Card header-->
-										<div class="card-header card-header-stretch border-bottom border-gray-200">
-											<!--begin::Title-->
-											<div class="card-title">
-												<h3 class="fw-bold m-0">Billing History</h3>
-											</div>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar m-0">
-												<!--begin::Tab nav-->
-												<ul class="nav nav-stretch nav-line-tabs border-transparent" role="tablist">
-													<!--begin::Tab nav item-->
-													<li class="nav-item" role="presentation">
-														<a id="kt_billing_6months_tab" class="nav-link fs-5 fw-semibold me-3 active" data-bs-toggle="tab" role="tab" href="#kt_billing_months">Month</a>
-													</li>
-													<!--end::Tab nav item-->
-													<!--begin::Tab nav item-->
-													<li class="nav-item" role="presentation">
-														<a id="kt_billing_1year_tab" class="nav-link fs-5 fw-semibold me-3" data-bs-toggle="tab" role="tab" href="#kt_billing_year">Year</a>
-													</li>
-													<!--end::Tab nav item-->
-													<!--begin::Tab nav item-->
-													<li class="nav-item" role="presentation">
-														<a id="kt_billing_alltime_tab" class="nav-link fs-5 fw-semibold" data-bs-toggle="tab" role="tab" href="#kt_billing_all">All Time</a>
-													</li>
-													<!--end::Tab nav item-->
-												</ul>
-												<!--end::Tab nav-->
-											</div>
-											<!--end::Toolbar-->
-										</div>
-										<!--end::Card header-->
-										<!--begin::Tab Content-->
-										<div class="tab-content">
-											<!--begin::Tab panel-->
-											<div id="kt_billing_months" class="card-body p-0 tab-pane fade show active" role="tabpanel" aria-labelledby="kt_billing_months">
-												<!--begin::Table container-->
-												<div class="table-responsive">
-													<!--begin::Table-->
-													<table class="table table-row-bordered align-middle gy-4 gs-9">
-														<thead class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
-															<tr>
-																<td class="min-w-150px">Date</td>
-																<td class="min-w-250px">Description</td>
-																<td class="min-w-150px">Amount</td>
-																<td class="min-w-150px">Invoice</td>
-																<td></td>
-															</tr>
-														</thead>
-														<tbody class="fw-semibold text-gray-600">
-															<!--begin::Table row-->
-															<tr>
-																<td>Nov 01, 2020</td>
-																<td>
-																	<a href="#">Invoice for Ocrober 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Oct 08, 2020</td>
-																<td>
-																	<a href="#">Invoice for September 2022</a>
-																</td>
-																<td>$98.03</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Aug 24, 2020</td>
-																<td>Paypal</td>
-																<td>$35.07</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Aug 01, 2020</td>
-																<td>
-																	<a href="#">Invoice for July 2022</a>
-																</td>
-																<td>$142.80</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jul 01, 2020</td>
-																<td>
-																	<a href="#">Invoice for June 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jun 17, 2020</td>
-																<td>Paypal</td>
-																<td>$523.09</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jun 01, 2020</td>
-																<td>
-																	<a href="#">Invoice for May 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-														</tbody>
-													</table>
-													<!--end::Table-->
-												</div>
-												<!--end::Table container-->
-											</div>
-											<!--end::Tab panel-->
-											<!--begin::Tab panel-->
-											<div id="kt_billing_year" class="card-body p-0 tab-pane fade" role="tabpanel" aria-labelledby="kt_billing_year">
-												<!--begin::Table container-->
-												<div class="table-responsive">
-													<!--begin::Table-->
-													<table class="table table-row-bordered align-middle gy-4 gs-9">
-														<thead class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
-															<tr>
-																<td class="min-w-150px">Date</td>
-																<td class="min-w-250px">Description</td>
-																<td class="min-w-150px">Amount</td>
-																<td class="min-w-150px">Invoice</td>
-																<td></td>
-															</tr>
-														</thead>
-														<tbody class="fw-semibold text-gray-600">
-															<!--begin::Table row-->
-															<tr>
-																<td>Dec 01, 2021</td>
-																<td>
-																	<a href="#">Billing for Ocrober 2022</a>
-																</td>
-																<td>$250.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Oct 08, 2021</td>
-																<td>
-																	<a href="#">Statements for September 2022</a>
-																</td>
-																<td>$98.03</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Aug 24, 2021</td>
-																<td>Paypal</td>
-																<td>$35.07</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Aug 01, 2021</td>
-																<td>
-																	<a href="#">Invoice for July 2022</a>
-																</td>
-																<td>$142.80</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jul 01, 2021</td>
-																<td>
-																	<a href="#">Statements for June 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jun 17, 2021</td>
-																<td>Paypal</td>
-																<td>$23.09</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-														</tbody>
-													</table>
-													<!--end::Table-->
-												</div>
-												<!--end::Table container-->
-											</div>
-											<!--end::Tab panel-->
-											<!--begin::Tab panel-->
-											<div id="kt_billing_all" class="card-body p-0 tab-pane fade" role="tabpanel" aria-labelledby="kt_billing_all">
-												<!--begin::Table container-->
-												<div class="table-responsive">
-													<!--begin::Table-->
-													<table class="table table-row-bordered align-middle gy-4 gs-9">
-														<thead class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
-															<tr>
-																<td class="min-w-150px">Date</td>
-																<td class="min-w-250px">Description</td>
-																<td class="min-w-150px">Amount</td>
-																<td class="min-w-150px">Invoice</td>
-																<td></td>
-															</tr>
-														</thead>
-														<tbody class="fw-semibold text-gray-600">
-															<!--begin::Table row-->
-															<tr>
-																<td>Nov 01, 2021</td>
-																<td>
-																	<a href="#">Billing for Ocrober 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Aug 10, 2021</td>
-																<td>Paypal</td>
-																<td>$35.07</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Aug 01, 2021</td>
-																<td>
-																	<a href="#">Invoice for July 2022</a>
-																</td>
-																<td>$142.80</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jul 20, 2021</td>
-																<td>
-																	<a href="#">Statements for June 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jun 17, 2021</td>
-																<td>Paypal</td>
-																<td>$23.09</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-															<!--begin::Table row-->
-															<tr>
-																<td>Jun 01, 2021</td>
-																<td>
-																	<a href="#">Invoice for May 2022</a>
-																</td>
-																<td>$123.79</td>
-																<td>
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">PDF</a>
-																</td>
-																<td class="text-right">
-																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
-																</td>
-															</tr>
-															<!--end::Table row-->
-														</tbody>
-													</table>
-													<!--end::Table-->
-												</div>
-												<!--end::Table container-->
-											</div>
-											<!--end::Tab panel-->
-										</div>
-										<!--end::Tab Content-->
-									</div>
+								
 									<!--end::Billing Address-->
         </div>
         <!--end::Content container-->

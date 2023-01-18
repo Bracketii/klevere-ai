@@ -267,22 +267,19 @@
                         <!--end::Menu separator-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
-                            <a href="" class="menu-link px-5">My Profile</a>
+                            <a href="{{ route('admin.account.overview') }}" class="menu-link px-5">My Profile</a>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
-                            <a href="" class="menu-link px-5">
+                            <a href="{{ route('admin.account.projects') }}" class="menu-link px-5">
                                 <span class="menu-text">My Projects</span>                                
                             </a>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
-                        <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                            <a href="#" class="menu-link px-5">
-                                <span class="menu-title">My Subscription</span>
-                            </a>
-                            
+                        <div class="menu-item px-5 my-1">
+                            <a href="{{ route('admin.account.billing') }}" class="menu-link px-5">My Subscription</a>
                         </div>
                         <!--end::Menu item-->
                         
@@ -292,12 +289,12 @@
                         
                         <!--begin::Menu item-->
                         <div class="menu-item px-5 my-1">
-                            <a href="" class="menu-link px-5">Account Settings</a>
+                            <a href="{{ route('admin.account.settings') }}" class="menu-link px-5">Account Settings</a>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
-                            <a href="" class="menu-link px-5">Sign Out</a>
+                            <a href="#" class="menu-link px-5">Sign Out</a>
                         </div>
                         <!--end::Menu item-->
                     </div>

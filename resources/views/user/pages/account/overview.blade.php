@@ -53,7 +53,7 @@
                         </div>
                         <!--end::Card title-->
                         <!--begin::Action-->
-                        <a href="../../demo1/dist/account/settings.html" class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
+                        <a href="{{ route('user.account.settings') }}" class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
                         <!--end::Action-->
                     </div>
                     <!--begin::Card header-->
@@ -137,16 +137,16 @@
                         <!--begin::Input group-->
                         <div class="row mb-10">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Allow Changes</label>
+                            <label class="col-lg-4 fw-semibold text-muted">Subscription</label>
                             <!--begin::Label-->
                             <!--begin::Label-->
                             <div class="col-lg-8">
-                                <span class="fw-semibold fs-6 text-gray-800">Yes</span>
+                                <span class="fw-semibold fs-6 text-gray-800">Premium</span>
                             </div>
                             <!--begin::Label-->
                         </div>
                         <!--end::Input group-->
-                        <!--begin::Notice-->
+                        {{-- <!--begin::Notice-->
                         <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
                             <!--begin::Icon-->
                             <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
@@ -171,7 +171,7 @@
                             </div>
                             <!--end::Wrapper-->
                         </div>
-                        <!--end::Notice-->
+                        <!--end::Notice--> --}}
                     </div>
                     <!--end::Card body-->
                 </div>
