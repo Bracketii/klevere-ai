@@ -51,7 +51,7 @@
 							<!--begin::Sign Up link-->
 							<div class="m-0">
 								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-in-head-desc">Not a Member yet?</span>
-								<a href="#" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>
+								<a href="{{ url('register') }}" class="link-primary fw-bold fs-5" data-kt-translate="sign-in-head-link">Sign Up</a>
 							</div>
 							<!--end::Sign Up link=-->
 						</div>
@@ -60,11 +60,10 @@
 						<div class="py-20">
 							<!--begin::Form-->
 
-                            @if (\Session::has('error'))
-                             <div class="alert alert-danger">
-                                <ul>
-                             <li>{!! \Session::get('error') !!}</li>
-                              </ul>
+                            @if (\Session::has('error'))                         
+							  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+								{!! \Session::get('error') !!}
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                               </div>
                               @endif
                             @include('errors')
@@ -99,26 +98,15 @@
 									<div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-10">
 										<div></div>
 										<!--begin::Link-->
-										<a href="#" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>
+										<a href="{{ route('show.forgot.password') }}" class="link-primary" data-kt-translate="sign-in-forgot-password">Forgot Password ?</a>
 										<!--end::Link-->
 									</div>
 									<!--end::Wrapper-->
-									<!--begin::Actions-->
+									
+									<!--begin::Socialite Actions-->
 									<div class="d-flex flex-stack">
-										<!--begin::Submit-->
-									{{--	<button id="kt_sign_in_submit" type="submit" class="btn btn-primary me-2 flex-shrink-0">
-											<!--begin::Indicator label-->
-											<span class="indicator-label" data-kt-translate="sign-in-submit">Sign In</span>
-											<!--end::Indicator label-->
-											<!--begin::Indicator progress-->
-											<span class="indicator-progress">
-												<span data-kt-translate="general-progress">Please wait...</span>
-												<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-											</span>
-											<!--end::Indicator progress-->
-										</button>
-                                        --}}
-                                        <input class="btn btn-primary me-2 flex-shrink-0" type="submit">
+										
+                                        <input class="btn btn-primary me-2 flex-shrink-0" type="submit" value="Sign in">
 										<!--end::Submit-->
 										<!--begin::Social-->
 										<div class="d-flex align-items-center">

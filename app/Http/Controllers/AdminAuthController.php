@@ -22,7 +22,7 @@ class AdminAuthController extends Controller
         ])){
             return to_route('admin.dashboard');
         }else{
-            return redirect()->back()->with('error', 'credential not matched');
+            return redirect()->back()->with('error', 'credentials not matched');
         }
 
     }

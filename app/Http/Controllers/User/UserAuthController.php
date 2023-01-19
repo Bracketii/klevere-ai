@@ -19,6 +19,9 @@ class UserAuthController extends Controller
     public function Showlogin(){
         return view('auth.signin');
     }
+    public function ShowForgotPassword(){
+        return view('auth.forgot-password');
+    }
     public function Register(){
 
         $this->validate(request(),[
@@ -28,7 +31,7 @@ class UserAuthController extends Controller
             //  'password'=>'required|confirmed',
             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()->symbols()]
         ]);
-        $user=\App\Models\user::create([
+        $user=ModelsUser::create([
             'firstname'=>request('firstname'),
             'lastname'=>request('lastname'),
             'email'=>request('email'),

@@ -31,11 +31,11 @@
 		<!--end::Theme mode setup on page load-->
 		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root" id="kt_app_root">
-			<!--begin::Authentication - Sign-in -->
+			<!--begin::Authentication - Password reset -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Logo-->
-				<a href="#" class="d-block d-lg-none mx-auto py-20">
-					<img alt="Logo" src="{{ asset('assets/media/logos/klevere-logo.svg') }}" class="theme-light-show h-25px" />
+				<a href="../../demo1/dist/index.html" class="d-block d-lg-none mx-auto py-20">
+					<img alt="Logo" src="{{ asset('assets/media/logos/default.svg') }}" class="theme-light-show h-25px" />
 					<img alt="Logo" src="{{ asset('assets/media/logos/default-dark.svg') }}" class="theme-dark-show h-25px" />
 				</a>
 				<!--end::Logo-->
@@ -46,98 +46,71 @@
 						<!--begin::Header-->
 						<div class="d-flex flex-stack py-2">
 							<!--begin::Back link-->
-							<div class="me-2"></div>
+							<div class="me-2">
+								<a href="{{ url()->previous() }}" class="btn btn-icon bg-light rounded-circle">
+									<!--begin::Svg Icon | path: icons/duotune/arrows/arr002.svg-->
+									<span class="svg-icon svg-icon-2 svg-icon-gray-800">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.60001 11H21C21.6 11 22 11.4 22 12C22 12.6 21.6 13 21 13H9.60001V11Z" fill="currentColor" />
+											<path opacity="0.3" d="M9.6 20V4L2.3 11.3C1.9 11.7 1.9 12.3 2.3 12.7L9.6 20Z" fill="currentColor" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</a>
+							</div>
 							<!--end::Back link-->
-							
+							<!--begin::Sign Up link-->
+							<div class="m-0">
+								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="password-reset-head-desc">Already a member ?</span>
+								<a href="{{ route('ShowLogin') }}" class="link-primary fw-bold fs-5" data-kt-translate="password-reset-head-link">Sign In</a>
+							</div>
+							<!--end::Sign Up link=-->
 						</div>
 						<!--end::Header-->
 						<!--begin::Body-->
 						<div class="py-20">
 							<!--begin::Form-->
-                            @if (\Session::has('error'))
-                             <div class="alert alert-danger">
-                                <ul>
-                             <li>{!! \Session::get('error') !!}</li>
-                              </ul>
-                              </div>
-                              @endif
-							<form class="form w-100" method="POST" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="" action="{{ route('admin.login')}}">
-								<!--begin::Body-->
-                                {{ csrf_field()}}
-								<div class="card-body">
-									<!--begin::Heading-->
-									<div class="text-start mb-10">
-										<!--begin::Title-->
-										<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-in-title">Sign In</h1>
-										<!--end::Title-->
-										<!--begin::Text-->
-										<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Get unlimited access & earn money</div>
-										<!--end::Link-->
-									</div>
-									<!--begin::Heading-->
-									<!--begin::Input group=-->
-									<div class="fv-row mb-8">
-										<!--begin::Email-->
-										<input type="name" placeholder="name" name="name" autocomplete="off" data-kt-translate="sign-in-input-email" class="form-control form-control-solid" />
-										<!--end::Email-->
-									</div>
-									<!--end::Input group=-->
-									<div class="fv-row mb-7">
-										<!--begin::Password-->
-										<input type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-in-input-password" class="form-control form-control-solid" />
-										<!--end::Password-->
-									</div>
-									<!--end::Input group=-->
-									
-									<!--begin::Actions-->
-									<div class="d-flex flex-stack">
-										<!--begin::Submit-->
-									{{--	<button id="kt_sign_in_submit" type="submit" class="btn btn-primary me-2 flex-shrink-0">
+							<form class="form w-100" novalidate="novalidate" id="kt_password_reset_form" data-kt-redirect-url="../../demo1/dist/authentication/layouts/fancy/new-password.html" action="#">
+								<!--begin::Heading-->
+								<div class="text-start mb-10">
+									<!--begin::Title-->
+									<h1 class="text-dark mb-3 fs-3x" data-kt-translate="password-reset-title">Forgot Password ?</h1>
+									<!--end::Title-->
+									<!--begin::Text-->
+									<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="password-reset-desc">Enter your email to reset your password.</div>
+									<!--end::Link-->
+								</div>
+								<!--begin::Heading-->
+								<!--begin::Input group-->
+								<div class="fv-row mb-10">
+									<input class="form-control form-control-solid" type="email" placeholder="Email" name="email" autocomplete="off" data-kt-translate="password-reset-input-email" />
+								</div>
+								<!--end::Input group-->
+								<!--begin::Actions-->
+								<div class="d-flex flex-stack">
+									<!--begin::Link-->
+									<div class="m-0">
+										<button id="kt_password_reset_submit" class="btn btn-primary me-2" data-kt-translate="password-reset-submit">
 											<!--begin::Indicator label-->
-											<span class="indicator-label" data-kt-translate="sign-in-submit">Sign In</span>
+											<span class="indicator-label">Submit</span>
 											<!--end::Indicator label-->
 											<!--begin::Indicator progress-->
-											<span class="indicator-progress">
-												<span data-kt-translate="general-progress">Please wait...</span>
-												<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-											</span>
+											<span class="indicator-progress">Please wait...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 											<!--end::Indicator progress-->
 										</button>
-                                        --}}
-                                        <input class="btn btn-primary me-2 flex-shrink-0" type="submit" value="Sign in">
-										<!--end::Submit-->
-										<!--begin::Social-->
-										<div class="d-flex align-items-center">
-											<div class="text-gray-400 fw-semibold fs-6 me-3 me-md-6" data-kt-translate="general-or">Or</div>
-											<!--begin::Symbol-->
-											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
-												<img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg" class="p-4" />
-											</a>
-											<!--end::Symbol-->
-											<!--begin::Symbol-->
-											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
-												<img alt="Logo" src="assets/media/svg/brand-logos/facebook-3.svg" class="p-4" />
-											</a>
-											<!--end::Symbol-->
-											<!--begin::Symbol-->
-											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light">
-												<img alt="Logo" src="assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show p-4" />
-												<img alt="Logo" src="assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show p-4" />
-											</a>
-											<!--end::Symbol-->
-										</div>
-										<!--end::Social-->
+										<a href="#" class="btn btn-lg btn-light-primary fw-bold" data-kt-translate="password-reset-cancel">Cancel</a>
 									</div>
-									<!--end::Actions-->
+									<!--end::Link-->
 								</div>
-								<!--begin::Body-->
+								<!--end::Actions-->
 							</form>
 							<!--end::Form-->
 						</div>
 						<!--end::Body-->
 						<!--begin::Footer-->
 						<div class="m-0">
-
+							
 						</div>
 						<!--end::Footer-->
 					</div>
@@ -148,7 +121,7 @@
 				<div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat" style="background-image: url(assets/media/auth/bg11.png)"></div>
 				<!--begin::Body-->
 			</div>
-			<!--end::Authentication - Sign-in-->
+			<!--end::Authentication - Password reset-->
 		</div>
 		<!--end::Root-->
 		<!--begin::Javascript-->

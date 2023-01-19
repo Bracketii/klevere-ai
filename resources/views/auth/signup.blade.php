@@ -47,7 +47,7 @@
 						<div class="d-flex flex-stack py-2">
 							<!--begin::Back link-->
 							<div class="me-2">
-								<a href="#" class="btn btn-icon bg-light rounded-circle">
+								<a href="{{ url()->previous() }}" class="btn btn-icon bg-light rounded-circle">
 									<!--begin::Svg Icon | path: icons/duotune/arrows/arr002.svg-->
 									<span class="svg-icon svg-icon-2 svg-icon-gray-800">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@
 							<!--begin::Sign Up link-->
 							<div class="m-0">
 								<span class="text-gray-400 fw-bold fs-5 me-2" data-kt-translate="sign-up-head-desc">Already a member ?</span>
-								<a href="#" class="link-primary fw-bold fs-5" data-kt-translate="sign-up-head-link">Sign In</a>
+								<a href="{{ route('ShowLogin') }}" class="link-primary fw-bold fs-5" data-kt-translate="sign-up-head-link">Sign In</a>
 							</div>
 							<!--end::Sign Up link=-->
 						</div>
@@ -141,19 +141,10 @@
 								<!--end::Input group-->
 								<!--begin::Actions-->
 								<div class="d-flex flex-stack">
-									<!--begin::Submit-->
-									{{-- <button type="submit" id="kt_sign_up_submit" class="btn btn-primary" data-kt-translate="sign-up-submit">
-										<!--begin::Indicator label-->
-										<span class="indicator-label">Submit</span>
-										<!--end::Indicator label-->
-										<!--begin::Indicator progress-->
-										<span class="indicator-progress">Please wait...
-										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-										<!--end::Indicator progress-->
-									</button> --}}
+									
                                     <input type="submit" class="btn btn-primary me-2 flex-shrink-0" value="submit">
 									<!--end::Submit-->
-									<!--begin::Social-->
+									<!--begin::Socialite Actions (Register)-->
 									<div class="d-flex align-items-center">
 										<div class="text-gray-400 fw-semibold fs-6 me-6">Or</div>
 										<!--begin::Symbol-->

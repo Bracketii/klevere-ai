@@ -44,6 +44,7 @@ Route::post('register',[UserAuthController::class,'Register'])->name('Register')
 Route::get('login',[UserAuthController::class,'Showlogin'])->name('ShowLogin');
 Route::post('login',[UserAuthController::class,'login'])->name('login');
 Route::get('logout',[UserAuthController::class,'logout'])->name('logout');
+Route::get('forgot-password',[UserAuthController::class,'ShowForgotPassword'])->name('show.forgot.password');
 
 Route::group(['middleware'=>'userauth'],function(){
     Route::get('user', [UserPagesController::class, 'showUserDashboard'])->name('user.dashboard');
