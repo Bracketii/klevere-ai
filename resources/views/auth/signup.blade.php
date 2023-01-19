@@ -70,8 +70,14 @@
 						<!--begin::Body-->
 						<div class="py-20">
 							<!--begin::Form-->
-							<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="#" action="#">
-								<!--begin::Heading-->
+                            @include('errors')
+							<form class="form w-100"  id="kt_sign_up_form" method="POST" action="{{ route('Register')}}">
+                                {{-- novalidate="novalidate"--}}
+                                {{-- data-kt-redirect-url="#"--}}
+
+                                {{ csrf_field() }}
+
+                                <!--begin::Heading-->
 								<div class="text-start mb-10">
 									<!--begin::Title-->
 									<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-up-title">Create an Account</h1>
@@ -85,19 +91,19 @@
 								<div class="row fv-row mb-7">
 									<!--begin::Col-->
 									<div class="col-xl-6">
-										<input class="form-control form-control-lg form-control-solid" type="text" placeholder="First Name" name="first-name" autocomplete="off" data-kt-translate="sign-up-input-first-name" />
+										<input class="form-control form-control-lg form-control-solid" type="text" placeholder="First Name" name="firstname" autocomplete="off" data-kt-translate="sign-up-input-first-name" />
 									</div>
 									<!--end::Col-->
 									<!--begin::Col-->
 									<div class="col-xl-6">
-										<input class="form-control form-control-lg form-control-solid" type="text" placeholder="Last Name" name="last-name" autocomplete="off" data-kt-translate="sign-up-input-last-name" />
+										<input class="form-control form-control-lg form-control-solid" type="text" placeholder="Last Name" name="lastname" autocomplete="off" data-kt-translate="sign-up-input-last-name" />
 									</div>
 									<!--end::Col-->
 								</div>
 								<!--end::Input group-->
 								<!--begin::Input group-->
 								<div class="fv-row mb-10">
-									<input class="form-control form-control-lg form-control-solid" type="email" placeholder="Email" name="email" autocomplete="off" data-kt-translate="sign-up-input-email" />
+									<input class="form-control form-control-lg form-control-solid" type="email"  placeholder="Email" name="email" autocomplete="off" data-kt-translate="sign-up-input-email" />
 								</div>
 								<!--end::Input group-->
 								<!--begin::Input group-->
@@ -106,7 +112,7 @@
 									<div class="mb-1">
 										<!--begin::Input wrapper-->
 										<div class="position-relative mb-3">
-											<input class="form-control form-control-lg form-control-solid" type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-up-input-password" />
+											<input class="form-control form-control-lg form-control-solid" type="password" name="password" placeholder="Password"  autocomplete="off" data-kt-translate="sign-up-input-password" />
 											<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
 												<i class="bi bi-eye-slash fs-2"></i>
 												<i class="bi bi-eye fs-2 d-none"></i>
@@ -130,13 +136,13 @@
 								<!--end::Input group=-->
 								<!--begin::Input group-->
 								<div class="fv-row mb-10">
-									<input class="form-control form-control-lg form-control-solid" type="password" placeholder="Confirm Password" name="confirm-password" autocomplete="off" data-kt-translate="sign-up-input-confirm-password" />
+									<input class="form-control form-control-lg form-control-solid" type="password" name="password_confirmation" placeholder="Confirm Password"  autocomplete="off" data-kt-translate="sign-up-input-confirm-password" />
 								</div>
 								<!--end::Input group-->
 								<!--begin::Actions-->
 								<div class="d-flex flex-stack">
 									<!--begin::Submit-->
-									<button id="kt_sign_up_submit" class="btn btn-primary" data-kt-translate="sign-up-submit">
+									{{-- <button type="submit" id="kt_sign_up_submit" class="btn btn-primary" data-kt-translate="sign-up-submit">
 										<!--begin::Indicator label-->
 										<span class="indicator-label">Submit</span>
 										<!--end::Indicator label-->
@@ -144,7 +150,8 @@
 										<span class="indicator-progress">Please wait...
 										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 										<!--end::Indicator progress-->
-									</button>
+									</button> --}}
+                                    <input type="submit" class="btn btn-primary me-2 flex-shrink-0" value="submit">
 									<!--end::Submit-->
 									<!--begin::Social-->
 									<div class="d-flex align-items-center">
@@ -175,7 +182,7 @@
 						<!--end::Body-->
 						<!--begin::Footer-->
 						<div class="m-0">
-							
+
 						</div>
 						<!--end::Footer-->
 					</div>

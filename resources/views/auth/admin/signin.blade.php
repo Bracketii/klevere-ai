@@ -59,7 +59,6 @@
 						<!--begin::Body-->
 						<div class="py-20">
 							<!--begin::Form-->
-
                             @if (\Session::has('error'))
                              <div class="alert alert-danger">
                                 <ul>
@@ -67,8 +66,7 @@
                               </ul>
                               </div>
                               @endif
-                            @include('errors')
-							<form class="form w-100" method="POST" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="" action="{{ route('login')}}">
+							<form class="form w-100" method="POST" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="" action="{{ route('admin.login')}}">
 								<!--begin::Body-->
                                 {{ csrf_field()}}
 								<div class="card-body">
@@ -85,13 +83,13 @@
 									<!--begin::Input group=-->
 									<div class="fv-row mb-8">
 										<!--begin::Email-->
-										<input type="text" placeholder="Email" name="email" autocomplete="off" data-kt-translate="sign-in-input-email" class="form-control form-control-solid" />
+										<input type="name" placeholder="name" name="name" autocomplete="off" data-kt-translate="sign-in-input-email" class="form-control form-control-solid" />
 										<!--end::Email-->
 									</div>
 									<!--end::Input group=-->
 									<div class="fv-row mb-7">
 										<!--begin::Password-->
-										<input type="text" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-in-input-password" class="form-control form-control-solid" />
+										<input type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="sign-in-input-password" class="form-control form-control-solid" />
 										<!--end::Password-->
 									</div>
 									<!--end::Input group=-->

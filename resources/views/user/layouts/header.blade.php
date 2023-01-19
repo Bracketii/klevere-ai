@@ -27,7 +27,7 @@
         <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
             <!--begin::Menu wrapper-->
             <div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="{default: 'append', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
-                
+
                 {{-- Top Menu --}}
 
             </div>
@@ -72,13 +72,13 @@
 													<!--begin::Input-->
 													<input type="text" class="search-input form-control form-control-flush ps-10" name="search" value="" placeholder="Search..." data-kt-search-element="input" />
 													<!--end::Input-->
-													
-													
+
+
 												</form>
 												<!--end::Form-->
-												
+
 											</div>
-												
+
 										</div>
 										<!--end::Menu-->
 									</div>
@@ -87,7 +87,7 @@
 								<!--end::Search-->
                 <!--end::Search-->
                 <!--begin::Activities-->
-                
+
                 <!--end::Activities-->
                 <!--begin::Notifications-->
                                 <!--begin::Theme mode-->
@@ -166,20 +166,20 @@
 											</a>
 										</div>
 										<!--end::Menu item-->
-										
+
 									</div>
 									<!--end::Menu-->
 								</div>
 								<!--end::Theme mode-->
                 <!--end::Notifications-->
                 <!--begin::Chat-->
-                
+
                 <!--end::Chat-->
                 <!--begin::My apps links-->
-                
+
                 <!--end::My apps links-->
                 <!--begin::Theme mode-->
-                
+
                 <!--end::Theme mode-->
                 <!--begin::User menu-->
                 <div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
@@ -217,7 +217,7 @@
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <a href="{{ route('user.account.projects') }}" class="menu-link px-5">
-                                <span class="menu-text">My Projects</span>                                
+                                <span class="menu-text">My Projects</span>
                             </a>
                         </div>
                         <!--end::Menu item-->
@@ -226,11 +226,11 @@
                             <a href="{{ route('user.account.billing') }}" class="menu-link px-5">My Subscription</a>
                         </div>
                         <!--end::Menu item-->
-                        
+
                         <!--begin::Menu separator-->
                         <div class="separator my-2"></div>
                         <!--end::Menu separator-->
-                        
+
                         <!--begin::Menu item-->
                         <div class="menu-item px-5 my-1">
                             <a href="{{ route('user.account.settings') }}" class="menu-link px-5">Account Settings</a>
@@ -238,7 +238,7 @@
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
-                            <a href="#" class="menu-link px-5">Sign Out</a>
+                            <a href="{{ route('logout') }}" class="menu-link px-5">Sign Out</a>
                         </div>
                         <!--end::Menu item-->
                     </div>
