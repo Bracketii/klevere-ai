@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+route::redirect('/','login');
 // Admin all pages routes
 Route::get('admin/login',[AdminAuthController::class,'showlogin'])->name('admin.showlogin');
 Route::post('admin/login',[AdminAuthController::class,'login'])->name('admin.login');
