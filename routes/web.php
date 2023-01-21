@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminPagesController;
+use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\User\UserAuthController;
 use App\Http\Controllers\User\UserPagesController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminPagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,106 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::get('user-account-projects', [UserPagesController::class, 'showUserAccountProjects'])->name('user.account.projects');
     Route::get('user-account-settings', [UserPagesController::class, 'showUserAccountSettings'])->name('user.account.settings');
 });
+
+
+////socialite in google////
+Route::get('google/redirect', function () {
+    return Socialite::driver('google')->redirect();
+})->name('google');
+
+
+Route::get('google/callback', function () {
+    $user = Socialite::driver('google')->user();
+    $userEmail = $user->getEmail();
+    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+
+    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    
+    if($getUser){
+        \Illuminate\Support\Facades\Auth::login($getUser);
+        return redirect('user');
+    } else{
+        $user = \App\Models\user::create([
+            'firstname' => $userName,
+            'lastname' => $userName,
+            'email' => $userEmail,
+            'password' => bcrypt('111111'),
+        ]);
+        \Illuminate\Support\Facades\Auth::login($user);
+        return redirect('user');
+    }
+
+    // $user->token
+});
+
+
+
+////socialite in facebook////
+Route::get('facebook/redirect', function () {
+    return Socialite::driver('facebook')->redirect();
+})->name('facebook');
+
+
+Route::get('facebook/callback', function () {
+    $user = Socialite::driver('facebook')->user();
+    $userEmail = $user->getEmail();
+    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+
+    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    
+    if($getUser){
+        \Illuminate\Support\Facades\Auth::login($getUser);
+        return redirect('user');
+    } else{
+        $user = \App\Models\user::create([
+            'firstname' => $userName,
+            'lastname' => $userName,
+            'email' => $userEmail,
+            'password' => bcrypt('111111'),
+        ]);
+        \Illuminate\Support\Facades\Auth::login($user);
+        return redirect('user');
+    }
+
+    // $user->token
+});
+////socialite in linked-in////
+Route::get('linkedin/redirect', function () {
+    return Socialite::driver('linkedin')->redirect();
+})->name('linkedin');
+
+
+Route::get('linkedin/callback', function () {
+    $user = Socialite::driver('linkedin')->user();
+    $userEmail = $user->getEmail();
+    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+
+    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    
+    if($getUser){
+        \Illuminate\Support\Facades\Auth::login($getUser);
+        return redirect('user');
+    } else{
+        $user = \App\Models\user::create([
+            'firstname' => $userName,
+            'lastname' => $userName,
+            'email' => $userEmail,
+            'password' => bcrypt('111111'),
+        ]);
+        \Illuminate\Support\Facades\Auth::login($user);
+        return redirect('user');
+    }
+
+    // $user->token
+});
+
+
+
+// The operation pages will be added soon after the authentication
+/**
+ * Operation pages: Blog post generate, product desctiptions . . . and others with OpenAI API
+ */
+
 
 // The operation pages will be added soon after the authentication
 /**
