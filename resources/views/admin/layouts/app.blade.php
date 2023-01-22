@@ -1,59 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    {{-- Head --}}
+	<!--begin::Head-->
 	@include('admin.layouts.head')
+	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+	<body id="kt_app_body" data-kt-app-header-fixed-mobile="true" data-kt-app-toolbar-enabled="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
 		<!--begin::Theme mode setup on page load-->
 		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
 		<!--end::Theme mode setup on page load-->
 		<!--begin::App-->
+
+		{{-- Left Side Bar Menu --}}
+		@include('admin.layouts.sidebar')
+		{{-- End Left side bar menu --}}
+
+
+
 		<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
 			<!--begin::Page-->
-			<div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+			@section('admin-content')
 				
-                {{-- Header --}}
-                @include('admin.layouts.header')
-
-				<!--begin::Wrapper-->
-				<div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
-
-                    {{-- Sidebar Menu --}}
-					@include('admin.layouts.sidebar')
-                    
-					<!--begin::Main-->
-					<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
-
-                        {{-- Main Section --}}
-						@section('main')                          
-                        @show
-						
-                        {{-- Footer --}}
-                        @include('admin.layouts.footer')
-					</div>
-					<!--end:::Main-->
-				</div>
-				<!--end::Wrapper-->
-			</div>
+			@show
 			<!--end::Page-->
 		</div>
 		<!--end::App-->
-		
-        {{-- Utilities - Drawers --}}
-        @include('admin.utilities.drawers')
-		
-		{{-- Utilities - Toolbars --}}
-        @include('admin.utilities.toolbars')
-		
-        {{-- Utilities - ScrollTop --}}
-        @include('admin.utilities.scrolltop')
 
-        {{-- Utilities - Modals --}}
-		@include('admin.utilities.modals')
-		
-        {{-- JavaScript Files --}}
-        @include('admin.layouts.js')
+		{{-- Utilities View All together - Please break it to parts --}}
+		@include('utilities.utilities')
+
+
+		{{-- JS Files from layouts folder file - js.blade.php --}}
+		@include('admin.layouts.js')
+
+
 	</body>
 	<!--end::Body-->
 </html>

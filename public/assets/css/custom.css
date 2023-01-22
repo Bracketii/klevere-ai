@@ -1,0 +1,45 @@
+/* Add your custom CSS Here! */
+
+#kt_app_sidebar {
+    width: 300px;
+    background-color: #000614;
+}
+
+.dash-icons{
+    font-size: 40px !important;
+    background-color: #C6FF00;
+    color: #000 !important;
+    padding: 4px !important;
+    border-radius: 10px;
+}
+
+.badge-light-warning{
+    background-color: #C6FF00;
+    color: #000 !important;
+}
+.badge-primary{
+    background-color: #2468FF;
+    color: #fff;
+}
+
+.text-logo{
+    letter-spacing: 1.5px;
+}
+
+.btn.btn-primary{
+    background-color: #2468FF;
+}
+
+a.disabled{
+    color: gray;
+  /* And disable the pointer events */
+  pointer-events: none;
+}
+
+.border-hover-primary:hover{
+    border-color: #2469ff4d !important;
+}
+.symbol>img {
+    width: 70px;
+    height: 70px;
+}

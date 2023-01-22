@@ -13,26 +13,34 @@ class UserPagesController extends Controller
         return view('user.pages.dashboard');
 
     }
-    public function showUserAccountOverview(){
 
-        return view('user.pages.account.overview');
+    public function showUserProjects(){
+
+        return view('user.pages.projects.index');
 
     }
-    public function showUserAccountBilling(){
+
+    // views for avatar coming soon
+
+    public function showUserKlevereChat(){
+
+        return view('user.pages.chat.kleverechat');
+
+    }
+
+    // User account pages 
+    public function showUserAccount(){
+
+        return view('user.pages.account.account');
+
+    }
+    public function showUserBilling(){
 
         return view('user.pages.account.billing');
 
     }
-    public function showUserAccountProjects(){
-
-        return view('user.pages.account.projects');
-
-    }
-    public function showUserAccountSettings(){
-
-        return view('user.pages.account.settings');
-
-    }
+    
+    
 
    
 }

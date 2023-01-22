@@ -1,4 +1,4 @@
-<!--begin::Head-->
+{{-- Head Updated --}}
 <head><base href=""/>
     <title>Klevere AI</title>
     <meta charset="utf-8" />
@@ -10,9 +10,9 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Klevere AI" />
-    <meta property="og:url" content="https://klevere.ai" />
+    <meta property="og:url" content="https://app.klevere.ai" />
     <meta property="og:site_name" content="Klevere AI" />
-    <link rel="canonical" href="https://klevere.ai" />
+    <link rel="canonical" href="https://app.klevere.ai" />
     <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -24,9 +24,6 @@
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
     <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-
-    {{-- Boxicons --}}
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<!--end::Head-->

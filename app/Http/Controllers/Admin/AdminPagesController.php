@@ -20,57 +20,20 @@ class AdminPagesController extends Controller
 
     }
 
-    public function showAdminSubscriptions(){
 
-        return view('admin.pages.subscriptions');
+    public function showAdminUsers(){
 
-    }
-
-    public function showAdminSettings(){
-
-        return view('admin.pages.settings');
+        return view('admin.pages.users');
 
     }
 
-    public function showAdminUserList(){
+    public function showAdminAccount(){
 
-        return view('admin.pages.users.users-list');
-
-    }
-
-    public function showAdminUserRoles(){
-
-        return view('admin.pages.users.roles.all-roles');
+        return view('admin.pages.account.account');
 
     }
 
-    public function showAdminUserPermissions(){
+    
 
-        return view('admin.pages.users.permissions');
-
-    }
-
-    // Functions for showing My Account pages (Admin)
-    public function showAdminAccountOverview(){
-
-        return view('admin.pages.account.overview');
-
-    }
-
-    public function showAdminAccountBilling(){
-
-        return view('admin.pages.account.billing');
-
-    }
-    public function showAdminAccountProjects(){
-
-        return view('admin.pages.account.projects');
-
-    }
-    public function showAdminAccountSettings(){
-
-        return view('admin.pages.account.settings');
-
-    }
 
 }
