@@ -32,6 +32,7 @@ class AdminPagesController extends Controller
         return view('admin.pages.account.account');
 
     }
+    
 
     
 

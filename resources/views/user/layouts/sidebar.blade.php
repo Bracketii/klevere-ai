@@ -1,4 +1,5 @@
 <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+    
     <!--begin::Header-->
     <div class="app-sidebar-header d-none d-lg-flex px-6 pt-8 pb-4" id="kt_app_sidebar_header">
         <!--begin::Toggle-->
@@ -86,14 +87,14 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="#" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                            <a class="menu-link" href="{{ route('marketing.chat') }}" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
                                 <span class="menu-title">Bryan</span><br>
                                 <!--begin::Badge-->
                                 <span class="menu-badge">
-                                    <span class="badge badge-primary">Social Media Expert</span>
+                                    <span class="badge badge-primary">Marketing</span>
                                 </span>
                                 <!--end::Badge-->
                             </a>
@@ -111,13 +112,87 @@
                                 <span class="menu-title">Amanda</span><br>
                                 <!--begin::Badge-->
                                 <span class="menu-badge">
-                                    <span class="badge badge-primary">Blog Writing</span>
+                                    <span class="badge badge-primary">Sales</span>
                                 </span>
                                 <!--end::Badge-->
                             </a>
                             <!--end:Menu link-->
                         </div>
                         <!--end:Menu item-->
+
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="#" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Aaron</span><br>
+                                <!--begin::Badge-->
+                                <span class="menu-badge">
+                                    <span class="badge badge-primary">HR</span>
+                                </span>
+                                <!--end::Badge-->
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="#" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Ryan</span><br>
+                                <!--begin::Badge-->
+                                <span class="menu-badge">
+                                    <span class="badge badge-primary">Guidance Coach</span>
+                                </span>
+                                <!--end::Badge-->
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="#" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Jack</span><br>
+                                <!--begin::Badge-->
+                                <span class="menu-badge">
+                                    <span class="badge badge-primary">Artist</span>
+                                </span>
+                                <!--end::Badge-->
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="#" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Sam</span><br>
+                                <!--begin::Badge-->
+                                <span class="menu-badge">
+                                    <span class="badge badge-primary">Tech Specialist</span>
+                                </span>
+                                <!--end::Badge-->
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+
+                        
                         
                         
                     </div>
@@ -128,7 +203,7 @@
                 <!--begin::Menu Item-->
                 <div class="menu-item">
                     <!--begin::Menu link-->
-                    <a href="{{ route('user.kleverechat') }}" class="menu-link">
+                    <a href="{{ route('chat') }}" class="menu-link">
                         <!--begin::Icon-->
                         <span class="menu-icon">
                             <i class="fonticon-chat"></i>
@@ -139,7 +214,7 @@
                         <!--end::Title-->
                         <!--begin::Badge-->
                         <span class="menu-badge">
-                            <span class="badge badge-light-warning">NEW</span>
+                            <span class="badge badge-light-warning">Ask me anything</span>
                         </span>
                         <!--end::Badge-->
                     </a>

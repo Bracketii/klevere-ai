@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\AI\AIController;
+use App\Http\Controllers\AI\MarketingController;
 use App\Http\Controllers\User\UserAuthController;
 use App\Http\Controllers\User\UserPagesController;
 use Illuminate\Support\Facades\Route;
@@ -47,9 +49,18 @@ Route::get('forgot-password',[UserAuthController::class,'ShowForgotPassword'])->
 Route::group(['middleware'=>'userauth'],function(){
     Route::get('user', [UserPagesController::class, 'showUserDashboard'])->name('user.dashboard');
     Route::get('user-projects', [UserPagesController::class, 'showUserProjects'])->name('user.projects');
-    Route::get('user-kleverechat', [UserPagesController::class, 'showUserKlevereChat'])->name('user.kleverechat');
     Route::get('user-account', [UserPagesController::class, 'showUserAccount'])->name('user.account');
     Route::get('user-billing', [UserPagesController::class, 'showUserBilling'])->name('user.billing');
+    /**
+     * AI routes
+     */
+    // Chat
+    Route::get('chat', [AIController::class, 'index'])->name('chat');
+    Route::post('chat-text', [AIController::class, 'textCompletion'])->name('chat.text');
+
+    // Marketing
+    Route::get('marketing', [MarketingController::class, 'index'])->name('marketing.chat');
+    Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
 
 });
 
@@ -58,3 +69,6 @@ Route::group(['middleware'=>'userauth'],function(){
 /**
  * Test Routes
  */
+// API Test routes
+
+

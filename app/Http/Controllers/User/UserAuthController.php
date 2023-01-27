@@ -51,11 +51,11 @@ class UserAuthController extends Controller
         ])){
             return to_route('user.dashboard');
         }else{
-            return redirect()->back()->with('error', 'credential not matched');
+            return redirect()->back()->with('error', 'credentials not matched');
         }
     }
     public function logout(){
         Auth::guard('web')->logout();
-        return to_route('ShowRegister');
+        return to_route('ShowLogin');
     }
 }

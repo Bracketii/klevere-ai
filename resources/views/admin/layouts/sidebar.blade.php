@@ -52,6 +52,28 @@
                 </div>
                 <!--end::Menu Item-->
 
+                <!--begin::Menu Item-->
+                <div class="menu-item">
+                    <!--begin::Menu link-->
+                    <a href="" class="menu-link">
+                        <!--begin::Icon-->
+                        <span class="menu-icon">
+                            <i class="fonticon-line-chart"></i>
+                        </span>
+                        <!--end::Icon-->
+                        <!--begin::Title-->
+                        <span class="menu-title">Analytics</span>
+                        <!--end::Title-->
+                        <!--begin::Badge-->
+                        {{-- <span class="menu-badge">
+                            <span class="badge badge-primary">6</span>
+                        </span> --}}
+                        <!--end::Badge-->
+                    </a>
+                    <!--end:::Menu link-->
+                </div>
+                <!--end::Menu Item-->
+
 
                 
                 <!--begin:Menu item-->
