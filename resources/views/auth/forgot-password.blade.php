@@ -69,8 +69,15 @@
 						<!--end::Header-->
 						<!--begin::Body-->
 						<div class="py-20">
+						@if (Session::has('message'))
+                         <div class="alert alert-success" role="alert">
+                            {{ Session::get('message') }}
+                        </div>
+                        @endif
 							<!--begin::Form-->
-							<form class="form w-100" novalidate="novalidate" id="kt_password_reset_form" data-kt-redirect-url="../../demo1/dist/authentication/layouts/fancy/new-password.html" action="#">
+							<form class="form w-100" novalidate="novalidate" id="kt_password_reset_form" data-kt-redirect-url="../../demo1/dist/authentication/layouts/fancy/new-password.html" action="{{ route('forget.password.post') }}" method="POST">
+							
+								@csrf
 								<!--begin::Heading-->
 								<div class="text-start mb-10">
 									<!--begin::Title-->
@@ -84,13 +91,20 @@
 								<!--begin::Input group-->
 								<div class="fv-row mb-10">
 									<input class="form-control form-control-solid" type="email" placeholder="Email" name="email" autocomplete="off" data-kt-translate="password-reset-input-email" />
+									
+									@if ($errors->has('email'))
+                                      <span class="text-danger">{{ $errors->first('email') }}</span>                                
+									  @endif
+								
 								</div>
 								<!--end::Input group-->
 								<!--begin::Actions-->
 								<div class="d-flex flex-stack">
 									<!--begin::Link-->
 									<div class="m-0">
-										<button id="kt_password_reset_submit" class="btn btn-primary me-2" data-kt-translate="password-reset-submit">
+									
+										<button  id="kt_password_reset_submit" class="btn btn-primary me-2" data-kt-translate="password-reset-submit">
+										
 											<!--begin::Indicator label-->
 											<span class="indicator-label">Submit</span>
 											<!--end::Indicator label-->
@@ -98,9 +112,12 @@
 											<span class="indicator-progress">Please wait...
 											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 											<!--end::Indicator progress-->
+										
 										</button>
+						
 										<a href="#" class="btn btn-lg btn-light-primary fw-bold" data-kt-translate="password-reset-cancel">Cancel</a>
-									</div>
+									    
+										</div>
 									<!--end::Link-->
 								</div>
 								<!--end::Actions-->

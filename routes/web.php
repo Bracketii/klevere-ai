@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\User\UserAuthController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
+use App\Http\Controllers\ConfirmablePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +47,11 @@ Route::post('register',[UserAuthController::class,'Register'])->name('Register')
 Route::get('login',[UserAuthController::class,'Showlogin'])->name('ShowLogin');
 Route::post('login',[UserAuthController::class,'login'])->name('login');
 Route::get('logout',[UserAuthController::class,'logout'])->name('logout');
-Route::get('forgot-password',[UserAuthController::class,'ShowForgotPassword'])->name('show.forgot.password');
+Route::get('forgot-password',[ForgotPasswordController::class,'ShowForgotPassword'])->name('show.forgot.password');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
 
 Route::group(['middleware'=>'userauth'],function(){
     Route::get('user', [UserPagesController::class, 'showUserDashboard'])->name('user.dashboard');
@@ -54,6 +60,11 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::get('user-account-projects', [UserPagesController::class, 'showUserAccountProjects'])->name('user.account.projects');
     Route::get('user-account-settings', [UserPagesController::class, 'showUserAccountSettings'])->name('user.account.settings');
 });
+
+// Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');
+// Route::post('submit-password',[ConfirmablePasswordController::class,'SubmitPassword'])->name('user.submit.password');
+
+
 
 
 ////socialite in google////

@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-use App\Models\Models\user as ModelsModelsUser;
-use App\Models\user as ModelsUser;
 use App\User;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\user as ModelsUser;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
+use App\Models\Models\user as ModelsModelsUser;
 
 class UserAuthController extends Controller
 {
@@ -19,9 +23,7 @@ class UserAuthController extends Controller
     public function Showlogin(){
         return view('auth.signin');
     }
-    public function ShowForgotPassword(){
-        return view('auth.forgot-password');
-    }
+ 
     public function Register(){
 
         $this->validate(request(),[
@@ -58,4 +60,33 @@ class UserAuthController extends Controller
         Auth::guard('web')->logout();
         return to_route('ShowRegister');
     }
+
+
+
+    ///reset-password-link///
+
+
+
+    // public function SendResetLink(Request $request)
+    // {
+    //     $request->validate([
+    //         'email'=>'required|email|exists:users,email'
+    //     ]);
+
+    //     $token = Str::random(64);
+    //     DB::table('users')->insert([
+    //         'email'=>$request->email,
+    //         'token'=>$token,
+    //         'created_at'=>Carbon::now(),
+    //     ]);
+    //     $action_link = route('reset.password.form',['token'=>$token,'email'=>$request->email]);
+    //     $body = "We are received a request to reset the password for<b>Your App Name</b> account associated with".$request->email.".You can reset your password by clicking the line bellow";
+    //     Mail::send('email-forget', ['action_link'=>$action_link,'body'=>$body], function ($message) use ($request) {
+    //         $message->from('noreply@example.com', 'Your App Name');
+            
+    //         $message->to('$request->email', 'Your Name')
+    //                 ->subject('Reset Password');
+    //     });
+    //     return back()->with('success','We have e-mailed your')
+    // }
 }
