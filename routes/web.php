@@ -82,7 +82,6 @@ Route::get('google/redirect', function () {
     return Socialite::driver('google')->redirect();
 })->name('google');
 
-
 Route::get('google/callback', function () {
     $user = Socialite::driver('google')->user();
     $userEmail = $user->getEmail();
