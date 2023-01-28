@@ -1,12 +1,15 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminPagesController;
+use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AI\AIController;
 use App\Http\Controllers\AI\MarketingController;
 use App\Http\Controllers\User\UserAuthController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminPagesController;
+use App\Http\Controllers\ConfirmablePasswordController;
 
 /**---------------------------------------------------------- */
 
@@ -43,7 +46,11 @@ Route::post('register',[UserAuthController::class,'Register'])->name('Register')
 Route::get('login',[UserAuthController::class,'Showlogin'])->name('ShowLogin');
 Route::post('login',[UserAuthController::class,'login'])->name('login');
 Route::get('logout',[UserAuthController::class,'logout'])->name('logout');
-Route::get('forgot-password',[UserAuthController::class,'ShowForgotPassword'])->name('show.forgot.password');
+Route::get('forgot-password',[ForgotPasswordController::class,'ShowForgotPassword'])->name('show.forgot.password');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
 
 // Middleware user routes
 Route::group(['middleware'=>'userauth'],function(){
@@ -63,6 +70,111 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
 
 });
+
+// Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');
+// Route::post('submit-password',[ConfirmablePasswordController::class,'SubmitPassword'])->name('user.submit.password');
+
+
+
+
+////socialite in google////
+Route::get('google/redirect', function () {
+    return Socialite::driver('google')->redirect();
+})->name('google');
+
+
+Route::get('google/callback', function () {
+    $user = Socialite::driver('google')->user();
+    $userEmail = $user->getEmail();
+    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+
+    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    
+    if($getUser){
+        \Illuminate\Support\Facades\Auth::login($getUser);
+        return redirect('user');
+    } else{
+        $user = \App\Models\user::create([
+            'firstname' => $userName,
+            'lastname' => $userName,
+            'email' => $userEmail,
+            'password' => bcrypt('111111'),
+        ]);
+        \Illuminate\Support\Facades\Auth::login($user);
+        return redirect('user');
+    }
+
+    // $user->token
+});
+
+
+
+////socialite in facebook////
+Route::get('facebook/redirect', function () {
+    return Socialite::driver('facebook')->redirect();
+})->name('facebook');
+
+
+Route::get('facebook/callback', function () {
+    $user = Socialite::driver('facebook')->user();
+    $userEmail = $user->getEmail();
+    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+
+    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    
+    if($getUser){
+        \Illuminate\Support\Facades\Auth::login($getUser);
+        return redirect('user');
+    } else{
+        $user = \App\Models\user::create([
+            'firstname' => $userName,
+            'lastname' => $userName,
+            'email' => $userEmail,
+            'password' => bcrypt('111111'),
+        ]);
+        \Illuminate\Support\Facades\Auth::login($user);
+        return redirect('user');
+    }
+
+    // $user->token
+});
+////socialite in linked-in////
+Route::get('linkedin/redirect', function () {
+    return Socialite::driver('linkedin')->redirect();
+})->name('linkedin');
+
+
+Route::get('linkedin/callback', function () {
+    $user = Socialite::driver('linkedin')->user();
+    $userEmail = $user->getEmail();
+    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+
+    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    
+    if($getUser){
+        \Illuminate\Support\Facades\Auth::login($getUser);
+        return redirect('user');
+    } else{
+        $user = \App\Models\user::create([
+            'firstname' => $userName,
+            'lastname' => $userName,
+            'email' => $userEmail,
+            'password' => bcrypt('111111'),
+        ]);
+        \Illuminate\Support\Facades\Auth::login($user);
+        return redirect('user');
+    }
+
+    // $user->token
+});
+
+
+
+// The operation pages will be added soon after the authentication
+/**
+ * Operation pages: Blog post generate, product desctiptions . . . and others with OpenAI API
+ */
+
 
 
 
