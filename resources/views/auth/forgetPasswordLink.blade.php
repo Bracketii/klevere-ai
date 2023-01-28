@@ -98,7 +98,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="mb-1">
 										<!--begin::Input wrapper-->
 										<div class="position-relative mb-3">
-											<input class="form-control form-control-lg form-control-solid" type="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="new-password-input-password" />
+											<input class="form-control form-control-lg form-control-solid" type="password" id="password" placeholder="Password" name="password" autocomplete="off" data-kt-translate="new-password-input-password" required autofocus />
 											<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
 												<i class="bi bi-eye-slash fs-2"></i>
 												<i class="bi bi-eye fs-2 d-none"></i>
@@ -125,7 +125,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Input group=-->
 								<!--begin::Input group=-->
 								<div class="fv-row mb-10">
-									<input class="form-control form-control-lg form-control-solid" type="password" placeholder="password_confirmation" name="confirm-password" autocomplete="off" data-kt-translate="new-password-confirm-password" />
+									<input class="form-control form-control-lg form-control-solid" type="password" id="password-confirm" placeholder="Confirm Password" name="password_confirmation" autocomplete="off" data-kt-translate="new-password-confirm-password" required autofocus />
 									@if ($errors->has('password_confirmation'))
                                       <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
                                   @endif
