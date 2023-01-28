@@ -29,6 +29,7 @@ class UserAuthController extends Controller
         $this->validate(request(),[
              'firstname'=>'required',
              'lastname'=>'required',
+             'password_confirmation' => 'required',
              'email'=>'required|unique:users,email',
             //  'password'=>'required|confirmed',
             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()->symbols()]
