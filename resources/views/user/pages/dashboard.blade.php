@@ -72,9 +72,10 @@
                         <!--begin::Row-->
 						<div class="row g-6 g-xl-9">
                             <!--begin::Col-->
-                            <div class="col-md-6 col-xl-4">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card-title pb-2"><h3>Recommended Avatars</h3></div>
                                 <!--begin::Card-->
-                                <a href="../../demo27/dist/apps/projects/project.html" class="card border-hover-primary">
+                                <a href="{{ route('marketing.chat') }}" class="card border-hover-primary">
                                     <!--begin::Card header-->
                                     <div class="card-header border-0 pt-9">
                                         <!--begin::Card Title-->
@@ -90,18 +91,186 @@
                                     </div>
                                     <!--end:: Card header-->
                                     <!--begin:: Card body-->
-                                    <div class="card-body p-9">
+                                    <div class="card-body pt-2">
                                         <!--begin::Name-->
                                         <div class="fs-3 fw-bold text-dark">Bryan</div>
                                         <!--end::Name-->
                                         <!--begin::Description-->
-                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Social Media Expert</p>
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1"><span class="badge badge-primary">Marketing</span></p>
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1">Ask your marketing questions and get your marketing plan.</p>
                                         <!--end::Description-->
                                         
                                     </div>
                                     <!--end:: Card body-->
                                 </a>
                                 <!--end::Card-->
+                                <!--begin::Card-->
+                                <a href="#" class="card border-hover-primary mt-5">
+                                    <!--begin::Card header-->
+                                    <div class="card-header border-0 pt-9">
+                                        <!--begin::Card Title-->
+                                        <div class="card-title m-0">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-80px w-50px bg-light">
+                                                <img src="assets/media/avatars/300-11.jpg" alt="image" class="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::Car Title-->
+                                        
+                                    </div>
+                                    <!--end:: Card header-->
+                                    <!--begin:: Card body-->
+                                    <div class="card-body pt-2">
+                                        <!--begin::Name-->
+                                        <div class="fs-3 fw-bold text-dark">Aaron</div>
+                                        <!--end::Name-->
+                                        <!--begin::Description-->
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1"><span class="badge badge-primary">HR</span></p>
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1">Ask your HR questions and get your human resource issues fixed!</p>
+                                        <!--end::Description-->
+                                        
+                                    </div>
+                                    <!--end:: Card body-->
+                                </a>
+                                <!--end::Card-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card-title pb-2"><h3 style="color: transparent">Most used avatars</h3></div>
+                                <!--begin::Card-->
+                                <a href="#" class="card border-hover-primary">
+                                    <!--begin::Card header-->
+                                    <div class="card-header border-0 pt-9">
+                                        <!--begin::Card Title-->
+                                        <div class="card-title m-0">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-80px w-50px bg-light">
+                                                <img src="assets/media/avatars/300-15.jpg" alt="image" class="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::Car Title-->
+                                        
+                                    </div>
+                                    <!--end:: Card header-->
+                                    <!--begin:: Card body-->
+                                    <div class="card-body pt-2">
+                                        <!--begin::Name-->
+                                        <div class="fs-3 fw-bold text-dark">Ryan</div>
+                                        <!--end::Name-->
+                                        <!--begin::Description-->
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1"><span class="badge badge-primary">Guidance Coach</span></p>
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1">Ask your questions and get your academic and career advice.</p>
+                                        <!--end::Description-->
+                                        
+                                        
+                                    </div>
+                                    <!--end:: Card body-->
+                                </a>
+                                <!--end::Card-->
+                                <!--begin::Card-->
+                                <a href="#" class="card border-hover-primary mt-5">
+                                    <!--begin::Card header-->
+                                    <div class="card-header border-0 pt-9">
+                                        <!--begin::Card Title-->
+                                        <div class="card-title m-0">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-80px w-50px bg-light">
+                                                <img src="assets/media/avatars/300-17.jpg" alt="image" class="" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::Car Title-->
+                                        
+                                    </div>
+                                    <!--end:: Card header-->
+                                    <!--begin:: Card body-->
+                                    <div class="card-body pt-2">
+                                        <!--begin::Name-->
+                                        <div class="fs-3 fw-bold text-dark">Sam</div>
+                                        <!--end::Name-->
+                                        <!--begin::Description-->
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1"><span class="badge badge-primary">Tech Specialist</span></p>
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-1">Ask your tech questions and get your tech advice and planning.</p>
+                                        <!--end::Description-->
+                                        
+                                    </div>
+                                    <!--end:: Card body-->
+                                </a>
+                                <!--end::Card-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-md-6 col-xl-6">
+                                <div class="card-title pb-2"><h3>Earn Free Words!</h3></div>
+                                <!--begin::Card-->
+                                <a href="#" class="card border-hover-primary">
+                                    <!--begin::Card header-->
+                                    <div class="card-header border-0 pt-9 pb-0">
+                                        <!--begin::Card Title-->
+                                        <div class="card-title">
+                                            <!--begin::Avatar-->
+                                            Refer a friend!
+                                            <!--end::Avatar-->
+                                            
+                                                <span class="badge badge-light-warning" style="margin-left: 10px">1000 Words!</span>
+                                            
+                                        </div>
+                                        <!--end::Car Title-->
+                                        
+                                    </div>
+                                    <!--end:: Card header-->
+                                    <!--begin:: Card body-->
+                                    <div class="card-body pt-0">
+                                        
+                                        <!--begin::Description-->
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Share this tool with your friends and earn 1000 free words</p>
+                                        <!--end::Description-->
+                                        <div class="symbol symbol-80px w-50px">
+                                            <i class="fonticon-send" style="font-size: 30px"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <!--end:: Card body-->
+                                </a>
+                                <!--end::Card-->
+
+                                <!--begin::Card-->
+                                <a href="#" class="card border-hover-primary mt-5">
+                                    <!--begin::Card header-->
+                                    <div class="card-header border-0 pt-9 pb-0">
+                                        <!--begin::Card Title-->
+                                        <div class="card-title">
+                                            <!--begin::Avatar-->
+                                            Share on Linkedin!
+                                            <!--end::Avatar-->
+                                            
+                                                <span class="badge badge-light-warning" style="margin-left: 10px">1500 Words!</span>
+                                            
+                                        </div>
+                                        <!--end::Car Title-->
+                                        
+                                    </div>
+                                    <!--end:: Card header-->
+                                    <!--begin:: Card body-->
+                                    <div class="card-body pt-0">
+                                        
+                                        <!--begin::Description-->
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Share this tool with your friends on Linkedin and earn 1500 free words</p>
+                                        <!--end::Description-->
+                                        <div class="symbol symbol-80px w-30px">
+                                            <img src="assets/media/avatars/linkedin-icon.png" alt="image" class="w-40px h-40px" />
+                                        </div>
+                                        
+                                    </div>
+                                    <!--end:: Card body-->
+                                </a>
+                                <!--end::Card-->
+
+                                
+                                
                             </div>
                             <!--end::Col-->
                         </div>

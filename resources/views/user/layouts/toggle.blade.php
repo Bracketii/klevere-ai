@@ -15,4 +15,5 @@
         <img alt="Logo" src="{{ asset('assets/media/logos/default-small-dark.svg') }}" class="h-30px theme-dark-show" />
     </a>
     <!--end::Logo image-->
+    
 </div>

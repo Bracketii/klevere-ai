@@ -178,11 +178,14 @@
 												<!--end::Card body-->
 											</div>
 											<!--end::Card widget 5-->
+											
 										</div>
 										<!--end::Col-->
 										
 										<!--begin::Col-->
 										<div class="col-lg-12 col-xl-12 col-xxl-8 mb-5 mb-xl-0">
+											{{-- Chart start --}}
+											{{-- Chart end --}}
 											<!--begin::Table Widget 4-->
 											<div class="card card-flush h-xl-100">
 												<!--begin::Card header-->

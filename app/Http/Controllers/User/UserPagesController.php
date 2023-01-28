@@ -39,6 +39,7 @@ class UserPagesController extends Controller
         return view('user.pages.account.billing');
 
     }
+
     
     
 

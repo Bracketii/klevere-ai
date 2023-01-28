@@ -43,3 +43,12 @@ a.disabled{
     width: 70px;
     height: 70px;
 }
+
+.btn-yellow{
+    background-color: #C6FF00;
+    color: #000;
+}
+.btn-yellow:hover{
+    background-color: #bae228;
+    color: #000;
+}
