@@ -32,6 +32,11 @@ class AdminPagesController extends Controller
         return view('admin.pages.account.account');
 
     }
+    public function showAdminAnalytics(){
+
+        return view('admin.pages.analytics');
+
+    }
     
 
     
