@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Laravel\Socialite\Facades\Socialite;
+
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AI\AIController;
 use App\Http\Controllers\AI\MarketingController;
@@ -10,6 +10,8 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
 
 /**---------------------------------------------------------- */
 
@@ -79,7 +81,7 @@ Route::group(['middleware'=>'userauth'],function(){
 
 ////socialite in google////
 Route::get('google/redirect', function () {
-    return Socialite::driver('google')->redirect();
+    return Laravel\Socialite\Facades\Socialite::driver('google')->redirect();
 })->name('google');
 
 Route::get('google/callback', function () {
@@ -90,7 +92,7 @@ Route::get('google/callback', function () {
     $getUser = \App\Models\user::where('email',$userEmail)->first();
     
     if($getUser){
-        \Illuminate\Support\Facades\Auth::login($getUser);
+        Auth::login($getUser);
         return redirect('user');
     } else{
         $user = \App\Models\user::create([
@@ -99,7 +101,7 @@ Route::get('google/callback', function () {
             'email' => $userEmail,
             'password' => bcrypt('111111'),
         ]);
-        \Illuminate\Support\Facades\Auth::login($user);
+        Auth::login($user);
         return redirect('user');
     }
 
@@ -122,7 +124,7 @@ Route::get('facebook/callback', function () {
     $getUser = \App\Models\user::where('email',$userEmail)->first();
     
     if($getUser){
-        \Illuminate\Support\Facades\Auth::login($getUser);
+        Auth::login($getUser);
         return redirect('user');
     } else{
         $user = \App\Models\user::create([
@@ -131,7 +133,7 @@ Route::get('facebook/callback', function () {
             'email' => $userEmail,
             'password' => bcrypt('111111'),
         ]);
-        \Illuminate\Support\Facades\Auth::login($user);
+        Auth::login($user);
         return redirect('user');
     }
 
@@ -151,7 +153,7 @@ Route::get('linkedin/callback', function () {
     $getUser = \App\Models\user::where('email',$userEmail)->first();
     
     if($getUser){
-        \Illuminate\Support\Facades\Auth::login($getUser);
+        Auth::login($getUser);
         return redirect('user');
     } else{
         $user = \App\Models\user::create([
@@ -160,7 +162,7 @@ Route::get('linkedin/callback', function () {
             'email' => $userEmail,
             'password' => bcrypt('111111'),
         ]);
-        \Illuminate\Support\Facades\Auth::login($user);
+        Auth::login($user);
         return redirect('user');
     }
 
@@ -169,10 +171,6 @@ Route::get('linkedin/callback', function () {
 
 
 
-// The operation pages will be added soon after the authentication
-/**
- * Operation pages: Blog post generate, product desctiptions . . . and others with OpenAI API
- */
 
 
 
