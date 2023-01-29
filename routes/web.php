@@ -10,6 +10,7 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
+use App\Http\Controllers\Plan\PlanController;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -78,6 +79,24 @@ Route::group(['middleware'=>'userauth'],function(){
 
 
 
+
+
+/**
+ * General routes (Public) - Pricing
+ */
+Route::get('pricing-plans', [PlanController::class, 'index'])->name('pricing.plans');
+Route::get('plans/{plan}', [PlanController::class, 'show'])->name("plans.show");
+Route::post('subscription', [PlanController::class, 'subscription'])->name("subscription.create");
+
+
+
+
+
+
+
+/**
+ * Social Auth routes with methods
+ */
 
 ////socialite in google////
 Route::get('google/redirect', function () {

@@ -40,6 +40,12 @@ class UserPagesController extends Controller
 
     }
 
+    public function showPricing(){
+
+        return view('pricing');
+
+    }
+
     
     
 
