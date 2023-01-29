@@ -33,7 +33,7 @@ class PlanController extends Controller
         $subscription = $request->user()->newSubscription($request->plan, $plan->stripe_plan)
                         ->create($request->token);
    
-        return view("pricing.subscription_success");
+        return view("user.pages.dashboard");
     }
     
 }

@@ -63,19 +63,20 @@
                                                 <!--begin::Input group-->
                                                 <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
                                                     <!--begin::Label-->
-                                                    <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                    <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2" for="">
                                                         <span class="required">Name On Card</span>
                                                     </label>
                                                     <!--end::Label-->
                                                 
-                                                    <input id="card-holder-name" type="text" class="form-control form-control-solid" placeholder="" name="name" value="">
+                                                   
+													<input type="text" name="name" id="card-holder-name" class="form-control form-control-solid" value="" placeholder="Name on the card">
                                                 
                                                 <!--end::Input group-->
                                                 
                                                 <!--begin::Input group-->
                                                 <div class="col-xl-12 col-lg-12 pt-5">
                                                     <div class="form-group">
-                                                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2" for="">
                                                             <span class="required">Card Details</span>
                                                         </label>
                                                         <div class="p-5 d-flex flex-column mb-7 fv-row fv-plugins-icon-container" id="card-element" style="border-radius: 8px;
@@ -89,7 +90,7 @@
                             
                                                 <!--begin::Actions-->
                                                 <div class="text-center pt-0">
-                                                    <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="btn btn-primary">
+                                                    <button type="submit" class="btn btn-primary" id="card-button" data-secret="{{ $intent->client_secret }}">
                                                             Purchase  
                                                     </button>
                                                 </div>

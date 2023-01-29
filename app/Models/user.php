@@ -10,7 +10,7 @@ use Laravel\Cashier\Billable;
 
 class user extends Authenticatable
 {
-    use HasFactory;
-    use Billable;
+    use HasFactory, Billable;
+
     protected $guarded=[];
 }

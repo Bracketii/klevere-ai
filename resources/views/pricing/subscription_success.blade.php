@@ -43,12 +43,7 @@
 						<!--begin::Plans-->
 						<div class="d-flex flex-column container pt-lg-20">
 							<!--begin::Heading-->
-							<div class="mb-13 text-center">
-                                <img src="{{ asset('assets/media/logos/klevere-logo-full.svg') }}" width="200" alt="klevere" class="pb-10">
-								<h1 class="fs-2hx fw-bold text-white mb-5" id="pricing" data-kt-scroll-offset="{default: 100, lg: 150}">You'll be charged ${{ number_format($plan->price, 2) }} for {{ $plan->name }} Plan</h1>
-								<div class="text-gray-600 fw-semibold fs-5">Save thousands to millions of bucks by using single tool for different
-								</div>
-							</div>
+							
 							<!--end::Heading-->
 							<!--begin::Pricing-->
 							<div class="" id="kt_pricing">
@@ -63,7 +58,7 @@
                                                         Subscription purchased successfully!
                                                     </div>
                                                     <div class="text-center pt-0">
-                                                        <a id="{{ route('login') }}" type="submit" class="btn btn-primary">
+                                                        <a href="{{ url('login') }}" id="" type="submit" class="btn btn-primary">
                                                                 Signin  
                                                         </a>
                                                     </div>
