@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\AI;
 
 use App\Http\Controllers\Controller;
+use App\Models\History;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use OpenAI\Laravel\Facades\OpenAI;
 
 class AIController extends Controller
@@ -28,9 +31,14 @@ class AIController extends Controller
         ]);
 
         $text=$result['choices'][0]['text'];
+        Auth::user()->histories()->create([
+            'title'=>request('text'),
+            'content'=>json_encode($result)
+
+        ]);
         return view('user.pages.chat.chat',['generate'=> $text]);
 
-        
+
 
     }
 }

@@ -66,7 +66,7 @@ Route::group(['middleware'=>'userauth'],function(){
      */
     // Chat
     Route::get('chat', [AIController::class, 'index'])->name('chat');
-    Route::post('chat-text', [AIController::class, 'textCompletion'])->name('chat.text');
+    Route::post('chat', [AIController::class, 'textCompletion'])->name('chat.text');
 
     // Marketing
     Route::get('marketing', [MarketingController::class, 'index'])->name('marketing.chat');

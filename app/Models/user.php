@@ -17,4 +17,10 @@ class user extends Authenticatable
 
     use HasFactory;
     protected $guarded=[];
+
+
+    // relationship with histories
+    public function histories(){
+        return $this->hasMany(History::class);
+    }
 }

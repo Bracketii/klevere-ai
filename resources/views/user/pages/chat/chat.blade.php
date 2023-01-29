@@ -53,7 +53,7 @@
                 <!--begin::Action-->
                 <a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Create
                 <span class="d-none d-sm-inline ps-2">New</span></a>
-				
+
                 <!--end::Action-->
             </div>
             <!--end::Header wrapper-->
@@ -73,13 +73,13 @@
                     <div id="kt_app_content_container" class="app-container container-fluid">
                                     <!--begin::Row-->
                                     <div class="card" id="kt_chat_messenger">
-                                        
+
                                         <!--begin::Card body-->
                                         <div class="card-body" id="kt_chat_messenger_body">
                                             <!--begin::Messages-->
                                             <div class="scroll-y me-n5 pe-5 h-300px h-lg-auto" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_header, #kt_app_header, #kt_app_toolbar, #kt_toolbar, #kt_footer, #kt_app_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer" data-kt-scroll-wrappers="#kt_content, #kt_app_content, #kt_chat_messenger_body" data-kt-scroll-offset="5px">
-                                                
-                                                
+
+
 
                                                 <!--begin::Message(in)-->
                                                 <div class="d-flex justify-content-start mb-10">
@@ -103,23 +103,24 @@
                                                         <!--begin::Text-->
                                                         <div class="p-5 rounded bg-light-info text-dark fw-semibold mw-lg-400px text-start" data-kt-element="message">Type a message...</div>
                                                         <!--end::Text-->
-                                                        
+
                                                         @if (isset($generate))
                                                             <div class="p-5 mt-5 rounded bg-light-info text-dark fw-semibold mw-lg-700px text-start" data-kt-element="">
-                                                            <p id=""> 
-                                                                
+                                                            <p id="">
+
                                                                 {{$generate}}
-                                                                
+
                                                             </p>
-                                                            
+                                                            {{-- <input disabled style="border: none" type="text" value="{{ $generate}}"> --}}
+
                                                             </div>
                                                         @endif
-                                                        
+
                                                       </div>
-                                                      
-                                                    
+
+
                                                     <!--end::Text-->
-                                                    
+
                                                     </div>
                                                     <!--end::Wrapper-->
                                                 </div>
@@ -151,7 +152,7 @@
                                                 </div>
                                                 <!--end::Message(template for out)-->
                                                 <!--begin::Message(template for in)-->
-                                                
+
                                                 <!--end::Message(template for in)-->
                                             </div>
                                             <!--end::Messages-->
@@ -159,10 +160,10 @@
                                         <!--end::Card body-->
                                         <!--begin::Card footer-->
                                         <form action="{{ route('chat.text')}}" method="POST" class="form fv-plugins-bootstrap5 fv-plugins-framework">
-                                            {{ csrf_field() }}  
+                                            {{ csrf_field() }}
                                             <div class="card-footer pt-4" id="kt_chat_messenger_footer">
                                                 <!--begin::Input-->
-                                                <textarea class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Type a message" name="text" type="text" ></textarea>
+                                                <textarea class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Type aa message" name="text" type="text" ></textarea>
                                                 <!--end::Input-->
                                                 <!--begin:Toolbar-->
                                                 <div class="d-flex flex-stack">
@@ -186,13 +187,13 @@
                                                             <option value="Conversational">Conversational</option>
                                                             <option value="Enthusiastic">Enthusiastic</option>
                                                         </select>
-                                                        
+
                                                     </div>
                                                     <!--end::Actions-->
                                                     <!--begin::Send-->
-                                                    
+
                                                     <button name="submit" class="btn btn-primary" type="submit" data-kt-element="send" id="generate-button">
-                                                        
+
                                                         <span class="indicator-label">
                                                             Send
                                                         </span>
@@ -200,22 +201,22 @@
                                                             Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
                                                         </span>
                                                     </button>
-                                                    
+
                                         </form>
-                                                
+
                                                 <!--end::Send-->
                                             </div>
                                             <!--end::Toolbar-->
                                         </div>
                                         <!--end::Card footer-->
-                                    </div>           
+                                    </div>
 									<!--end::Row-->
-                                    
-                                    
+
+
                         <!--end::Row-->
-                        
-                        
-                        
+
+
+
                     </div>
                     <!--end::Content container-->
                 </div>
