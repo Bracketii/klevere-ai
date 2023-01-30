@@ -17,7 +17,7 @@ class UserPagesController extends Controller
     }
 
     public function showUserProjects(){
-        $myprojects=History::where('user_id',Auth::id())->latest()->get();
+        $myprojects=History::where('user_id',Auth::id())->latest()->paginate(3);
 
         return view('user.pages.projects.index',compact('myprojects'));
 
