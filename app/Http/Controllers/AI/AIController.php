@@ -30,12 +30,8 @@ class AIController extends Controller
             "presence_penalty"=> 0,
         ]);
 
-        $text=$result['choices'][0]['text'];
-        Auth::user()->histories()->create([
-            'title'=>request('text'),
-            'content'=>json_encode($result)
-
-        ]);
+         $text=$result['choices'][0]['text'];
+       
         return view('user.pages.chat.chat',['generate'=> $text]);
 
 

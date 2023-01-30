@@ -106,12 +106,24 @@
 
                                                         @if (isset($generate))
                                                             <div class="p-5 mt-5 rounded bg-light-info text-dark fw-semibold mw-lg-700px text-start" data-kt-element="">
-                                                            <p id="">
+
+
+                                                                <form class="form-group" action="{{ route('SaveHistory')}}" method="POST">
+                                                                    {{ csrf_field() }}
+                                                                    <input class="form-control" style="width: 100%" type="text" name="title" value="{{ $title}}"><br>
+                                                                    <input class="form-control" type="text" name="content" value="{{ $generate}}"><br>
+                                                                    {{-- <p>{{ $title}}</p> --}}
+                                                                    {{-- <p>{{ $generate}}</p> --}}
+
+                                                                    <input class="btn btn-success" type="submit" value="save">
+
+                                                                </form>
+                                                            {{-- <p id="">
 
                                                                 {{$generate}}
 
-                                                            </p>
-                                                            {{-- <input style="color: blue" type="text" name="content" value="{{ $generate}}"> --}}
+                                                            </p> --}}
+
 
                                                             </div>
                                                         @endif

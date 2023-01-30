@@ -13,12 +13,12 @@ class MarketingController extends Controller
         return view('user.pages.avatars.marketing');
     }
     public function textCompletion(Request $request){
-        $text=$request->text;
+        $title=$request->text;
         $language = $request->language;
         $tone = $request->tone;
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' =>  'Act as a Marketing Specialist, and always answer marketing questions nothing else, all other questions\' answer would be \'Ask me about marketing\'. ' . 'In ' . $language . ' language, ' . 'and ' . 'in ' . $tone . 'tone, '  . $text,
+            'prompt' =>  'Act as a Marketing Specialist, and always answer marketing questions nothing else, all other questions\' answer would be \'Ask me about marketing\'. ' . 'In ' . $language . ' language, ' . 'and ' . 'in ' . $tone . 'tone, '  . $title,
             "temperature" => 0.7,
             "max_tokens" => 256,
             "top_p"=> 1,
@@ -27,9 +27,9 @@ class MarketingController extends Controller
         ]);
 
         $text=$result['choices'][0]['text'];
-        return view('user.pages.avatars.marketing',['generate'=> $text]);
+        return view('user.pages.avatars.marketing',['generate'=> $text,'title'=>$title]);
 
-        
+
 
     }
 }

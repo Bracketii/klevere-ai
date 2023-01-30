@@ -10,6 +10,7 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
+use App\Http\Controllers\History\HistoryController;
 use App\Http\Controllers\Plan\PlanController;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
@@ -71,6 +72,9 @@ Route::group(['middleware'=>'userauth'],function(){
     // Marketing
     Route::get('marketing', [MarketingController::class, 'index'])->name('marketing.chat');
     Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
+
+    // history
+    Route::post('history',[HistoryController::class,'SaveHistory'])->name('SaveHistory');
 
 });
 
