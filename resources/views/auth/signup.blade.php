@@ -35,8 +35,8 @@
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Logo-->
 				<a href="../../demo1/dist/index.html" class="d-block d-lg-none mx-auto py-20">
-					<img alt="Logo" src="{{ asset('assets/media/logos/klevere-logo.svg') }}" class="theme-light-show h-25px" />
-					<img alt="Logo" src="{{ asset('assets/media/logos/default-dark.svg') }}" class="theme-dark-show h-25px" />
+					<img alt="Logo" src="{{ asset('assets/media/logos/klevere-logo-full-black.svg') }}" class="theme-light-show h-25px" />
+					<img alt="Logo" src="{{ asset('assets/media/logos/klevere-logo-full-black.svg') }}" class="theme-dark-show h-25px" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Aside-->
@@ -80,10 +80,10 @@
                                 <!--begin::Heading-->
 								<div class="text-start mb-10">
 									<!--begin::Title-->
-									<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-up-title">Create an Account</h1>
+									<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-up-title">Sign up</h1>
 									<!--end::Title-->
 									<!--begin::Text-->
-									<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Get unlimited access & earn money</div>
+									<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Create your free Klevere account</div>
 									<!--end::Link-->
 								</div>
 								<!--end::Heading-->
@@ -142,7 +142,7 @@
 								<!--begin::Actions-->
 								<div class="d-flex flex-stack">
 									
-                                    <input type="submit" class="btn btn-primary me-2 flex-shrink-0" value="submit">
+                                    <input type="submit" class="btn btn-primary me-2 flex-shrink-0" value="Create Account">
 									<!--end::Submit-->
 									<!--begin::Socialite Actions (Register)-->
 									<div class="d-flex align-items-center">
@@ -181,7 +181,22 @@
 				</div>
 				<!--end::Aside-->
 				<!--begin::Body-->
-				<div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat" style="background-image: url(assets/media/auth/bg11.png)"></div>
+				<div class="d-flex flex-column flex-column-fluid flex-center w-lg-50 p-10" style="background-color:#2468FF">
+					<div class="row">
+						<div class="col-md-12">
+							<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+							<lottie-player src="https://lottie.host/7a608d6b-889c-472a-9958-49eb965eb3ae/ithnppsder.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="text-center" style="color: #ffffff;font-size:35px; line-height:4rem">Say 👋 to your best<br> AI Writing Tool</h1>
+							<h1 class="pt-1 text-center" style="color: #ffffff;font-size:25px">Klevere.AI</h1>
+						</div>
+					</div>
+
+				</div>
 				<!--begin::Body-->
 			</div>
 			<!--end::Authentication - Sign-up-->
