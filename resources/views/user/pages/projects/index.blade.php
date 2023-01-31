@@ -69,32 +69,36 @@
                 <div id="kt_app_content" class="app-content flex-column-fluid">
                     <!--begin::Content container-->
                     <div id="kt_app_content_container" class="app-container container-fluid">
-                        
+
                         <!--begin::Row-->
 						<div class="row g-6 g-xl-9">
                             <!--begin::Col-->
+                            @foreach ($history as $histories)
+
                             <div class="col-md-6 col-xl-4">
                                 <!--begin::Card-->
                                 <a href="../../demo27/dist/apps/projects/project.html" class="card border-hover-primary">
-                                    
+
                                     <!--begin:: Card body-->
                                     <div class="card-body p-9">
                                         <!--begin::Name-->
-                                        <div class="fs-3 fw-bold text-dark">Project Title</div>
+                                        <div class="fs-3 fw-bold text-dark">{{ $histories->title}}</div>
                                         <!--end::Name-->
                                         <!--begin::Description-->
-                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Project Description</p>
+                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">{{ $histories->content}}</p>
                                         <!--end::Description-->
-                                        
+
                                     </div>
                                     <!--end:: Card body-->
                                 </a>
                                 <!--end::Card-->
                             </div>
+                            @endforeach
+
                             <!--end::Col-->
                         </div>
                         <!--end::Row-->
-                        
+                 {{ $history->links()}}
                     </div>
                     <!--end::Content container-->
                 </div>

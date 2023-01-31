@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\History;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
+use App\Models\user;
 
 class UserPagesController extends Controller
 {
@@ -16,7 +20,10 @@ class UserPagesController extends Controller
 
     public function showUserProjects(){
 
-        return view('user.pages.projects.index');
+        $history=History::where('user_id',Auth::id())->latest()->paginate(3);
+
+
+        return view('user.pages.projects.index',compact('history'));
 
     }
 
@@ -28,7 +35,7 @@ class UserPagesController extends Controller
 
     }
 
-    // User account pages 
+    // User account pages
     public function showUserAccount(){
 
         return view('user.pages.account.account');
@@ -46,8 +53,8 @@ class UserPagesController extends Controller
 
     }
 
-    
-    
 
-   
+
+
+
 }

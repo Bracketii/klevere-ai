@@ -13,4 +13,9 @@ class user extends Authenticatable
     use HasFactory, Billable;
 
     protected $guarded=[];
+
+
+    public function histories(){
+        return $this->hasMany(History::class);
+    }
 }
