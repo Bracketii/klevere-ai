@@ -10,6 +10,7 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
+use App\Http\Controllers\History\HistoryController;
 use App\Http\Controllers\Plan\PlanController;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
@@ -50,7 +51,7 @@ Route::get('login',[UserAuthController::class,'Showlogin'])->name('ShowLogin');
 Route::post('login',[UserAuthController::class,'login'])->name('login');
 Route::get('logout',[UserAuthController::class,'logout'])->name('logout');
 Route::get('forgot-password',[ForgotPasswordController::class,'ShowForgotPassword'])->name('show.forgot.password');
-Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post');
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
@@ -66,18 +67,26 @@ Route::group(['middleware'=>'userauth'],function(){
      */
     // Chat
     Route::get('chat', [AIController::class, 'index'])->name('chat');
-    Route::post('chat-text', [AIController::class, 'textCompletion'])->name('chat.text');
+    Route::post('chat', [AIController::class, 'textCompletion'])->name('chat.text');
 
     // Marketing
     Route::get('marketing', [MarketingController::class, 'index'])->name('marketing.chat');
     Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
+
+    // history
+    Route::post('history',[HistoryController::class,'SaveHistory'])->name('SaveHistory');
 
 });
 
 // Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');
 // Route::post('submit-password',[ConfirmablePasswordController::class,'SubmitPassword'])->name('user.submit.password');
 
+// subscription ======================================================
+Route::get('plans',[PlanController::class,'index'])->name('plans');
+Route::get('plans/{plan}',[PlanController::class,'show'])->name('plan.show');
+Route::post('subscription',[PlanController::class,'subscription'])->name('subs.create');
 
+// end  subscription ======================================================
 
 
 
@@ -106,10 +115,10 @@ Route::get('google/redirect', function () {
 Route::get('google/callback', function () {
     $user = Socialite::driver('google')->user();
     $userEmail = $user->getEmail();
-    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+    $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
     $getUser = \App\Models\user::where('email',$userEmail)->first();
-    
+
     if($getUser){
         Auth::login($getUser);
         return redirect('user');
@@ -138,10 +147,10 @@ Route::get('facebook/redirect', function () {
 Route::get('facebook/callback', function () {
     $user = Socialite::driver('facebook')->user();
     $userEmail = $user->getEmail();
-    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+    $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
     $getUser = \App\Models\user::where('email',$userEmail)->first();
-    
+
     if($getUser){
         Auth::login($getUser);
         return redirect('user');
@@ -167,10 +176,10 @@ Route::get('linkedin/redirect', function () {
 Route::get('linkedin/callback', function () {
     $user = Socialite::driver('linkedin')->user();
     $userEmail = $user->getEmail();
-    $userName = strtolower(implode('_',explode(' ',$user->getName()))); 
+    $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
     $getUser = \App\Models\user::where('email',$userEmail)->first();
-    
+
     if($getUser){
         Auth::login($getUser);
         return redirect('user');

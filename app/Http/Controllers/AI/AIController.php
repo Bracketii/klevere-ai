@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\AI;
 
 use App\Http\Controllers\Controller;
+use App\Models\History;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use OpenAI\Laravel\Facades\OpenAI;
 
 class AIController extends Controller
@@ -27,10 +30,11 @@ class AIController extends Controller
             "presence_penalty"=> 0,
         ]);
 
-        $text=$result['choices'][0]['text'];
+         $text=$result['choices'][0]['text'];
+       
         return view('user.pages.chat.chat',['generate'=> $text]);
 
-        
+
 
     }
 }

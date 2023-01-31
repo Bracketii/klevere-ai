@@ -69,34 +69,47 @@
                 <div id="kt_app_content" class="app-content flex-column-fluid">
                     <!--begin::Content container-->
                     <div id="kt_app_content_container" class="app-container container-fluid">
-                        
+
                         <!--begin::Row-->
 						<div class="row g-6 g-xl-9">
                             <!--begin::Col-->
+                            @foreach ($myprojects as $projects )
+
                             <div class="col-md-6 col-xl-4">
                                 <!--begin::Card-->
+
+
                                 <a href="../../demo27/dist/apps/projects/project.html" class="card border-hover-primary">
-                                    
+
                                     <!--begin:: Card body-->
-                                    <div class="card-body p-9">
-                                        <!--begin::Name-->
-                                        <div class="fs-3 fw-bold text-dark">Project Title</div>
-                                        <!--end::Name-->
-                                        <!--begin::Description-->
-                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Project Description</p>
-                                        <!--end::Description-->
-                                        
-                                    </div>
+                                  <div class="card-body p-9">
+                                    <!--begin::Name-->
+                                    <div class="fs-3 fw-bold text-dark">{{ $projects->title}}</div>
+                                    <!--end::Name-->
+                                    <!--begin::Description-->
+                                    <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">{{ $projects->content}}</p>
+                                    <!--end::Description-->
+
+                                </div>
+
                                     <!--end:: Card body-->
+
                                 </a>
+
+
                                 <!--end::Card-->
+
                             </div>
+                            @endforeach
+
                             <!--end::Col-->
+
                         </div>
                         <!--end::Row-->
-                        
+                     {{ $myprojects->links()}}
                     </div>
                     <!--end::Content container-->
+
                 </div>
                 <!--end::Content-->
             </div>
@@ -108,5 +121,6 @@
         <!--end:::Main-->
     </div>
     <!--end::Wrapper-->
+
 </div>
 @endsection
