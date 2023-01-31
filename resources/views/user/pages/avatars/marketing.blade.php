@@ -215,14 +215,7 @@
                                     </div>
                                     <div class="card mt-15">
                                         <div class="card-body">
-                                            <div class="d-inline pt-5" style="margin-top: 30px !important">
-                                                <div class="me-3">
-                                                    <a href="" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">Suggestions</a>
-                                                </div>
-                                                <span class="badge badge-secondary badge-lg m-1">1. What strategies can we use to better engage our customers in our language and tone?</span>
-                                                <span class="badge badge-secondary badge-lg m-1">2. How can we create an effective marketing campaign to target our desired demographic?</span>
-                                                <span class="badge badge-secondary badge-lg m-1">3. What are some innovative ideas that we can use to create a memorable message in our chosen language and tone?</span>
-                                            </div>
+                                            
                                         </div>
                                     </div>
 
