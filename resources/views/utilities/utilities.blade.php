@@ -987,12 +987,7 @@
 		</div>
 		<!--end::Help drawer-->
 		<!--begin::Help toolbar-->
-		<div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">
-			
-			<!--begin::Help drawer toggle-->
-			<button id="kt_help_toggle" class="engage-help-toggle btn engage-btn shadow-sm px-5 rounded-top-0" title="Learn & Get Inspired" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Help</button>
-			<!--end::Help drawer toggle-->
-		</div>
+		
 		{{-- end::Help drawer and toolbar --}}
 
 
@@ -1019,7 +1014,8 @@
 
 		<!--begin::Modals-->
 
-		{{-- Create project modal --}}
+		{{-- Please make the form inside this modal dynamic, to create project/history --}}
+		{{-- Create Project Modal --}}
 		<div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
 			<!--begin::Modal dialog-->
 			<div class="modal-dialog modal-dialog-centered mw-650px">
@@ -1068,7 +1064,7 @@
 							<!--begin::Input group-->
 							<div class="d-flex flex-column mb-8">
 								<label class="fs-6 fw-semibold mb-2">Project Details</label>
-								<textarea class="form-control form-control-solid" rows="3" name="target_details" placeholder="Type Target Details"></textarea>
+								<textarea class="form-control form-control-solid" rows="3" name="target_details" placeholder="Type Project Details"></textarea>
 							</div>
 							<!--end::Input group-->
 							

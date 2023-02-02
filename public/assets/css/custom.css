@@ -1,8 +1,53 @@
 /* Add your custom CSS Here! */
 
+.expertise-icons{
+    font-size: 28px !important;
+    color: #2468FF !important;
+}
+
+.started-modal{
+    padding: 20px 90px 10px 20px;
+    border: 1px solid #ebebeb;
+    border-radius: 11px;
+}
+
+
+button#generate-button {
+    padding: 10px 10px 10px 15px;
+}
+
+.inputTop {
+    background-color: none;
+    margin: 0;
+    padding: 8px 0px;
+    
+}
+
+
+#kt_chat_messenger_footer {
+    box-shadow: rgb(167 167 167 / 20%) 0px 15px 20px 2px;
+}
+
+
+.dashboard-menu-badge{
+    margin-top: -0.5rem;
+}
+
+.dashboard-icons{
+    font-size: 1.5rem !important;
+}
+
+.dashboard-menu-title{
+    font-size: 1.1rem;
+    margin-left: 0.2rem;
+    font-weight: 500;
+    color: #e4e6ef !important;
+    margin-top: -6px;
+}
+
+
 #kt_app_sidebar {
-    width: 300px;
-    background-color: #000614;
+    background-color: #000D29;
 }
 
 .dash-icons{
@@ -51,4 +96,15 @@ a.disabled{
 .btn-yellow:hover{
     background-color: #bae228;
     color: #000;
+}
+
+textarea.form-control.form-control-flush.mb-3.chat-area{
+    margin-top: 20px;
+    background-color: #f4f4f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+button.btn.btn-outline.btn-custom.btn-flex.w-100 {
+    background-color: black;
 }
