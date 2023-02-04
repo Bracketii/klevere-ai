@@ -76,6 +76,7 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
    //history
    Route::post('history',[HistoryController::class,'projectSave'])->name('projectSave');
+   Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
 });
 
 // Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');

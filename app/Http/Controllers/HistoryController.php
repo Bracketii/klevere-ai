@@ -16,4 +16,12 @@ class HistoryController extends Controller
         ]);
         return to_route('marketing.chat');
     }
+
+    public function projectSaveChat(){
+      Auth::user()->histories()->create([
+        'title'=>request('title'),
+        'content'=>request('content'),
+      ]);
+      return to_route('chat');
+  }
 }

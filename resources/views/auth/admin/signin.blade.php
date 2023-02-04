@@ -33,12 +33,7 @@
 		<div class="d-flex flex-column flex-root" id="kt_app_root">
 			<!--begin::Authentication - Sign-in -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
-				<!--begin::Logo-->
-				<a href="#" class="d-block d-lg-none mx-auto py-20">
-					<img alt="Logo" src="{{ asset('assets/media/logos/klevere-logo.svg') }}" class="theme-light-show h-25px" />
-					<img alt="Logo" src="{{ asset('assets/media/logos/default-dark.svg') }}" class="theme-dark-show h-25px" />
-				</a>
-				<!--end::Logo-->
+				
 				<!--begin::Aside-->
 				<div class="d-flex flex-column flex-column-fluid flex-center w-lg-50 p-10">
 					<!--begin::Wrapper-->
@@ -71,7 +66,7 @@
 										<h1 class="text-dark mb-3 fs-3x" data-kt-translate="sign-in-title">Sign In</h1>
 										<!--end::Title-->
 										<!--begin::Text-->
-										<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Get unlimited access & earn money</div>
+										<div class="text-gray-400 fw-semibold fs-6" data-kt-translate="general-desc">Administrator login</div>
 										<!--end::Link-->
 									</div>
 									<!--begin::Heading-->
@@ -91,42 +86,11 @@
 									
 									<!--begin::Actions-->
 									<div class="d-flex flex-stack">
+
 										<!--begin::Submit-->
-									{{--	<button id="kt_sign_in_submit" type="submit" class="btn btn-primary me-2 flex-shrink-0">
-											<!--begin::Indicator label-->
-											<span class="indicator-label" data-kt-translate="sign-in-submit">Sign In</span>
-											<!--end::Indicator label-->
-											<!--begin::Indicator progress-->
-											<span class="indicator-progress">
-												<span data-kt-translate="general-progress">Please wait...</span>
-												<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-											</span>
-											<!--end::Indicator progress-->
-										</button>
-                                        --}}
                                         <input class="btn btn-primary me-2 flex-shrink-0" type="submit" value="Sign in">
 										<!--end::Submit-->
-										<!--begin::Social-->
-										<div class="d-flex align-items-center">
-											<div class="text-gray-400 fw-semibold fs-6 me-3 me-md-6" data-kt-translate="general-or">Or</div>
-											<!--begin::Symbol-->
-											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
-												<img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg" class="p-4" />
-											</a>
-											<!--end::Symbol-->
-											<!--begin::Symbol-->
-											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light me-3">
-												<img alt="Logo" src="assets/media/svg/brand-logos/facebook-3.svg" class="p-4" />
-											</a>
-											<!--end::Symbol-->
-											<!--begin::Symbol-->
-											<a href="#" class="symbol symbol-circle symbol-45px w-45px bg-light">
-												<img alt="Logo" src="assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show p-4" />
-												<img alt="Logo" src="assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show p-4" />
-											</a>
-											<!--end::Symbol-->
-										</div>
-										<!--end::Social-->
+										
 									</div>
 									<!--end::Actions-->
 								</div>
@@ -145,7 +109,22 @@
 				</div>
 				<!--end::Aside-->
 				<!--begin::Body-->
-				<div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat" style="background-image: url(assets/media/auth/bg11.png)"></div>
+				<div class="d-flex flex-column flex-column-fluid flex-center w-lg-50 p-10" style="background-color:#2468FF">
+					<div class="row">
+						<div class="col-md-12">
+							<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+							<lottie-player src="https://lottie.host/7a608d6b-889c-472a-9958-49eb965eb3ae/ithnppsder.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="text-center" style="color: #ffffff;font-size:35px; line-height:4rem">Say 👋 to your best<br> AI Writing Tool</h1>
+							<h1 class="pt-1 text-center" style="color: #ffffff;font-size:25px">Klevere.AI</h1>
+						</div>
+					</div>
+
+				</div>
 				<!--begin::Body-->
 			</div>
 			<!--end::Authentication - Sign-in-->

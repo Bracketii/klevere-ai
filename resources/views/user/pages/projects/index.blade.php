@@ -42,7 +42,7 @@
 					</ul>
 					<!--end::Breadcrumb-->
 					<!--begin::Title-->
-					<h1 class="text-gray-900 fw-bolder m-0">Dashboard</h1>
+					<h1 class="text-gray-900 fw-bolder m-0">Saved Files</h1>
 					<!--end::Title-->
 				</div>
 				<!--end::Page title-->
@@ -73,41 +73,93 @@
 					<!--begin::Content container-->
 					<div id="kt_app_content_container" class="app-container container-fluid">
 
-
-
-						<!--begin::Row-->
-                        <!--begin::Row-->
-						<div class="row g-6 g-xl-9 pt-10">
-                            <!--begin::Col-->
-                            @foreach ($history as $histories)
-
-                            <div class="col-md-6 col-xl-4">
-                                <!--begin::Card-->
-                                <a href="../../demo27/dist/apps/projects/project.html" class="card border-hover-primary">
-
-                                    <!--begin:: Card body-->
-                                    <div class="card-body p-9">
-                                        <!--begin::Name-->
-                                        <div class="fs-3 fw-bold text-dark">{{ $histories->title}}</div>
-                                        <!--end::Name-->
-                                        <!--begin::Description-->
-                                        <p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">{{ $histories->content}}</p>
-                                        <!--end::Description-->
-
-                                    </div>
-                                    <!--end:: Card body-->
-                                </a>
-                                <!--end::Card-->
-                            </div>
-                            @endforeach
-
-                            <!--end::Col-->
-                        </div>
-                        <!--end::Row-->
-                        {{ $history->links()}}
-						<!--end::Row-->		
+                        		
                         
-                        
+                        <div class="card mt-10">
+							<!--begin::Card body-->
+							<div class="card-body pt-0 ">
+								<!--begin::Table-->
+								<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+									<!--begin::Table head-->
+									<thead>
+										<!--begin::Table row-->
+										<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+											<th class="">SN</th>
+											<th class="min-w-125px">Title</th>
+											<th class="min-w-125px">Type</th>
+											<th class="min-w-125px">Created Date</th>
+											<th class="text-end min-w-70px">Actions</th>
+										</tr>
+										<!--end::Table row-->
+									</thead>
+									<!--end::Table head-->
+									<!--begin::Table body-->
+									@forelse ($history as $histories)
+									<tbody class="fw-semibold text-gray-600">
+										<tr>
+											<td>{{ $loop -> index + 1 }}</td>
+											<!--begin::Name=-->
+											<td>
+												<a href="" class="text-gray-800 text-hover-primary mb-1">{{$histories -> title}}</a>
+											</td>
+											<!--end::Name=-->
+											<!--begin::Email=-->
+											<td>
+												<a href="#" class="badge badge-primary">Jack</a>
+											</td>
+											<!--end::Email=-->
+											<!--begin::Date=-->
+											<td>14 Dec 2020, 8:43 pm</td>
+											<!--end::Date=-->
+											<!--begin::Action=-->
+											<td class="text-end">
+												<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+												<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+												<span class="svg-icon svg-icon-5 m-0">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon--></a>
+												<!--begin::Menu-->
+												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+													<!--begin::Menu item-->
+													<div class="menu-item px-3">
+														<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+													</div>
+													<!--end::Menu item-->
+													<!--begin::Menu item-->
+													<div class="menu-item px-3">
+														<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+													</div>
+													<!--end::Menu item-->
+												</div>
+												<!--end::Menu-->
+											</td>
+											<!--end::Action=-->
+										</tr>
+									</tbody>
+									<!--end::Table body-->
+									@empty
+									<tbody class="fw-semibold text-gray-600">
+										<tr>
+											<td colspan="5">No saved projects</td>
+										</tr>
+									</tbody>
+									<!--end::Table body-->
+									@endforelse
+									
+								</table>
+								<!--end::Table-->
+							</div>
+							<!--end::Card body-->
+							
+						</div>
+						<!--end::Row-->
+						<div class="row pt-10">
+						{{ $history->links()}}
+						</div>
+						<!--end::Row-->
                         
 					</div>
 					<!--end::Content container-->

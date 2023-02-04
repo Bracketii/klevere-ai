@@ -237,6 +237,7 @@
                                                         <form action="{{ route('projectSave')}}" method="POST">
                                                             {{ csrf_field() }}
                                                             <input type="hidden" name="content" value="{{ $generate}}">
+                                                            <input type="hidden" name="title" value="{{ $title }}">
                                                             {{-- <input type="submit" value="Save" class="btn btn-success"> --}}
                                                             <button type="submit" class="btn btn-icon btn-sm btn-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save">
                                                                 <i class="fa fa-bookmark" aria-hidden="true"></i>

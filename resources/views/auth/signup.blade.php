@@ -159,8 +159,8 @@
 										<!--end::Symbol-->
 										<!--begin::Symbol-->
 										<a href="{{ route('linkedin') }}" class="symbol symbol-circle symbol-45px w-45px bg-light">
-											<img alt="Logo" src="assets/media/svg/brand-logos/linkedin-blue.svg" class="theme-light-show p-4" />
-											<img alt="Logo" src="assets/media/svg/brand-logos/linkedin-dark.svg.svg" class="theme-dark-show p-4" />
+											<img alt="Logo" src="assets/media/svg/social-logos/linkedin.svg" class="theme-light-show p-4" />
+											<img alt="Logo" src="assets/media/svg/social-logos/linkedin.svg" class="theme-dark-show p-4" />
 										</a>
 										<!--end::Symbol-->
 									</div>

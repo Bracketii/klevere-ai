@@ -20,7 +20,7 @@ class UserPagesController extends Controller
 
     public function showUserProjects(){
 
-        $history=History::where('user_id',Auth::id())->latest()->paginate(3);
+        $history=History::where('user_id',Auth::id())->latest()->paginate(7);
 
 
         return view('user.pages.projects.index',compact('history'));
