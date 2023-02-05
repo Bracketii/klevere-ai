@@ -47,8 +47,8 @@
 				</div>
 				<!--end::Page title-->
 				<!--begin::Action-->
-				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Create
-				<span class="d-none d-sm-inline ps-2">Project</span></a>
+				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">How to get started
+				</a>
 				<!--end::Action-->
 			</div>
 			<!--end::Header wrapper-->
