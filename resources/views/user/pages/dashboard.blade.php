@@ -47,8 +47,7 @@
 				</div>
 				<!--end::Page title-->
 				<!--begin::Action-->
-				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Create
-				<span class="d-none d-sm-inline ps-2">Project</span></a>
+				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Get Started</a>
 				<!--end::Action-->
 			</div>
 			<!--end::Header wrapper-->
@@ -369,35 +368,49 @@
 								<!--end::Card-->
 
 								<!--begin::Card-->
-								<a href="#" class="card border-hover-primary mt-5">
-									<!--begin::Card header-->
-									<div class="card-header border-0 pt-9 pb-0">
-										<!--begin::Card Title-->
-										<div class="card-title">
-											<!--begin::Avatar-->
-											Share on Linkedin!
-											<!--end::Avatar-->
-											
-												<span class="badge badge-light-warning" style="margin-left: 10px">1500 Words!</span>
+								<div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-50 mb-5 mb-xl-10 pb-5 mt-10" style="background-color: #C6FF00;background-image:url('/metronic8/demo1/assets/media/patterns/vector-1.png')">
+									<!--begin::Header-->
+									<div class="card-header pt-5">
+										<!--begin::Title-->
+										<div class="card-title d-flex flex-column">   
+											<!--begin::Amount-->
+											<span class="fs-2hx fw-bold text-black me-2 lh-1 ls-n2">690</span>
+											<!--end::Amount-->
+								
+											<!--begin::Subtitle-->
+											<span class="text-black opacity-85 pt-1 fw-semibold fs-6">Words Generated</span>             
+											<!--end::Subtitle--> 
+										</div>
+										<!--end::Title-->  
+										<!--begin::Title-->
+										<div class="d-flex flex-column">   
+											<!--begin::Amount-->
+											<a href="{{ route('user.billing') }}" class="btn btn-sm btn-light text-black opacity-85 fw-semibold">See more</a>
+											<!--end::Amount--> 
+										</div>
+										<!--end::Title-->       
+									</div>
+									<!--end::Header-->
+								
+									<!--begin::Card body-->
+									<div class="card-body d-flex align-items-end pt-0">
+										<!--begin::Progress-->
+										<div class="d-flex align-items-center flex-column mt-3 w-100">
+											<div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-85 w-100 mt-auto mb-2">
+												<span class="text-black">Words</span>
+												<span class="text-black">690 of 10000 Used</span>
+											</div>
+								
+											<div class="h-8px mx-3 w-100 bg-black bg-opacity-50 rounded">
+												<div class="bg-black rounded h-8px" role="progressbar" style="width: 72%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												<div class="text-black fw-semibold mb-10">9310 Words remaining.</div>
+											</div>
 											
 										</div>
-										<!--end::Car Title-->
-										
+										<!--end::Progress-->
 									</div>
-									<!--end:: Card header-->
-									<!--begin:: Card body-->
-									<div class="card-body pt-0">
-										
-										<!--begin::Description-->
-										<p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Share this tool with your friends on Linkedin and earn 1500 free words</p>
-										<!--end::Description-->
-										<div class="symbol symbol-80px w-30px">
-											<img src="assets/media/svg/social-logos/linkedin.svg" alt="image" class="w-40px h-40px" />
-										</div>
-										
-									</div>
-									<!--end:: Card body-->
-								</a>
+									<!--end::Card body-->
+								</div>
 								<!--end::Card-->
 
 								
