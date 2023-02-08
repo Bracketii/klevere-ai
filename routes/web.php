@@ -1,21 +1,28 @@
 <?php
 
+use App\Models\user;
+
+use App\Http\Controllers\AI\SalesController;
+use App\Http\Controllers\History;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\AI\AIController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\EditProjectController;
 
 use App\Http\Controllers\AdminAuthController;
-use App\Http\Controllers\AI\AIController;
+use App\Http\Controllers\Plan\PlanController;
 use App\Http\Controllers\AI\MarketingController;
+use App\Http\Controllers\AI\hrController;
+use App\Http\Controllers\AI\GuidanceController;
+use App\Http\Controllers\AI\ArtistController;
+use App\Http\Controllers\AI\TechController;
 use App\Http\Controllers\User\UserAuthController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
-use App\Http\Controllers\History;
-use App\Http\Controllers\HistoryController;
-use App\Http\Controllers\Plan\PlanController;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Socialite\Facades\Socialite;
-use App\Models\user;
 
 /**---------------------------------------------------------- */
 
@@ -57,6 +64,18 @@ Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPa
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+//update Routes
+Route::get('edit-project/{id}', [EditProjectController::class, 'showEditForm'])->name('showEdit');
+Route::post('edit-project/{id}', [EditProjectController::class, 'Edit'])->name('EditProject');
+
+
+//delete Routes
+Route::get('delete-project/{id}', [EditProjectController::class, 'showDeleteForm'])->name('showDelete');
+
+
+
+
+
 
 // Middleware user routes
 Route::group(['middleware'=>'userauth'],function(){
@@ -74,6 +93,28 @@ Route::group(['middleware'=>'userauth'],function(){
     // Marketing
     Route::get('marketing', [MarketingController::class, 'index'])->name('marketing.chat');
     Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
+
+    // Sales
+    Route::get('sales', [SalesController::class, 'index'])->name('sales.chat');
+    Route::post('sales-result', [SalesController::class, 'textCompletion'])->name('sales.result');
+    
+    // HR
+    Route::get('hr', [hrController::class, 'index'])->name('hr.chat');
+    Route::post('hr-result', [hrController::class, 'textCompletion'])->name('hr.result');
+   
+    // Guidance
+    Route::get('guidance', [GuidanceController::class, 'index'])->name('guidance.chat');
+    Route::post('guidance-result', [GuidanceController::class, 'textCompletion'])->name('guidance.result');
+    
+    // Artist
+    Route::get('artist', [ArtistController::class, 'index'])->name('artist.chat');
+    Route::post('artist-result', [ArtistController::class, 'textCompletion'])->name('artist.result');
+    
+    // Tech
+    Route::get('tech', [TechController::class, 'index'])->name('tech.chat');
+    Route::post('tech-result', [TechController::class, 'textCompletion'])->name('tech.result');
+
+
    //history
    Route::post('history',[HistoryController::class,'projectSave'])->name('projectSave');
    Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
@@ -81,8 +122,6 @@ Route::group(['middleware'=>'userauth'],function(){
 
 // Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');
 // Route::post('submit-password',[ConfirmablePasswordController::class,'SubmitPassword'])->name('user.submit.password');
-
-
 
 
 

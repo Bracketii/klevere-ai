@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\User;
 use Carbon\Carbon;
+use App\Models\History;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\user as ModelsUser;
@@ -90,4 +91,7 @@ class UserAuthController extends Controller
     //     });
     //     return back()->with('success','We have e-mailed your')
     // }
+
+
+   
 }
