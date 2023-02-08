@@ -405,92 +405,89 @@
 	</div>
 	<!--end::Wrapper-->
 </div>
-	
-@endsection
 
 
-
-{{-- Get started Modal --}}
-<div class="modal fade" tabindex="-1" id="get_started_modal">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Start writing in 4 easy steps!</h2>
-    
-                <!--begin::Close-->
-                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
-                    <span class="svg-icon svg-icon-2x">...</span>
+    {{-- Get started Modal --}}
+    <div class="modal fade" tabindex="-1" id="get_started_modal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Start writing in 4 easy steps!</h2>
+        
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="svg-icon svg-icon-2x">...</span>
+                    </div>
+                    <!--end::Close-->
                 </div>
-                <!--end::Close-->
-            </div>
-    
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card-body started-modal">
+        
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
+                                        
+                                <i class="fonticon-content-marketing" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Write               
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                Write any topic names or questions in the chat box by selecting tone and language and other options.        
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
                                     
-                            <i class="fonticon-content-marketing" style="font-size: 35px; color: #2468FF;"></i>
-                            <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                Write               
-                            </h3>
-                    
-                            <p class="fw-semibold fs-6">
-                               Write any topic names or questions in the chat box by selecting tone and language and other options.        
-                            </p>
+                                <i class="fonticon-settings-1" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Select                   
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                Select the options as per your needs for your language and tone to get the best results from Klevere.AI        
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card-body started-modal">
-                                
-                            <i class="fonticon-settings-1" style="font-size: 35px; color: #2468FF;"></i>
-                            <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                Select                   
-                            </h3>
-                    
-                            <p class="fw-semibold fs-6">
-                               Select the options as per your needs for your language and tone to get the best results from Klevere.AI        
-                            </p>
+                    <div class="row mt-10">
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
+                                        
+                                <i class="fonticon-send" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Generate                   
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                Click on generate button and wait for the results within seconds!        
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row mt-10">
-                    <div class="col-md-6">
-                        <div class="card-body started-modal">
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
                                     
-                            <i class="fonticon-send" style="font-size: 35px; color: #2468FF;"></i>
-                            <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                Generate                   
-                            </h3>
-                    
-                            <p class="fw-semibold fs-6">
-                               Click on generate button and wait for the results within seconds!        
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-body started-modal">
-                                
-                            <i class="fonticon-bookmark" style="font-size: 35px; color: #2468FF;"></i>
-                            <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                Save & Copy                   
-                            </h3>
-                    
-                            <p class="fw-semibold fs-6">
-                               After the generate save or copy your results for your use!        
-                            </p>
+                                <i class="fonticon-bookmark" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Save & Copy                   
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                After the generate save or copy your results for your use!        
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="modal-footer">
-                <a href="#" type="button" class="btn btn-light"><i class="bi bi-play-circle-fill" style="font-size: 18px;margin-top: -4px;"></i> Watch a demo</a>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Let's Go! 🚀</button>
+        
+                <div class="modal-footer">
+                    <a href="#" type="button" class="btn btn-light"><i class="bi bi-play-circle-fill" style="font-size: 18px;margin-top: -4px;"></i> Watch a demo</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Let's Go! 🚀</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{{-- end::Get started Modal --}}
+    {{-- end::Get started Modal --}}
 
 
     {{-- Suggestions Modal --}}
@@ -653,3 +650,9 @@
 		</div>
 		<!--end::Help drawer-->
     {{-- end:: Expertise Drawer --}}
+
+
+@endsection
+
+
+
