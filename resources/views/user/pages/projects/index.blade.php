@@ -87,6 +87,7 @@
 											<th class="">SN</th>
 											<th class="min-w-125px">Title</th>
 											<th class="min-w-125px">Type</th>
+											<th>content</th>
 											<th class="min-w-125px">Created Date</th>
 											<th class="text-end min-w-70px">Actions</th>
 										</tr>
@@ -96,6 +97,7 @@
 									<!--begin::Table body-->
 									@forelse ($history as $histories)
 									<tbody class="fw-semibold text-gray-600">
+										
 										<tr>
 											<td>{{ $loop -> index + 1 }}</td>
 											<!--begin::Name=-->
@@ -107,9 +109,10 @@
 											<td>
 												<a href="#" class="badge badge-primary">Jack</a>
 											</td>
+											<td>{{$histories->content}}</td>
 											<!--end::Email=-->
 											<!--begin::Date=-->
-											<td>14 Dec 2020, 8:43 pm</td>
+											<td>{{\carbon\carbon::create($histories->created_at)->format('D-m-y')}}</td>
 											<!--end::Date=-->
 											<!--begin::Action=-->
 											<td class="text-end">
@@ -124,20 +127,26 @@
 												<!--begin::Menu-->
 												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
 													<!--begin::Menu item-->
+													
+														
+													
 													<div class="menu-item px-3">
-														<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+														<a href="{{ route('showEdit',$histories->id) }}" class="menu-link px-3">Edit</a>
 													</div>
+													
 													<!--end::Menu item-->
 													<!--begin::Menu item-->
 													<div class="menu-item px-3">
-														<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+														<a onclick="return confirm('Are You Sure')" href="{{ route('showDelete',$histories->id) }}" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
 													</div>
+													
 													<!--end::Menu item-->
 												</div>
 												<!--end::Menu-->
 											</td>
 											<!--end::Action=-->
 										</tr>
+										
 									</tbody>
 									<!--end::Table body-->
 									@empty

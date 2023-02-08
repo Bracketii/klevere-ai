@@ -13,6 +13,7 @@ class UserPagesController extends Controller
 {
     // Functions for showing User pages and sub-pages
     public function showUserDashboard(){
+        
 
         return view('user.pages.dashboard');
 
