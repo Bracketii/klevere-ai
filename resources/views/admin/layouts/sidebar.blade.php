@@ -1,34 +1,44 @@
-<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
-    <!--begin::Header-->
-    <div class="app-sidebar-header d-none d-lg-flex px-6 pt-8 pb-4" id="kt_app_sidebar_header">
-        <!--begin::Toggle-->
-        <button type="button" data-kt-element="selected" class="btn btn-outline btn-custom btn-flex w-100" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, -1px">
-            <!--begin::Logo-->
-            <span class="d-flex flex-center flex-shrink-0 w-40px me-3">
-                <img alt="Logo" src="{{ asset('assets/media/logos/klevereLogoIcon.svg') }}" data-kt-element="logo" class="h-30px" />
+
+<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+    <!--begin::Logo-->
+    <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+        <!--begin::Logo image-->
+        <a href="{{ route('user.dashboard') }}">
+            <img alt="Logo" src="assets/media/logos/klevere.svg" class="app-sidebar-logo-default" style="height: 36px" />
+            <img alt="Logo" src="assets/media/logos/klevereLogoIcon.svg" class="h-30px app-sidebar-logo-minimize" />
+        </a>
+        <!--end::Logo image-->
+        <!--begin::Sidebar toggle-->
+        <div id="kt_app_sidebar_toggle" class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="app-sidebar-minimize">
+            <!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
+            <span class="svg-icon svg-icon-2 rotate-180">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor" />
+                    <path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor" />
+                </svg>
             </span>
-            <!--end::Logo-->
-            <!--begin::Info-->
-            <span class="d-flex flex-column align-items-start flex-grow-1">
-                <span class="fs-5 fw-bold text-white text-uppercase text-logo" data-kt-element="title">Klevere.AI</span>
-                <span class="fs-7 fw-bold text-gray-700 lh-sm" data-kt-element="desc">Your AI Writing Tool</span>
-            </span>
-            <!--end::Info-->
-        </button>
-        <!--end::Toggle-->
+            <!--end::Svg Icon-->
+        </div>
+        <!--end::Sidebar toggle-->
     </div>
-    <!--end::Header-->
-    <!--begin::Navs-->
-    <div class="app-sidebar-navs flex-column-fluid py-6" id="kt_app_sidebar_navs">
-        <div id="kt_app_sidebar_navs_wrappers" class="hover-scroll-y my-2" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_header, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_navs" data-kt-scroll-offset="5px">
-            
-            <!--begin::Sidebar menu-->
-            <div id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false" class="menu menu-column menu-rounded menu-sub-indention menu-active-bg">
+    <!--end::Logo-->
+    <!--begin::sidebar menu-->
+    <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+        <!--begin::Menu wrapper-->
+        <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+            <!--begin::Menu-->
+            <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
                 
-                {{-- Menu Group Heading --}}
-                <div class="menu-item">
-                    <div class="menu-content menu-heading">Admin Panel</div>
+                 {{-- Menu Group Heading --}}
+                 <!--begin:Menu item-->
+                <div class="menu-item pt-5">
+                    <!--begin:Menu content-->
+                    <div class="menu-content">
+                        <span class="menu-heading fw-bold text-uppercase fs-7">Admin Panel</span>
+                    </div>
+                    <!--end:Menu content-->
                 </div>
+                <!--end:Menu item-->
 
                 <!--begin::Menu Item-->
                 <div class="menu-item">
@@ -36,17 +46,12 @@
                     <a href="{{ route('admin.dashboard') }}" class="menu-link">
                         <!--begin::Icon-->
                         <span class="menu-icon">
-                            <i class="fonticon-house"></i>
+                            <i class="fonticon-house dashboard-icons"></i>
                         </span>
                         <!--end::Icon-->
                         <!--begin::Title-->
-                        <span class="menu-title">Dashboard</span>
+                        <span class="menu-title dashboard-menu-title">Dashboard</span>
                         <!--end::Title-->
-                        <!--begin::Badge-->
-                        {{-- <span class="menu-badge">
-                            <span class="badge badge-primary">6</span>
-                        </span> --}}
-                        <!--end::Badge-->
                     </a>
                     <!--end:::Menu link-->
                 </div>
@@ -61,9 +66,10 @@
                     <!--begin:Menu link-->
                     <span class="menu-link">
                         <span class="menu-icon">
-                            <i class="fonticon-app-store fs-2"></i>
+                            <i class="fonticon-app-store" style="font-size: 17px !important;
+                            margin-top: -8px;"></i>
                         </span>
-                        <span class="menu-title">Pricing Plans</span>
+                        <span class="menu-title dashboard-menu-title">Pricing Plans</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -76,11 +82,12 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">All Pricings</span>
+                                <span class="menu-title">All Pricings</span><br>
                             </a>
                             <!--end:Menu link-->
                         </div>
                         <!--end:Menu item-->
+                        
                         
                     </div>
                     <!--end:Menu sub-->
@@ -92,9 +99,10 @@
                     <!--begin:Menu link-->
                     <span class="menu-link">
                         <span class="menu-icon">
-                            <i class="fonticon-user fs-2"></i>
+                            <i class="fonticon-user-2" style="font-size: 18px !important;
+                            margin-top: -8px;"></i>
                         </span>
-                        <span class="menu-title">User Management</span>
+                        <span class="menu-title dashboard-menu-title">User Management</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -107,7 +115,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">All Users</span>
+                                <span class="menu-title">All Users</span><br>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -118,63 +126,22 @@
                     <!--end:Menu sub-->
                 </div>
                 <!--end:Menu item-->
-
-                
-
-                
-
-                
-
-                <!--begin::Separator-->
-                <div class="separator"></div>
-                <!--end::Separator-->
-
-                {{-- Menu Group Heading --}}
-                {{-- <div class="menu-item">
-                    <div class="menu-content menu-heading">User Operations</div>
-                </div> --}}
-
-                <!--begin::Menu Item-->
-                {{-- <div class="menu-item">
-                   
-                    <a href="#" class="menu-link">
-                       
-                        <span class="menu-icon">
-                            <i class="fonticon-setting"></i>
-                        </span>
-                        
-                      
-                        <span class="menu-title">Options</span>
-                        
-                        <span class="menu-badge">
-                            <span class="badge badge-primary">6</span>
-                        </span>
-                      
-                    </a>
-                  
-                </div> --}}
-                <!--end::Menu Item-->
-
-
             </div>
-            <!--end::Sidebar menu-->
-
-
-            
-
-            
-            
+            <!--end::Menu-->
         </div>
+        <!--end::Menu wrapper-->
     </div>
-    <!--end::Navs-->
+    <!--end::sidebar menu-->
     <!--begin::Footer-->
-    <div class="app-sidebar-footer d-flex flex-stack px-11 pb-10" id="kt_app_sidebar_footer">
+    <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
+
         <!--begin::User menu-->
         <div class="">
             <!--begin::Menu wrapper-->
             <div class="cursor-pointer symbol symbol-circle symbol-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-overflow="true" data-kt-menu-placement="top-start">
                 <img src="assets/media/avatars/300-2.jpg" alt="image" />
             </div>
+            
             <!--begin::User account menu-->
             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color  fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
                 <!--begin::Menu item-->
@@ -189,7 +156,7 @@
                         <div class="d-flex flex-column">
                             <div class="fw-bold d-flex align-items-center fs-5">Max Smith
                             </div>
-                            <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">Admin</a>
+                            <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">User</a>
                         </div>
                         <!--end::Username-->
                     </div>
@@ -202,8 +169,6 @@
                 <div class="menu-item px-5">
                     <a href="{{ route('admin.account') }}" class="menu-link px-5">My Account</a>
                 </div>
-                <!--end::Menu item-->
-                
                 
 
                 
@@ -304,18 +269,10 @@
             <!--end::Menu wrapper-->
         </div>
         <!--end::User menu-->
-        <!--begin::Logout-->
-        <a href="{{ route('admin.logout') }}" class="btn btn-sm btn-outline btn-flex btn-custom px-3">
-        <!--begin::Svg Icon | path: icons/duotune/arrows/arr076.svg-->
-        <span class="svg-icon svg-icon-3 me-2">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect opacity="0.3" width="12" height="2" rx="1" transform="matrix(-1 0 0 1 15.5 11)" fill="currentColor" />
-                <path d="M13.6313 11.6927L11.8756 10.2297C11.4054 9.83785 11.3732 9.12683 11.806 8.69401C12.1957 8.3043 12.8216 8.28591 13.2336 8.65206L16.1592 11.2526C16.6067 11.6504 16.6067 12.3496 16.1592 12.7474L13.2336 15.3479C12.8216 15.7141 12.1957 15.6957 11.806 15.306C11.3732 14.8732 11.4054 14.1621 11.8756 13.7703L13.6313 12.3073C13.8232 12.1474 13.8232 11.8526 13.6313 11.6927Z" fill="currentColor" />
-                <path d="M8 5V6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 10.4477 5 11 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H11C10.4477 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17C8.44772 17 8 17.4477 8 18V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H10C8.89543 3 8 3.89543 8 5Z" fill="currentColor" />
-            </svg>
-        </span>
-        <!--end::Svg Icon-->Logout</a>
-        <!--end::Logout-->
+
+        
+
+        
     </div>
     <!--end::Footer-->
 </div>

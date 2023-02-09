@@ -74,30 +74,10 @@
 
 
 						<!--begin::Row-->
-                        <div class="card">     
+                        <div class="card mt-5">     
                             <!--begin::Body-->
                             <div class="card-body p-lg-17">
                                 <!--begin::Hero-->
-                        <div class="position-relative mb-17">
-                            <!--begin::Overlay-->
-                              
-                            <!--end::Overlay-->  
-                        
-                            <!--begin::Heading-->
-                              
-                            <!--end::Heading-->  
-                        </div>
-                        <!--end::-->
-                        
-                         
-                        
-                         
-                        
-                         
-                        
-                         
-                           
-                                
                                 <!--begin::Layout-->
                                 <div class="d-flex flex-column flex-lg-row mb-17">
                                     <!--begin::Content-->
@@ -110,7 +90,7 @@
                             <div class="d-flex flex-column mb-5">
                                 <label class="fs-6 fw-semibold mb-2" >Title</label>
                         
-                                <textarea class="form-control form-control-solid" rows="2" name="title" value="" placeholder="">     {{ $histories->title }}   </textarea>
+                                <textarea class="form-control form-control-solid" rows="1" name="title" value="" placeholder="">{{ $histories->title }}   </textarea>
                             </div>
                             <!--end::Input group-->
                         
@@ -118,7 +98,7 @@
                             <div class="d-flex flex-column mb-8">
                                 <label class="fs-6 fw-semibold mb-2" >Result</label>
                         
-                                <textarea class="form-control form-control-solid" rows="4" name="content" value="" placeholder="">    {{ $histories->content }}    </textarea>
+                                <textarea class="form-control form-control-solid" rows="5" name="content" value="" placeholder="">    {{ $histories->content }}</textarea>
                             </div>
                             <!--end::Input group-->    
                         
@@ -127,18 +107,7 @@
                             <!--end::Separator-->
                         
                             <!--begin::Submit-->
-                            <button type="submit" class="btn btn-primary" name="submit" value="Update" id="kt_careers_submit_button">
-                                
-                        <!--begin::Indicator label-->
-                        <span class="indicator-label">
-                            Update</span>
-                        <!--end::Indicator label-->
-                        
-                        <!--begin::Indicator progress-->
-                        <span class="indicator-progress">
-                            Please wait...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                        </span>
-                        <!--end::Indicator progress-->    </button>
+                            <button type="submit" class="btn btn-primary" name="submit" value="Update" id="kt_careers_submit_button">Update</button>
                             <!--end::Submit-->
                         </form>
                         <!--end::Form-->

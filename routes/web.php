@@ -23,6 +23,7 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
+use App\Http\Controllers\Project\EditProjectController as ProjectEditProjectController;
 
 /**---------------------------------------------------------- */
 
