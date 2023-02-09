@@ -115,8 +115,13 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::post('tech-result', [TechController::class, 'textCompletion'])->name('tech.result');
 
 
-   //history
-   Route::post('history',[HistoryController::class,'projectSave'])->name('projectSave');
+   //history saving routes
+   Route::post('project-save-marketing',[HistoryController::class,'projectSaveMarketing'])->name('projectSave.marketing');
+   Route::post('project-save-artist',[HistoryController::class,'projectSaveArtist'])->name('projectSave.artist');
+   Route::post('project-save-guidance',[HistoryController::class,'projectSaveGuidance'])->name('projectSave.guidance');
+   Route::post('project-save-hr',[HistoryController::class,'projectSaveHR'])->name('projectSave.hr');
+   Route::post('project-save-sales',[HistoryController::class,'projectSaveSales'])->name('projectSave.sales');
+   Route::post('project-save-tech',[HistoryController::class,'projectSaveTech'])->name('projectSave.tech');
    Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
 });
 

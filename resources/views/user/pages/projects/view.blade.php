@@ -108,7 +108,7 @@
                             {{ csrf_field() }}
                             <!--begin::Input group-->
                             <div class="d-flex flex-column mb-5">
-                                <label class="fs-6 fw-semibold mb-2" >title</label>
+                                <label class="fs-6 fw-semibold mb-2" >Title</label>
                         
                                 <textarea class="form-control form-control-solid" rows="2" name="title" value="" placeholder="">     {{ $histories->title }}   </textarea>
                             </div>
@@ -116,7 +116,7 @@
                         
                             <!--begin::Input group-->
                             <div class="d-flex flex-column mb-8">
-                                <label class="fs-6 fw-semibold mb-2" >content</label>
+                                <label class="fs-6 fw-semibold mb-2" >Result</label>
                         
                                 <textarea class="form-control form-control-solid" rows="4" name="content" value="" placeholder="">    {{ $histories->content }}    </textarea>
                             </div>
@@ -127,11 +127,11 @@
                             <!--end::Separator-->
                         
                             <!--begin::Submit-->
-                            <button type="submit" class="btn btn-primary" name="submit" value="Apply Now" id="kt_careers_submit_button">
+                            <button type="submit" class="btn btn-primary" name="submit" value="Update" id="kt_careers_submit_button">
                                 
                         <!--begin::Indicator label-->
                         <span class="indicator-label">
-                            Apply Now</span>
+                            Update</span>
                         <!--end::Indicator label-->
                         
                         <!--begin::Indicator progress-->

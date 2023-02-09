@@ -234,7 +234,7 @@
                                                     {{-- <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-start" style="background-color: #EBF1FF !important" data-kt-element="message-text">How likely are you to recommend our company to your friends and family ?</div> --}}
                                                    
                                                         <textarea class="form-control form-control form-control-solid pt-0 mt-1" data-kt-autosize="true" style="width: 700px !important;font-size:16px; color:black;" id="myInput" >{{$generate}}</textarea>
-                                                        <form action="{{ route('projectSave')}}" method="POST">
+                                                        <form action="{{ route('projectSave.guidance')}}" method="POST">
                                                             {{ csrf_field() }}
                                                             <input type="hidden" name="content" value="{{ $generate}}">
                                                             <input type="hidden" name="title" value="{{ $title }}">
