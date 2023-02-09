@@ -233,7 +233,8 @@
                                                     <!--begin::Text-->
                                                     {{-- <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-start" style="background-color: #EBF1FF !important" data-kt-element="message-text">How likely are you to recommend our company to your friends and family ?</div> --}}
                                                    
-                                                        <textarea class="form-control form-control form-control-solid pt-0 mt-1" data-kt-autosize="true" style="width: 700px !important;font-size:16px; color:black;" id="myInput" >{{$generate}}</textarea>
+                                                        {{-- <textarea class="form-control form-control form-control-solid pt-0 mt-1" data-kt-autosize="true" style="width: 700px !important;font-size:16px; color:black;" id="myInput" >{{$generate}}</textarea> --}}
+                                                        <img src="{{$generate}}" alt="result" width="360" height="360">
                                                         <form action="{{ route('projectSave.artist')}}" method="POST">
                                                             {{ csrf_field() }}
                                                             <input type="hidden" name="content" value="{{ $generate}}">

@@ -11,7 +11,6 @@ class EditProjectController extends Controller
    {
     $all_data = History::latest()->get();
     $histories = History::findOrFail($id);
-    // dd($histories);
     return view('user.pages.projects.view',[
         'histories' => $histories,
         'all_data'  => $all_data,
