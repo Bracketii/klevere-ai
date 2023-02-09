@@ -384,11 +384,7 @@
                                     <!--end::Card footer-->
                                 </div>
                                 <!--end::Messenger-->
-                                <div class="row inputTop">
-                                    <div class="col-md-6">
-                                        <a href="#" class="text-dark" style="text-decoration:underline" data-bs-toggle="modal" data-bs-target="#suggestions_modal">View suggestions</a>
-                                    </div>
-                                </div>
+
                             </div>
                             <!--end::Content-->
                         </div>
@@ -405,6 +401,9 @@
             <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">	
                 <!--begin::Help drawer toggle-->
                 <button id="kt_expertise" class="engage-help-toggle btn engage-btn shadow-sm px-5 rounded-top-0" title="Expertise of Klevere Chat" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Expertise</button>
+                <!--end::Help drawer toggle-->
+                <!--begin::Help drawer toggle-->
+                <button id="" class="engage-help-toggle btn btn-primary engage-btn shadow-sm px-5 rounded-top-0" data-bs-target="#suggestions_modal" data-bs-toggle="modal">Suggestions</button>
                 <!--end::Help drawer toggle-->
             </div>
 

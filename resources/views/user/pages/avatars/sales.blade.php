@@ -153,7 +153,7 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-23.jpg" />
+                                                            <img alt="Pic" src="assets/media/avatars/300-2.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -168,7 +168,7 @@
                                                     <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-start" style="background-color: #F5F8FA !important; font-size:16px; color:black;" data-kt-element="message-text" id="kt_typedjs_example_1"></div>
                                                     <script>
                                                         var typed = new Typed("#kt_typedjs_example_1", {
-                                                        strings: ["Hi there! My name is Bryan. I'm here for your marketing solutions. Ask me about marketing..."],
+                                                        strings: ["Hi there! My name is Amanda. I'm here for your sales solutions. Ask me about sales..."],
                                                         typeSpeed: 30,
                                                         showCursor: false
                                                     });
@@ -219,7 +219,7 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-23.jpg" />
+                                                            <img alt="Pic" src="assets/media/avatars/300-2.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -263,7 +263,7 @@
                                         <!--begin::Input-->
                                         <form action="{{ route('sales.result')}}" method="POST" class="form fv-plugins-bootstrap5 fv-plugins-framework">
                                             {{ csrf_field() }}
-                                        <textarea name="text" type="text" class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Write a marketing plan for my clothing store..." style="font-size:16px; color:black;" autofocus id="chat-input"></textarea>
+                                        <textarea name="text" type="text" class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="How to maintain positive business and customer relationships?" style="font-size:16px; color:black;" autofocus id="chat-input"></textarea>
                                         <!--end::Input-->
                                         <!--begin:Toolbar-->
                                         <div class="d-flex flex-stack">
@@ -372,11 +372,7 @@
                                     <!--end::Card footer-->
                                 </div>
                                 <!--end::Messenger-->
-                                <div class="row inputTop">
-                                    <div class="col-md-6">
-                                        <a href="#" class="text-dark" style="text-decoration:underline" data-bs-toggle="modal" data-bs-target="#suggestions_modal">View suggestions</a>
-                                    </div>
-                                </div>
+
                             </div>
                             <!--end::Content-->
                         </div>
@@ -393,6 +389,9 @@
             <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">	
                 <!--begin::Help drawer toggle-->
                 <button id="kt_expertise" class="engage-help-toggle btn engage-btn shadow-sm px-5 rounded-top-0" title="Expertise of Klevere Chat" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Expertise</button>
+                <!--end::Help drawer toggle-->
+                <!--begin::Help drawer toggle-->
+                <button id="" class="engage-help-toggle btn btn-primary engage-btn shadow-sm px-5 rounded-top-0" data-bs-target="#suggestions_modal" data-bs-toggle="modal">Suggestions</button>
                 <!--end::Help drawer toggle-->
             </div>
 

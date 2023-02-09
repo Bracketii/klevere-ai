@@ -43,7 +43,7 @@
 					</ul>
 					<!--end::Breadcrumb-->
 					<!--begin::Title-->
-					<h1 class="text-gray-900 fw-bolder m-0">Jack</h1>
+					<h1 class="text-gray-900 fw-bolder m-0">John</h1>
 					<!--end::Title-->
 				</div>
 				<!--end::Page title-->
@@ -90,7 +90,7 @@
                                         <div class="card-title">
                                             <!--begin::User-->
                                             <div class="d-flex justify-content-center flex-column me-3">
-                                                <a href="#" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 mb-2 lh-1">Jack</a>
+                                                <a href="#" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 mb-2 lh-1">John</a>
                                                 <!--begin::Info-->
                                                 <div class="mb-0 lh-1">
                                                     <span class="badge badge-success badge-circle w-10px h-10px me-1"></span>
@@ -158,8 +158,8 @@
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
                                                         <div class="ms-3">
-                                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Jack</a>
-                                                            <span class="text-muted fs-7 mb-1">Artist Expert</span>
+                                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">John</a>
+                                                            <span class="text-muted fs-7 mb-1">Artist</span>
                                                         </div>
                                                         <!--end::Details-->
                                                     </div>
@@ -168,7 +168,7 @@
                                                     <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-start" style="background-color: #F5F8FA !important; font-size:16px; color:black;" data-kt-element="message-text" id="kt_typedjs_example_1"></div>
                                                     <script>
                                                         var typed = new Typed("#kt_typedjs_example_1", {
-                                                        strings: ["Hi there! My name is Bryan. I'm here for your marketing solutions. Ask me about marketing..."],
+                                                        strings: ["Hi there! My name is John. I'm here for your art. I can generate AI Images for you!"],
                                                         typeSpeed: 30,
                                                         showCursor: false
                                                     });
@@ -225,7 +225,7 @@
                                                         <!--begin::Details-->
                                                         <div class="ms-3">
                                                             <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Jack</a>
-                                                            <span class="text-muted fs-7 mb-1">Artist Expert</span>
+                                                            <span class="text-muted fs-7 mb-1">Artist</span>
                                                         </div>
                                                         <!--end::Details-->
                                                     </div>
@@ -263,7 +263,7 @@
                                         <!--begin::Input-->
                                         <form action="{{ route('artist.result')}}" method="POST" class="form fv-plugins-bootstrap5 fv-plugins-framework">
                                             {{ csrf_field() }}
-                                        <textarea name="text" type="text" class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Write a marketing plan for my clothing store..." style="font-size:16px; color:black;" autofocus id="chat-input"></textarea>
+                                        <textarea name="text" type="text" class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="A turtle – swimming underwater, – expressionist painting...." style="font-size:16px; color:black;" autofocus id="chat-input"></textarea>
                                         <!--end::Input-->
                                         <!--begin:Toolbar-->
                                         <div class="d-flex flex-stack">
@@ -372,11 +372,6 @@
                                     <!--end::Card footer-->
                                 </div>
                                 <!--end::Messenger-->
-                                <div class="row inputTop">
-                                    <div class="col-md-6">
-                                        <a href="#" class="text-dark" style="text-decoration:underline" data-bs-toggle="modal" data-bs-target="#suggestions_modal">View suggestions</a>
-                                    </div>
-                                </div>
                             </div>
                             <!--end::Content-->
                         </div>
@@ -393,6 +388,9 @@
             <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">	
                 <!--begin::Help drawer toggle-->
                 <button id="kt_expertise" class="engage-help-toggle btn engage-btn shadow-sm px-5 rounded-top-0" title="Expertise of Klevere Chat" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Expertise</button>
+                <!--end::Help drawer toggle-->
+                <!--begin::Help drawer toggle-->
+                <button id="" class="engage-help-toggle btn btn-primary engage-btn shadow-sm px-5 rounded-top-0" data-bs-target="#suggestions_modal" data-bs-toggle="modal">Suggestions</button>
                 <!--end::Help drawer toggle-->
             </div>
 

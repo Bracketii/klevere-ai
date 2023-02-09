@@ -10,7 +10,7 @@ class hrController extends Controller
 {
     public function index(){
 
-        return view('user.pages.avatars.marketing', [
+        return view('user.pages.avatars.hr', [
             'type' => 'demo',
         ]);
         
@@ -30,7 +30,7 @@ class hrController extends Controller
         ]);
 
         $text=$result['choices'][0]['text'];
-        return view('user.pages.avatars.marketing',['generate'=> $text, 'type' => 'main','title'=>$title]);
+        return view('user.pages.avatars.hr',['generate'=> $text, 'type' => 'main','title'=>$title]);
 
 
 
