@@ -24,7 +24,7 @@ class UserAuthController extends Controller
     public function Showlogin(){
         return view('auth.signin');
     }
- 
+
     public function Register(){
 
         $this->validate(request(),[
@@ -53,7 +53,7 @@ class UserAuthController extends Controller
           'email'=>request('email'),
           'password'=>request('password')
         ])){
-            return to_route('user.dashboard');
+            return to_route('order');
         }else{
             return redirect()->back()->with('error', 'credentials not matched');
         }
@@ -85,7 +85,7 @@ class UserAuthController extends Controller
     //     $body = "We are received a request to reset the password for<b>Your App Name</b> account associated with".$request->email.".You can reset your password by clicking the line bellow";
     //     Mail::send('email-forget', ['action_link'=>$action_link,'body'=>$body], function ($message) use ($request) {
     //         $message->from('noreply@example.com', 'Your App Name');
-            
+
     //         $message->to('$request->email', 'Your Name')
     //                 ->subject('Reset Password');
     //     });
@@ -93,5 +93,5 @@ class UserAuthController extends Controller
     // }
 
 
-   
+
 }

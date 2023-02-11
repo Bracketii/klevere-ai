@@ -23,6 +23,7 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\ConfirmablePasswordController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Project\EditProjectController as ProjectEditProjectController;
 
 /**---------------------------------------------------------- */
@@ -98,19 +99,19 @@ Route::group(['middleware'=>'userauth'],function(){
     // Sales
     Route::get('sales', [SalesController::class, 'index'])->name('sales.chat');
     Route::post('sales-result', [SalesController::class, 'textCompletion'])->name('sales.result');
-    
+
     // HR
     Route::get('hr', [hrController::class, 'index'])->name('hr.chat');
     Route::post('hr-result', [hrController::class, 'textCompletion'])->name('hr.result');
-   
+
     // Guidance
     Route::get('guidance', [GuidanceController::class, 'index'])->name('guidance.chat');
     Route::post('guidance-result', [GuidanceController::class, 'textCompletion'])->name('guidance.result');
-    
+
     // Artist
     Route::get('artist', [ArtistController::class, 'index'])->name('artist.chat');
     Route::post('artist-result', [ArtistController::class, 'textCompletion'])->name('artist.result');
-    
+
     // Tech
     Route::get('tech', [TechController::class, 'index'])->name('tech.chat');
     Route::post('tech-result', [TechController::class, 'textCompletion'])->name('tech.result');
@@ -125,6 +126,12 @@ Route::group(['middleware'=>'userauth'],function(){
    Route::post('project-save-tech',[HistoryController::class,'projectSaveTech'])->name('projectSave.tech');
    Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
 });
+// order route start
+ Route::get('order',[OrderController::class,'index'])->name('order');
+ Route::post('orderr/{id}',[OrderController::class,'checkout'])->name('checkout');
+ Route::get('/success',[OrderController::class,'success'])->name('checkout.success');
+Route::get('/cancel',[OrderController::class,'cancel'])->name('checkout.cancel');
+// order route end
 
 // Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');
 // Route::post('submit-password',[ConfirmablePasswordController::class,'SubmitPassword'])->name('user.submit.password');

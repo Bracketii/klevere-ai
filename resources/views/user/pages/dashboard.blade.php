@@ -61,7 +61,7 @@
 		<!--begin::Sidebar-->
 		@include('user.layouts.sidebar')
 		<!--end::Sidebar-->
-		
+
 		<!--begin::Main-->
 		<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
 
@@ -328,12 +328,19 @@
 											</div>
 											<!--end::Table widget 14-->
 								<!--end::Card-->
-								
+
 							</div>
 							<!--end::Col-->
-							
+
 							<!--begin::Col-->
 							<div class="col-md-6 col-xl-4">
+                                @if (\Session::has('success'))
+                                  <div class="alert alert-success">
+                                      <ul>
+                                          <li>{!! \Session::get('success') !!}</li>
+                                       </ul>
+                                    </div>
+                                @endif
 								<div class="card-title pb-2"><h3>Earn Free Words!</h3></div>
 								<!--begin::Card-->
 								<a href="#" class="card border-hover-primary">
@@ -344,24 +351,24 @@
 											<!--begin::Avatar-->
 											Refer a friend!
 											<!--end::Avatar-->
-											
+
 												<span class="badge badge-light-warning" style="margin-left: 10px">1000 Words!</span>
-											
+
 										</div>
 										<!--end::Car Title-->
-										
+
 									</div>
 									<!--end:: Card header-->
 									<!--begin:: Card body-->
 									<div class="card-body pt-0">
-										
+
 										<!--begin::Description-->
 										<p class="text-gray-400 fw-semibold fs-5 mt-1 mb-7">Share this tool with your friends and earn 1000 free words</p>
 										<!--end::Description-->
 										<div class="symbol symbol-80px w-50px">
 											<i class="fonticon-send" style="font-size: 30px"></i>
 										</div>
-										
+
 									</div>
 									<!--end:: Card body-->
 								</a>
@@ -372,26 +379,26 @@
 									<!--begin::Header-->
 									<div class="card-header pt-5">
 										<!--begin::Title-->
-										<div class="card-title d-flex flex-column">   
+										<div class="card-title d-flex flex-column">
 											<!--begin::Amount-->
 											<span class="fs-2hx fw-bold text-black me-2 lh-1 ls-n2">690</span>
 											<!--end::Amount-->
-								
+
 											<!--begin::Subtitle-->
-											<span class="text-black opacity-85 pt-1 fw-semibold fs-6">Words Generated</span>             
-											<!--end::Subtitle--> 
+											<span class="text-black opacity-85 pt-1 fw-semibold fs-6">Words Generated</span>
+											<!--end::Subtitle-->
 										</div>
-										<!--end::Title-->  
+										<!--end::Title-->
 										<!--begin::Title-->
-										<div class="d-flex flex-column">   
+										<div class="d-flex flex-column">
 											<!--begin::Amount-->
 											<a href="{{ route('user.billing') }}" class="btn btn-sm btn-light text-black opacity-85 fw-semibold">See more</a>
-											<!--end::Amount--> 
+											<!--end::Amount-->
 										</div>
-										<!--end::Title-->       
+										<!--end::Title-->
 									</div>
 									<!--end::Header-->
-								
+
 									<!--begin::Card body-->
 									<div class="card-body d-flex align-items-end pt-0">
 										<!--begin::Progress-->
@@ -400,12 +407,12 @@
 												<span class="text-black">Words</span>
 												<span class="text-black">690 of 10000 Used</span>
 											</div>
-								
+
 											<div class="h-8px mx-3 w-100 bg-black bg-opacity-50 rounded">
 												<div class="bg-black rounded h-8px" role="progressbar" style="width: 72%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 												<div class="text-black fw-semibold mb-10">9310 Words remaining.</div>
 											</div>
-											
+
 										</div>
 										<!--end::Progress-->
 									</div>
@@ -413,26 +420,27 @@
 								</div>
 								<!--end::Card-->
 
-								
-								
+
+
 							</div>
 							<!--end::Col-->
 						</div>
-						<!--end::Row-->			
+						<!--end::Row-->
 					</div>
 					<!--end::Content container-->
 				</div>
 				<!--end::Content-->
 			</div>
 			<!--end::Content wrapper-->
-			
+
 			<!--begin::Footer-->
 				@include('user.layouts.footer')
 			<!--end::Footer-->
 		</div>
+
 		<!--end:::Main-->
 	</div>
 	<!--end::Wrapper-->
 </div>
-	
+
 @endsection
