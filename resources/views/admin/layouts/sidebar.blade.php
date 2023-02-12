@@ -57,6 +57,23 @@
                 </div>
                 <!--end::Menu Item-->
 
+                <!--begin::Menu Item-->
+                <div class="menu-item">
+                    <!--begin::Menu link-->
+                    <a href="{{ route('admin.analytics') }}" class="menu-link">
+                        <!--begin::Icon-->
+                        <span class="menu-icon">
+                            <i class="fonticon-stats dashboard-icons"></i>
+                        </span>
+                        <!--end::Icon-->
+                        <!--begin::Title-->
+                        <span class="menu-title dashboard-menu-title">Analytics</span>
+                        <!--end::Title-->
+                    </a>
+                    <!--end:::Menu link-->
+                </div>
+                <!--end::Menu Item-->
+
                 
 
 

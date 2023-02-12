@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Orders;
+use App\Models\Product;
+use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminPagesController extends Controller
 {
@@ -16,14 +20,21 @@ class AdminPagesController extends Controller
 
     public function showAdminPricing(){
 
-        return view('admin.pages.pricing');
+        $all_products = Product::get();
+        return view('admin.pages.pricing',[
+            'all_products'    => $all_products,
+        ]);
 
     }
 
 
     public function showAdminUsers(){
 
-        return view('admin.pages.users');
+        $all_users = user::latest()->get();
+
+        return view('admin.pages.users', [
+            'all_users'     => $all_users,
+        ]);
 
     }
 

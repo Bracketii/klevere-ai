@@ -43,6 +43,7 @@ Route::group(['middleware' => 'adminauth'], function () {
     Route::get('admin-pricing', [AdminPagesController::class, 'showAdminPricing'])->name('admin.pricing');
     Route::get('admin-users', [AdminPagesController::class, 'showAdminUsers'])->name('admin.users');
     Route::get('admin-account', [AdminPagesController::class, 'showAdminAccount'])->name('admin.account');
+    Route::get('admin-analytics', [AdminPagesController::class, 'showAdminAnalytics'])->name('admin.analytics');
 });
 
 

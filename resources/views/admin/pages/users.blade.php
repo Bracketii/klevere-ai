@@ -37,18 +37,18 @@
 					</li>
 					<!--end::Item-->
 					<!--begin::Item-->
-					<li class="breadcrumb-item text-gray-600 fw-bold lh-1">admin Dashboard</li>
+					<li class="breadcrumb-item text-gray-600 fw-bold lh-1">Admin Dashboard</li>
 					<!--end::Item-->
 					</ul>
 					<!--end::Breadcrumb-->
 					<!--begin::Title-->
-					<h1 class="text-gray-900 fw-bolder m-0">Dashboard</h1>
+					<h1 class="text-gray-900 fw-bolder m-0">All Users</h1>
 					<!--end::Title-->
 				</div>
 				<!--end::Page title-->
 				<!--begin::Action-->
-				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Create
-				<span class="d-none d-sm-inline ps-2">Project</span></a>
+				{{-- <a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Create
+				<span class="d-none d-sm-inline ps-2">Project</span></a> --}}
 				<!--end::Action-->
 			</div>
 			<!--end::Header wrapper-->
@@ -164,7 +164,8 @@
 									<thead>
 										<!--begin::Table row-->
 										<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
-											<th class="min-w-125px">User</th>
+											<th class="min-w-125px">SN</th>
+											<th class="min-w-125px">Name</th>
 											<th class="min-w-125px">Role</th>
 											<th class="min-w-125px">Subscribed To</th>
 											<th class="min-w-125px">Joined Date</th>
@@ -176,38 +177,36 @@
 									<!--begin::Table body-->
 									<tbody class="text-gray-600 fw-semibold">
 										<!--begin::Table row-->
+										@forelse ($all_users as $item)
 										<tr>
-											
+											<td>{{ $loop -> index + 1 }}</td>
 											<!--begin::User=-->
-											<td class="d-flex align-items-center">
-												<!--begin:: Avatar -->
-												<div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-													<a href="../../demo27/dist/apps/user-management/users/view.html">
-														<div class="symbol-label">
-															<img src="assets/media/avatars/300-6.jpg" alt="Emma Smith" class="w-100" />
-														</div>
-													</a>
-												</div>
-												<!--end::Avatar-->
-												<!--begin::User details-->
+											<td>
 												<div class="d-flex flex-column">
-													<a href="../../demo27/dist/apps/user-management/users/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													<span>smith@kpmg.com</span>
+													<span>{{ $item->firstname }} {{ $item->lastname }}</span>
 												</div>
-												<!--begin::User details-->
+											</td>
+											<td>
+												<div class="d-flex flex-column">
+													<span>{{ $item ->email }}</span>
+												</div>
 											</td>
 											<!--end::User=-->
-											<!--begin::Role=-->
-											<td>Customer</td>
-											<!--end::Role=-->
 											<!--begin::Last login=-->
 											<td>
-												<div class="text-center badge badge-light-warning fw-bold">Basic</div>
+												<div class="text-center badge badge-light-warning fw-bold">
+													@forelse(json_decode($item ->orders) as $order)
+													{{ $order->package_name }}
+													@empty
+													Not Subscribed
+													@endforelse
+													
+												</div>
 											</td>
 											<!--end::Last login=-->
 											
 											<!--begin::Joined-->
-											<td class="text-start">22 Sep 2022</td>
+											<td class="text-start">{{ $item->created_at->diffForHumans() }}</td>
 											<!--begin::Joined-->
 											<!--begin::Action=-->
 											<td class="text-end">
@@ -232,6 +231,10 @@
 											</td>
 											<!--end::Action=-->
 										</tr>
+										@empty
+											<h4>No users found</h4>
+										@endforelse
+										
 										<!--end::Table row-->
 										
 									</tbody>
