@@ -3,7 +3,7 @@
     <!--begin::Logo-->
     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
         <!--begin::Logo image-->
-        <a href="{{ route('user.dashboard') }}">
+        <a href="{{ route('admin.dashboard') }}">
             <img alt="Logo" src="assets/media/logos/klevere.svg" class="app-sidebar-logo-default" style="height: 36px" />
             <img alt="Logo" src="assets/media/logos/klevereLogoIcon.svg" class="h-30px app-sidebar-logo-minimize" />
         </a>
