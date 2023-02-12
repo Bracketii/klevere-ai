@@ -86,7 +86,7 @@
 										<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
 											<th class="">SN</th>
 											<th class="min-w-125px">Title</th>
-											<th class="min-w-125px">Type</th>
+											{{-- <th class="min-w-125px">Type</th> --}}
 											<th>content</th>
 											<th class="min-w-125px">Created Date</th>
 											<th class="text-end min-w-70px">Actions</th>
@@ -106,9 +106,9 @@
 											</td>
 											<!--end::Name=-->
 											<!--begin::Email=-->
-											<td>
+											{{-- <td>
 												<a href="#" class="badge badge-primary">Jack</a>
-											</td>
+											</td> --}}
 											<td>{{$histories->content}}</td>
 											<!--end::Email=-->
 											<!--begin::Date=-->
@@ -165,6 +165,7 @@
 							
 						</div>
 						<!--end::Row-->
+						{{-- Pagination --}}
 						<div class="row pt-10">
 						{{ $history->links()}}
 						</div>

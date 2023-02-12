@@ -12,7 +12,6 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\EditProjectController;
 
 use App\Http\Controllers\AdminAuthController;
-use App\Http\Controllers\Plan\PlanController;
 use App\Http\Controllers\AI\MarketingController;
 use App\Http\Controllers\AI\hrController;
 use App\Http\Controllers\AI\GuidanceController;
@@ -22,9 +21,8 @@ use App\Http\Controllers\User\UserAuthController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
-use App\Http\Controllers\ConfirmablePasswordController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\Project\EditProjectController as ProjectEditProjectController;
+
 
 /**---------------------------------------------------------- */
 
@@ -138,12 +136,7 @@ Route::get('/cancel',[OrderController::class,'cancel'])->name('checkout.cancel')
 
 
 
-/**
- * General routes (Public) - Pricing
- */
-Route::get('pricing-plans', [PlanController::class, 'index'])->name('pricing.plans');
-Route::get('plans/{plan}', [PlanController::class, 'show'])->name("plans.show");
-Route::post('subscription', [PlanController::class, 'subscription'])->name("subscription.create");
+
 
 
 

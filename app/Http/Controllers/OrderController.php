@@ -72,7 +72,7 @@ class OrderController extends Controller
          }
          $order->status='paid';
          $order->save();
-        return to_route('user.dashboard')->with('success', 'congratulations you subscribed successfully');
+        return to_route('user.dashboard')->with('success', 'Congratulations! You subscribed successfully');
 
          }catch(\Exception $e){
             throw new NotFoundHttpException();
