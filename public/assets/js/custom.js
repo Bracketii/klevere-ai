@@ -14,7 +14,7 @@ button.addEventListener("click", function() {
 
 function myFunction() {
     // Get the text field
-    var copyText = document.getElementById("myInput");
+    var copyText = document.getElementById("myResult");
   
     // Select the text field
     copyText.select();
@@ -31,10 +31,10 @@ function myFunction() {
 
 
 //   submit on enter method
-var input = document.getElementById("chat-input");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("generate-button").click();
-  }
-});
+// var input = document.getElementById("chat-input");
+// input.addEventListener("keypress", function(event) {
+//   if (event.key === "Enter") {
+//     event.preventDefault();
+//     document.getElementById("generate-button").click();
+//   }
+// });

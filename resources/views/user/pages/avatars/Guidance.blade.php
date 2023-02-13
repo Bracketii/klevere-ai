@@ -194,8 +194,11 @@
                                                         </div>
                                                         <!--end::Details-->
                                                         <!--begin::Avatar-->
-                                                        <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                                        <div class="symbol symbol-35px symbol-circle" style="padding: 5px 12px;
+                                                        background-color: #2468FF;
+                                                        color: #fff;
+                                                        font-size: 16px;">
+                                                            {{Auth::guard('web') -> user()->firstname[0] }}
                                                         </div>
                                                         <!--end::Avatar-->
                                                     </div>
@@ -354,15 +357,44 @@
                                             {{-- end:: Reset button --}}
 
                                             
-                                            <button name="submit" class="btn btn-primary" type="submit" data-kt-element="send" id="generate-button">
+                                            <button name="submit" class="btn btn-primary" type="submit" id="kt_page_loading_overlay">
                         
                                                 <span class="indicator-label">
-                                                    <i class="las la-paper-plane" style="font-size: 30px"></i>
-                                                </span>
-                                                <span class="indicator-progress">
-                                                    Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                                                </span>
-                                            </button>
+                                                   <i class="las la-paper-plane" style="font-size: 30px;margin-right:-5px"></i>
+                                               </span>
+                                               
+                                           </button>
+                                           <!--begin::Page loading(append to body)-->
+                                               
+                                               <script>
+                                                   // Toggle
+                                               const button = document.querySelector("#kt_page_loading_overlay");
+                                               // Handle toggle click event
+                                               button.addEventListener("click", function() {
+                                                   // Populate the page loading element dynamically.
+                                                   // Optionally you can skipt this part and place the HTML
+                                                   // code in the body element by refer to the above HTML code tab.
+                                                   const loadingEl = document.createElement("div");
+                                                   document.body.prepend(loadingEl);
+                                                   loadingEl.classList.add("page-loader");
+                                                   loadingEl.classList.add("flex-column");
+                                                   loadingEl.classList.add("bg-dark");
+                                                   loadingEl.classList.add("bg-opacity-25");
+                                                   loadingEl.innerHTML = `
+                                                       <span class="spinner-border text-primary" style="width:50px; height:50px;border-width:4px" role="status"></span>
+                                                       <span class="text-white-800 fs-6 fw-semibold mt-5" style="color:white !important; font-size:22px !important">Generating...</span>
+                                                   `;
+
+                                                   // Show page loading
+                                                   KTApp.showPageLoading();
+
+                                                   // Hide after 3 seconds
+                                                   setTimeout(function() {
+                                                       KTApp.hidePageLoading();
+                                                       loadingEl.remove();
+                                                   }, 500000);
+                                               });
+                                               </script>
                                             
                                             </form>
                                             <!--end::Send-->

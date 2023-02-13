@@ -64,6 +64,6 @@ class HistoryController extends Controller
         'title'=>request('title'),
         'content'=>request('content'),
       ]);
-      return to_route('chat');
+      return to_route('chat')->with('success', 'Saved successfully');
   }
 }

@@ -27,4 +27,6 @@
 		<link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+        {{-- Custom JS --}}
+        <script src="{{ asset('assets/js/custom.js') }}"></script>
 </head>

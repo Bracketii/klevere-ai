@@ -17,12 +17,16 @@ class ProductSeeder extends Seeder
     {
         $product=[
               [
-                'name'=>'Basic_plan',
+                'name'=>'Basic',
                 'price'=>10
               ],
               [
-                'name'=>'standard',
+                'name'=>'Standard',
                 'price'=>20
+              ],
+              [
+                'name'=>'Premium',
+                'price'=>30
               ],
 
 
