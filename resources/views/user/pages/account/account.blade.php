@@ -203,6 +203,20 @@
                                         <!--end::Col-->
                                     </div>
                                     <!--end::Input group-->
+
+                                    <!--begin::Input group-->
+                                    <div class="row mb-7">
+                                        <!--begin::Label-->
+                                        <label class="col-lg-4 fw-semibold text-muted">Package</label>
+                                        <!--end::Label-->
+                                        <!--begin::Col-->
+										{{-- We have to add the payment status here paid or unpaid --}}
+                                        <div class="col-lg-8">
+                                            <a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{ $user_data }}</a>
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
                                     
                                     
                                     

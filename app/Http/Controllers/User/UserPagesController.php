@@ -38,8 +38,10 @@ class UserPagesController extends Controller
 
     // User account pages
     public function showUserAccount(){
-
-        return view('user.pages.account.account');
+        $user_data = Auth::user()->orders;
+        return view('user.pages.account.account', [
+            'user_data'     => $user_data,
+        ]);
 
     }
     public function showUserBilling(){
