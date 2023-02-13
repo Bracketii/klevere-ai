@@ -19,7 +19,7 @@ class OrderController extends Controller
         return view('product.product',compact('product'));//resources/product/product.blade
     }
     public function checkout($id){
-        $stripe = new \Stripe\StripeClient('sk_test_51M93A9E4o5Z9I1xT72Bb0YJQTglBDuxGDs8br56OZLrcsOIVbHXglgk6gVZluoaE7ZVdUDh3Xfo0VzF3FQnyMExO00EvAsFQGz');
+        $stripe = new \Stripe\StripeClient('sk_test_51IT0nQGeSSGDH3mHPHA0HzZzjSbiNES8tvsTLIS98jdAOVoqx0ZvZEaFdIgCtdmLP8j0BOEFmwWFGnFyg1JA48Mb00ywyj4zV5');
         $products=Product::find($id);
 
         $line_items=[];
@@ -30,6 +30,8 @@ class OrderController extends Controller
               'currency' => 'usd',
               'product_data' => [
                 'name' => $products->name,
+                'description'   => [],
+                
 
               ],
               'unit_amount' => $products->price*100,
@@ -58,7 +60,7 @@ class OrderController extends Controller
     }
 
     public function success(Request $request){
-        $stripe = new \Stripe\StripeClient('sk_test_51M93A9E4o5Z9I1xT72Bb0YJQTglBDuxGDs8br56OZLrcsOIVbHXglgk6gVZluoaE7ZVdUDh3Xfo0VzF3FQnyMExO00EvAsFQGz');
+        $stripe = new \Stripe\StripeClient('sk_test_51IT0nQGeSSGDH3mHPHA0HzZzjSbiNES8tvsTLIS98jdAOVoqx0ZvZEaFdIgCtdmLP8j0BOEFmwWFGnFyg1JA48Mb00ywyj4zV5');
 
          $sessionId=$request->get('session_id');
          try{

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AI;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use OpenAI\Laravel\Facades\OpenAI;
 
 class AIController extends Controller
@@ -15,7 +16,7 @@ class AIController extends Controller
         ]);
     }
     public function textCompletion(Request $request){
-
+        // $words = Auth::guard('web') -> user()->words;
         $title=$request->text;
         $text=$request->text;
         $language = $request->language;
