@@ -77,6 +77,45 @@
 				<div id="kt_app_content" class="app-content flex-column-fluid">
                     <!--begin::Content container-->
                     <div id="kt_app_content_container" class="app-container container-xxl">
+
+                        {{-- Saved successfully alert --}}
+                        @if (\Session::has('success'))
+                            <div class="row g-6 g-xl-9 pt-10" style="margin-bottom: -40px">
+                                <div class="col-md-12">
+                                    <div class="alert alert-dismissible bg-success d-flex flex-column flex-sm-row w-100 p-5 mb-10">
+                                        <!--begin::Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+                                        <span class="svg-icon svg-icon-2hx svg-icon-light me-4 mb-5 mb-sm-0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.3" d="M20.5543 4.37824L12.1798 2.02473C12.0626 1.99176 11.9376 1.99176 11.8203 2.02473L3.44572 4.37824C3.18118 4.45258 3 4.6807 3 4.93945V13.569C3 14.6914 3.48509 15.8404 4.4417 16.984C5.17231 17.8575 6.18314 18.7345 7.446 19.5909C9.56752 21.0295 11.6566 21.912 11.7445 21.9488C11.8258 21.9829 11.9129 22 12.0001 22C12.0872 22 12.1744 21.983 12.2557 21.9488C12.3435 21.912 14.4326 21.0295 16.5541 19.5909C17.8169 18.7345 18.8277 17.8575 19.5584 16.984C20.515 15.8404 21 14.6914 21 13.569V4.93945C21 4.6807 20.8189 4.45258 20.5543 4.37824Z" fill="currentColor"></path>
+                                            <path d="M10.5606 11.3042L9.57283 10.3018C9.28174 10.0065 8.80522 10.0065 8.51412 10.3018C8.22897 10.5912 8.22897 11.0559 8.51412 11.3452L10.4182 13.2773C10.8099 13.6747 11.451 13.6747 11.8427 13.2773L15.4859 9.58051C15.771 9.29117 15.771 8.82648 15.4859 8.53714C15.1948 8.24176 14.7183 8.24176 14.4272 8.53714L11.7002 11.3042C11.3869 11.6221 10.874 11.6221 10.5606 11.3042Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                    
+                                        <!--begin::Content-->
+                                        <div class="d-flex flex-column text-light pe-0 pe-sm-10">
+                                            <h4 class="mb-2 text-light">{!! \Session::get('success') !!}</h4>
+                                            <a href="{{ route('user.projects') }}"><button class="btn btn-light btn-sm">View Files</button></a>
+                                        </div>
+                                        <!--end::Content-->
+                    
+                                        <!--begin::Close-->
+                                        <button type="button" class="position-absolute position-sm-relative m-2 m-sm-0 top-0 end-0 btn btn-icon ms-sm-auto" data-bs-dismiss="alert">
+                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                        <span class="svg-icon svg-icon-2x svg-icon-light"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+                                        <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
+                                        </svg>
+                                        
+                                        </span>
+                                    </button>
+                                        <!--end::Close-->
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
+
                         <!--begin::Layout-->
                         <div class="d-flex flex-column flex-lg-row mt-10">
                             
@@ -236,7 +275,7 @@
                                                     <!--begin::Text-->
                                                     {{-- <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-start" style="background-color: #EBF1FF !important" data-kt-element="message-text">How likely are you to recommend our company to your friends and family ?</div> --}}
                                                    
-                                                        <textarea class="form-control form-control form-control-solid pt-0 mt-1" data-kt-autosize="true" style="width: 700px !important;font-size:16px; color:black;" id="myInput" >{{$generate}}</textarea>
+                                                        <textarea class="form-control form-control form-control-solid pt-0 mt-1" data-kt-autosize="true" style="width: 700px !important;font-size:16px; color:black;" id="myResult" >{{$generate}}</textarea>
                                                         <form action="{{ route('projectSave.marketing')}}" method="POST">
                                                             {{ csrf_field() }}
                                                             <input type="hidden" name="content" value="{{ $generate}}">
@@ -366,35 +405,7 @@
                                            </button>
                                            <!--begin::Page loading(append to body)-->
                                                
-                                               <script>
-                                                   // Toggle
-                                               const button = document.querySelector("#kt_page_loading_overlay");
-                                               // Handle toggle click event
-                                               button.addEventListener("click", function() {
-                                                   // Populate the page loading element dynamically.
-                                                   // Optionally you can skipt this part and place the HTML
-                                                   // code in the body element by refer to the above HTML code tab.
-                                                   const loadingEl = document.createElement("div");
-                                                   document.body.prepend(loadingEl);
-                                                   loadingEl.classList.add("page-loader");
-                                                   loadingEl.classList.add("flex-column");
-                                                   loadingEl.classList.add("bg-dark");
-                                                   loadingEl.classList.add("bg-opacity-25");
-                                                   loadingEl.innerHTML = `
-                                                       <span class="spinner-border text-primary" style="width:50px; height:50px;border-width:4px" role="status"></span>
-                                                       <span class="text-white-800 fs-6 fw-semibold mt-5" style="color:white !important; font-size:22px !important">Generating...</span>
-                                                   `;
-
-                                                   // Show page loading
-                                                   KTApp.showPageLoading();
-
-                                                   // Hide after 3 seconds
-                                                   setTimeout(function() {
-                                                       KTApp.hidePageLoading();
-                                                       loadingEl.remove();
-                                                   }, 500000);
-                                               });
-                                               </script>
+                                             
                                             
                                             </form>
                                             <!--end::Send-->
@@ -682,7 +693,49 @@
 		<!--end::Help drawer-->
     {{-- end:: Expertise Drawer --}}
 
+    <script>
+        function myFunction() {
+        // Get the text field
+        var copyText = document.getElementById("myResult");
+    
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+        
+        // Alert the copied text
+        alert("Copied the text: " + copyText.value);
+    }
+        // Toggle
+    const button = document.querySelector("#kt_page_loading_overlay");
+    // Handle toggle click event
+    button.addEventListener("click", function() {
+        // Populate the page loading element dynamically.
+        // Optionally you can skipt this part and place the HTML
+        // code in the body element by refer to the above HTML code tab.
+        const loadingEl = document.createElement("div");
+        document.body.prepend(loadingEl);
+        loadingEl.classList.add("page-loader");
+        loadingEl.classList.add("flex-column");
+        loadingEl.classList.add("bg-dark");
+        loadingEl.classList.add("bg-opacity-25");
+        loadingEl.innerHTML = `
+            <span class="spinner-border text-primary" style="width:50px; height:50px;border-width:4px" role="status"></span>
+            <span class="text-white-800 fs-6 fw-semibold mt-5" style="color:white !important; font-size:22px !important">Generating...</span>
+        `;
 
+        // Show page loading
+        KTApp.showPageLoading();
+
+        // Hide after 3 seconds
+        setTimeout(function() {
+            KTApp.hidePageLoading();
+            loadingEl.remove();
+        }, 500000);
+    });
+    </script>
 
 @endsection
 

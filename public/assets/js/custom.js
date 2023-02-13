@@ -1,31 +1,31 @@
 // Button indicator
-var button = document.querySelector("#generate-button");
+// var button = document.querySelector("#generate-button");
 
 // Handle button click event
-button.addEventListener("click", function() {
-    // Activate indicator
-    button.setAttribute("data-kt-indicator", "on");
-});
+// button.addEventListener("click", function() {
+//     // Activate indicator
+//     button.setAttribute("data-kt-indicator", "on");
+// });
 
 
 
 
 
 
-function myFunction() {
-    // Get the text field
-    var copyText = document.getElementById("myResult");
+// function myFunction() {
+//     // Get the text field
+//     var copyText = document.getElementById("myResult");
   
-    // Select the text field
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
+//     // Select the text field
+//     copyText.select();
+//     copyText.setSelectionRange(0, 99999); // For mobile devices
   
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value);
+//     // Copy the text inside the text field
+//     navigator.clipboard.writeText(copyText.value);
     
-    // Alert the copied text
-    alert("Copied the text: " + copyText.value);
-  }
+//     // Alert the copied text
+//     alert("Copied the text: " + copyText.value);
+//   }
 
 
 
@@ -38,3 +38,6 @@ function myFunction() {
 //     document.getElementById("generate-button").click();
 //   }
 // });
+
+
+// Loader

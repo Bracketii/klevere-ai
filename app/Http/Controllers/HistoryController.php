@@ -14,7 +14,7 @@ class HistoryController extends Controller
           'title'=>request('title'),
           'content'=>request('content'),
         ]);
-        return redirect()->route('marketing.chat');
+        return redirect()->route('marketing.chat')->with('success', 'Saved successfully');
     }
 
     public function projectSaveArtist(){
@@ -22,7 +22,7 @@ class HistoryController extends Controller
         'title'=>request('title'),
         'content'=>request('content'),
       ]);
-      return redirect()->route('artist.chat');
+      return redirect()->route('artist.chat')->with('success', 'Saved successfully');
   }
 
   public function projectSaveGuidance(){
@@ -30,7 +30,7 @@ class HistoryController extends Controller
       'title'=>request('title'),
       'content'=>request('content'),
     ]);
-    return redirect()->route('guidance.chat');
+    return redirect()->route('guidance.chat')->with('success', 'Saved successfully');
 }
 
   public function projectSaveHR(){
@@ -38,7 +38,7 @@ class HistoryController extends Controller
       'title'=>request('title'),
       'content'=>request('content'),
     ]);
-    return redirect()->route('hr.chat');
+    return redirect()->route('hr.chat')->with('success', 'Saved successfully');
   }
 
   public function projectSaveSales(){
@@ -46,7 +46,7 @@ class HistoryController extends Controller
       'title'=>request('title'),
       'content'=>request('content'),
     ]);
-    return redirect()->route('sales.chat');
+    return redirect()->route('sales.chat')->with('success', 'Saved successfully');
   }
 
   public function projectSaveTech(){
@@ -54,7 +54,7 @@ class HistoryController extends Controller
       'title'=>request('title'),
       'content'=>request('content'),
     ]);
-    return redirect()->route('tech.chat');
+    return redirect()->route('tech.chat')->with('success', 'Saved successfully');
   }
 
     

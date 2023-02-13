@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\History;
+use App\Models\Orders;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
@@ -38,7 +39,7 @@ class UserPagesController extends Controller
 
     // User account pages
     public function showUserAccount(){
-        $user_data = Auth::user()->orders;
+        $user_data = Orders::where("user_id",Auth::id())->latest()->get();
         return view('user.pages.account.account', [
             'user_data'     => $user_data,
         ]);

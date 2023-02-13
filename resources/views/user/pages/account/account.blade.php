@@ -198,7 +198,7 @@
                                         <!--begin::Col-->
 										{{-- We have to add the payment status here paid or unpaid --}}
                                         <div class="col-lg-8">
-                                            <a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{Auth::guard('web') -> user()->pm_type }}</a>
+                                            <a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{ $user_data[0]->status }}</a>
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -212,7 +212,7 @@
                                         <!--begin::Col-->
 										{{-- We have to add the payment status here paid or unpaid --}}
                                         <div class="col-lg-8">
-                                            <a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{ $user_data }}</a>
+                                            <span class="badge badge-primary">{{ $user_data[0]->package_name }}</span>
                                         </div>
                                         <!--end::Col-->
                                     </div>
