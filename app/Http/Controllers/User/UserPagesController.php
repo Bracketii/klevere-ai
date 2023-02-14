@@ -8,7 +8,7 @@ use App\Models\Orders;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
-use App\Models\user;
+use App\Models\User;
 
 class UserPagesController extends Controller
 {

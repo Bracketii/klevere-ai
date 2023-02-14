@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
-use App\Models\user;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -70,7 +70,7 @@ class ForgotPasswordController extends Controller
               return back()->withInput()->with('error', 'Invalid token!');
           }
   
-          $user = user::where('email', $request->email)
+          $user = User::where('email', $request->email)
                       ->update(['password' => Hash::make($request->password)]);
  
           DB::table('password_resets')->where(['email'=> $request->email])->delete();

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Orders;
 use App\Models\Product;
-use App\Models\user;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -30,7 +30,7 @@ class AdminPagesController extends Controller
 
     public function showAdminUsers(){
 
-        $all_users = user::latest()->get();
+        $all_users = User::latest()->get();
 
         return view('admin.pages.users', [
             'all_users'     => $all_users,

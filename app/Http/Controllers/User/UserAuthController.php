@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
-use App\User;
+use App\Models\User;
 use Carbon\Carbon;
 use App\Models\History;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\user as ModelsUser;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -35,7 +34,7 @@ class UserAuthController extends Controller
             //  'password'=>'required|confirmed',
             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()->symbols()]
         ]);
-        $user=ModelsUser::create([
+        $user=User::create([
             'firstname'=>request('firstname'),
             'lastname'=>request('lastname'),
             'email'=>request('email'),
