@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Models\User;
+use App\Notifications\UserAccountNotification;
 use Carbon\Carbon;
 use App\Models\History;
 use Illuminate\Support\Str;
@@ -31,30 +32,66 @@ class UserAuthController extends Controller
              'lastname'=>'required',
              'password_confirmation' => 'required',
              'email'=>'required|unique:users,email',
-            //  'password'=>'required|confirmed',
-            'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()->symbols()]
+             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()->symbols()]
         ]);
+
+        // Creating token
+        $token = md5(time().rand());
+
+
         $user=User::create([
             'firstname'=>request('firstname'),
             'lastname'=>request('lastname'),
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
+            'access_token'  => $token,
         ]);
-        return to_route('ShowLogin');
+        // Sending activation link to user email
+        $user -> notify(new UserAccountNotification($user));
+
+
+        return to_route('ShowLogin')->with('danger', 'Please activate your account to log in! Check your email.');
 
     }
+
+    // Account Activation
+    public function accountActivation($token){
+        if(!$token){
+            return to_route('ShowLogin')->with('danger', 'Access Denied!');
+        }
+        // Check token validity
+        if($token){
+            $user_data = User::where('access_token', $token)->first();
+            if($user_data){
+
+                $user_data -> update([
+                    'access_token'      => NULL,
+                    'status'            => true,
+                ]);
+
+
+                return to_route('ShowLogin')->with('success', 'Account verified!');
+            }else{
+                return to_route('ShowLogin')->with('danger', 'Access Denied!');
+            }
+        }
+    }
+
+    
     public function login(){
         $this->validate(request(),[
             'email'=>'required',
             'password'=>'required'
         ]);
+
         if(Auth::attempt([
           'email'=>request('email'),
-          'password'=>request('password')
+          'password'=>request('password'),
+          'status'  => true,
         ])){
-            return to_route('order');
+            return to_route('user.dashboard');
         }else{
-            return redirect()->back()->with('error', 'credentials not matched');
+            return redirect()->back()->with('error', 'Please activate your account');
         }
     }
     public function logout(){

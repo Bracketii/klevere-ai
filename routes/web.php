@@ -1,16 +1,14 @@
 <?php
 
-use App\Models\user;
+use App\Models\User;
 
 use App\Http\Controllers\AI\SalesController;
-use App\Http\Controllers\History;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AI\AIController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\EditProjectController;
-
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AI\MarketingController;
 use App\Http\Controllers\AI\hrController;
@@ -22,7 +20,6 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\OrderController;
-
 
 /**---------------------------------------------------------- */
 
@@ -65,10 +62,12 @@ Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPa
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+// Account Activation
+Route::get('activation/{token?}', [UserAuthController::class, 'accountActivation'])->name('user.account.activation');
+
 //update Routes
 Route::get('edit-project/{id}', [EditProjectController::class, 'showEditForm'])->name('showEdit');
 Route::post('edit-project/{id}', [EditProjectController::class, 'Edit'])->name('EditProject');
-
 
 //delete Routes
 Route::get('delete-project/{id}', [EditProjectController::class, 'showDeleteForm'])->name('showDelete');
@@ -116,21 +115,25 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::post('tech-result', [TechController::class, 'textCompletion'])->name('tech.result');
 
 
-   //history saving routes
-   Route::post('project-save-marketing',[HistoryController::class,'projectSaveMarketing'])->name('projectSave.marketing');
-   Route::post('project-save-artist',[HistoryController::class,'projectSaveArtist'])->name('projectSave.artist');
-   Route::post('project-save-guidance',[HistoryController::class,'projectSaveGuidance'])->name('projectSave.guidance');
-   Route::post('project-save-hr',[HistoryController::class,'projectSaveHR'])->name('projectSave.hr');
-   Route::post('project-save-sales',[HistoryController::class,'projectSaveSales'])->name('projectSave.sales');
-   Route::post('project-save-tech',[HistoryController::class,'projectSaveTech'])->name('projectSave.tech');
-   Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
+    //history saving routes
+    Route::post('project-save-marketing',[HistoryController::class,'projectSaveMarketing'])->name('projectSave.marketing');
+    Route::post('project-save-artist',[HistoryController::class,'projectSaveArtist'])->name('projectSave.artist');
+    Route::post('project-save-guidance',[HistoryController::class,'projectSaveGuidance'])->name('projectSave.guidance');
+    Route::post('project-save-hr',[HistoryController::class,'projectSaveHR'])->name('projectSave.hr');
+    Route::post('project-save-sales',[HistoryController::class,'projectSaveSales'])->name('projectSave.sales');
+    Route::post('project-save-tech',[HistoryController::class,'projectSaveTech'])->name('projectSave.tech');
+    Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
 });
+
+
 // order route start
  Route::get('order',[OrderController::class,'index'])->name('order');
  Route::post('orderr/{id}',[OrderController::class,'checkout'])->name('checkout');
  Route::get('/success',[OrderController::class,'success'])->name('checkout.success');
-Route::get('/cancel',[OrderController::class,'cancel'])->name('checkout.cancel');
+ Route::get('/cancel',[OrderController::class,'cancel'])->name('checkout.cancel');
 // order route end
+
+
 
 // Route::get('confirm-password',[ConfirmablePasswordController::class,'confirmPassword'])->name('user.confirm.password');
 // Route::post('submit-password',[ConfirmablePasswordController::class,'SubmitPassword'])->name('user.submit.password');
@@ -159,13 +162,13 @@ Route::get('google/callback', function () {
     $userEmail = $user->getEmail();
     $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
-    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    $getUser = User::where('email',$userEmail)->first();
 
     if($getUser){
         Auth::login($getUser);
         return redirect('user');
     } else{
-        $user = \App\Models\user::create([
+        $user = User::create([
             'firstname' => $userName,
             'lastname' => $userName,
             'email' => $userEmail,
@@ -191,13 +194,13 @@ Route::get('facebook/callback', function () {
     $userEmail = $user->getEmail();
     $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
-    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    $getUser = User::where('email',$userEmail)->first();
 
     if($getUser){
         Auth::login($getUser);
         return redirect('user');
     } else{
-        $user = \App\Models\user::create([
+        $user = User::create([
             'firstname' => $userName,
             'lastname' => $userName,
             'email' => $userEmail,
@@ -220,13 +223,13 @@ Route::get('linkedin/callback', function () {
     $userEmail = $user->getEmail();
     $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
-    $getUser = \App\Models\user::where('email',$userEmail)->first();
+    $getUser = User::where('email',$userEmail)->first();
 
     if($getUser){
         Auth::login($getUser);
         return redirect('user');
     } else{
-        $user = \App\Models\user::create([
+        $user = User::create([
             'firstname' => $userName,
             'lastname' => $userName,
             'email' => $userEmail,

@@ -51,11 +51,22 @@
 						<!--begin::Body-->
 						<div class="py-20">
 							<!--begin::Form-->
-
+							@if (\Session::has('success'))                         
+							<div class="alert alert-dismissible bg-success d-flex flex-column flex-sm-row w-100 p-5 mb-10" role="alert">
+								<div class="d-flex flex-column text-light pe-0 pe-sm-10">{!! \Session::get('success') !!}</div>
+								<button type="button" class="btn-close text-light" data-bs-dismiss="alert" aria-label="Close"></button>
+							  </div>
+                              @endif
+							@if (\Session::has('danger'))                         
+							  <div class="alert alert-dismissible bg-danger d-flex flex-column flex-sm-row w-100 p-5 mb-10" role="alert">
+								<div class="d-flex flex-column text-light pe-0 pe-sm-10">{!! \Session::get('danger') !!}</div>
+								<button type="button" class="btn-close text-light" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                            @endif
                             @if (\Session::has('error'))                         
-							  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-								{!! \Session::get('error') !!}
-								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							  <div class="alert alert-dismissible bg-danger d-flex flex-column flex-sm-row w-100 p-5 mb-10" role="alert">
+								<div class="d-flex flex-column text-light pe-0 pe-sm-10">{!! \Session::get('error') !!}</div>
+								<button type="button" class="btn-close text-light" data-bs-dismiss="alert" aria-label="Close"></button>
                               </div>
                               @endif
                             @include('errors')
@@ -98,7 +109,29 @@
 									<!--begin::Socialite Actions-->
 									<div class="d-flex flex-stack">
 										
-                                        <input class="btn btn-primary me-2 flex-shrink-0" type="submit" value="Sign in">
+                                        <button type="submit" class="btn btn-primary me-10" id="kt_button_1">
+											<span class="indicator-label">
+												Log in
+											</span>
+											<span class="indicator-progress">
+												Logging in... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+											</span>
+											<script>
+												// Element to indecate
+												var button = document.querySelector("#kt_button_1");
+
+												// Handle button click event
+												button.addEventListener("click", function() {
+													// Activate indicator
+													button.setAttribute("data-kt-indicator", "on");
+
+													// Disable indicator after 3 seconds
+													setTimeout(function() {
+														button.removeAttribute("data-kt-indicator");
+													}, 3000);
+												});
+											</script>
+										</button>
 										<!--end::Submit-->
 										<!--begin::Social-->
 										<div class="d-flex align-items-center">

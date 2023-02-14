@@ -127,7 +127,7 @@
 													<label class="form-label fs-6 fw-semibold">Subscribed Plan</label>
 													<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true">
 														
-														<option value="Enabled">Starter</option>
+														<option value="Enabled">Basic</option>
 														<option>Standard</option>
 														<option>Premium</option>
 														<option>On Trial</option>

@@ -156,7 +156,7 @@
         <div class="">
             <!--begin::Menu wrapper-->
             <div class="cursor-pointer symbol symbol-circle symbol-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-overflow="true" data-kt-menu-placement="top-start">
-                <img src="assets/media/avatars/300-2.jpg" alt="image" />
+                <span class="bg-primary w-px-60 h-px-60 rounded-circle" style="font-size:16px; padding:10px 15px;color:#fff">{{Auth::guard('admin') -> user()->name[0] }}</span>
             </div>
             
             <!--begin::User account menu-->
@@ -164,16 +164,15 @@
                 <!--begin::Menu item-->
                 <div class="menu-item px-3">
                     <div class="menu-content d-flex align-items-center px-3">
-                        <!--begin::Avatar-->
                         <div class="symbol symbol-50px me-5">
-                            <img alt="Logo" src="assets/media/avatars/300-13.jpg" />
+                            <span class="bg-primary w-px-60 h-px-60 rounded-circle" style="font-size:16px; padding:15px 20px;color:#fff">{{Auth::guard('admin') -> user()->name[0] }}</span>
                         </div>
                         <!--end::Avatar-->
                         <!--begin::Username-->
                         <div class="d-flex flex-column">
-                            <div class="fw-bold d-flex align-items-center fs-5">Max Smith
+                            <div class="fw-bold d-flex align-items-center fs-5">{{ Auth::guard('admin')->user()->name}}
                             </div>
-                            <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">User</a>
+                            <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{ Auth::guard('admin')->user()->email}}</a>
                         </div>
                         <!--end::Username-->
                     </div>
