@@ -123,6 +123,8 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::post('project-save-sales',[HistoryController::class,'projectSaveSales'])->name('projectSave.sales');
     Route::post('project-save-tech',[HistoryController::class,'projectSaveTech'])->name('projectSave.tech');
     Route::post('chat-history',[HistoryController::class,'projectSaveChat'])->name('projectSave.chat');
+
+     Route::get('test',[OrderController::class,'test']);
 });
 
 

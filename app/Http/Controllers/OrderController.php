@@ -87,4 +87,18 @@ class OrderController extends Controller
     public function cancel(){
         return "cancel";
    }
+
+   public function test(){
+      // $check=Auth::user()->orders()->with('status');
+    // $check=Auth::user()->orders()->with('status')->get();
+
+   $check=Orders::where('user_id',Auth::id())->first();
+     $chec=$check->status;
+//    dd($check);
+   if($chec=='unpaid'){
+    return 'hello';
+   }else{
+    return 'hi';
+   }
+   }
 }
