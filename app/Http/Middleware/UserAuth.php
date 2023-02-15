@@ -20,6 +20,7 @@ class UserAuth
     {
 
         if(Auth::check()){
+            
             $check=Orders::where('user_id',Auth::id())->first();
             $chec=$check->status;
             if($chec=='paid'){

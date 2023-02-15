@@ -52,7 +52,8 @@ class OrderController extends Controller
                'status'=>'unpaid',
                'session_id'=>$checkout_session->id,
                'total_price'=>$products->price,
-               'package_name'=>$products->name
+               'package_name'=>$products->name,
+               
 
           ]);
 
