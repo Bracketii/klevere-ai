@@ -20,8 +20,16 @@ class AIController extends Controller
     public function textCompletion(Request $request){
         // $words = Auth::guard('web') -> user()->words;
 
+        $this->validate(\request(),[
+            'word_input'=>'required',
 
+        ]);
         $word_input = intval($request->word_input);
+        $order=Orders::where('user_id',Auth::id())->first();
+        $oldlimit=$order->word_limit;
+        if($oldlimit<$word_input){
+            return to_route('order');
+        }
 
 
         $title=$request->text;
@@ -45,11 +53,21 @@ class AIController extends Controller
         // ]);
 
         $text=$result['choices'][0]['text'];
-        $order=Orders::where('user_id',Auth::id())->first();
-        $oldlimit=$order->word_limit;
-        // dd($oldlimit);
+        // $order=Orders::where('user_id',Auth::id())->first();
+        // $oldlimit=$order->word_limit;
 
-        // $oldlimit->
+        // if($oldlimit<$word_input){
+        //     return to_route('order');
+        // }else{
+        //     $order->update([
+
+
+        //         'word_limit'=>$oldlimit - $word_input,
+        //     ]);
+        //     return view('user.pages.chat.chat',['generate'=> $text, 'type' => 'main','title'=>$title]);
+        // }
+
+
         if($oldlimit<=0){
             return to_route('order');
          }else{
@@ -60,6 +78,7 @@ class AIController extends Controller
             ]);
             return view('user.pages.chat.chat',['generate'=> $text, 'type' => 'main','title'=>$title]);
         }
+
 
 
 
