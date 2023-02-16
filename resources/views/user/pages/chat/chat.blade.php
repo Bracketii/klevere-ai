@@ -51,7 +51,7 @@
                     How to get started
                 </button>
                 {{-- Modal paste here --}}
-                		
+
                 {{-- end::Modal --}}
 				<!--end::Action-->
 			</div>
@@ -66,7 +66,7 @@
 		<!--begin::Sidebar-->
 		@include('user.layouts.sidebar')
 		<!--end::Sidebar-->
-		
+
 		<!--begin::Main-->
 		<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
 
@@ -90,14 +90,14 @@
                                                 </svg>
                                             </span>
                                             <!--end::Svg Icon-->
-                        
+
                                             <!--begin::Content-->
                                             <div class="d-flex flex-column text-light pe-0 pe-sm-10">
                                                 <h4 class="mb-2 text-light">{!! \Session::get('success') !!}</h4>
                                                 <a href="{{ route('user.projects') }}"><button class="btn btn-light btn-sm">View Files</button></a>
                                             </div>
                                             <!--end::Content-->
-                        
+
                                             <!--begin::Close-->
                                             <button type="button" class="position-absolute position-sm-relative m-2 m-sm-0 top-0 end-0 btn btn-icon ms-sm-auto" data-bs-dismiss="alert">
                                                 <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
@@ -105,7 +105,7 @@
                                             <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
                                             <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
                                             </svg>
-                                            
+
                                             </span>
                                         </button>
                                             <!--end::Close-->
@@ -213,7 +213,7 @@
                                                 <!--end::Wrapper-->
                                             </div>
                                             @endif
-                                            
+
                                             <!--begin::Message(template for out)-->
                                             @if ($type=='main')
                                             @if (isset($generate))
@@ -243,7 +243,7 @@
                                                     <!--end::Text-->
                                                 </div>
                                                 <!--end::Wrapper-->
-                                            </div>                                             
+                                            </div>
                                             @endif
                                             @endif
                                             <!--end::Message(template for out)-->
@@ -270,7 +270,7 @@
                                                     <!--end::User-->
                                                     <!--begin::Text-->
                                                     {{-- <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-start" style="background-color: #EBF1FF !important" data-kt-element="message-text">How likely are you to recommend our company to your friends and family ?</div> --}}
-                                                   
+
                                                         <textarea class="form-control form-control form-control-solid pt-0 mt-1" data-kt-autosize="true" style="width: 700px !important;font-size:16px; color:black;" id="myResult" >{{$generate}}</textarea>
                                                         <form action="{{ route('projectSave.chat')}}" method="POST">
                                                             {{ csrf_field() }}
@@ -283,20 +283,20 @@
                                                             <a class="btn btn-icon btn-sm btn-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy" onclick="myFunction()">
                                                                 <i class="fa fa-clone" aria-hidden="true"></i>
                                                             </a>
-                                                        </form>    
-                                                   
+                                                        </form>
+
                                                     <!--end::Text-->
                                                 </div>
                                                 <!--end::Wrapper-->
                                             </div>
                                             @endif
-                                            
+
                                         </div>
                                         <!--end::Messages-->
                                     </div>
                                     <!--end::Card body-->
                                     <!--begin::Card footer-->
-                                    
+
                                     <div class="card-footer pt-4" id="kt_chat_messenger_footer">
                                         <!--begin::Input-->
                                         <form action="{{ route('chat.text')}}" method="POST" class="form fv-plugins-bootstrap5 fv-plugins-framework">
@@ -310,7 +310,7 @@
                                                 <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
                                                     <i class="bi bi-mic fs-3"></i>
                                                 </button>
-                                                
+
                                                 <select name="language" data-control="select2" data-placeholder="Select a language..." class="form-select form-select-solid " data-select2-id="select2-data-1-o0c1" tabindex="-1" aria-hidden="true" data-kt-initialized="1" style="margin-left: 10px">
                                                     <option value="English" selected>Language</option>
                                                     <option value="Arabic">Arabic</option>
@@ -390,10 +390,12 @@
                                                     <option value="Accountant">Accountant</option>
                                                 </select>
 
+                                                <input type="number" name="word_input">
+
                                             </div>
                                             <!--end::Actions-->
                                             <!--begin::Send-->
-                                            
+
                                             {{-- Reset button --}}
                                             {{-- @if(isset($generate))
                                             <div class="d-flex align-items-end">
@@ -404,18 +406,18 @@
                                             @endif --}}
                                             {{-- end:: Reset button --}}
 
-                                            
+
                                             <button name="submit" class="btn btn-primary" type="submit" id="kt_page_loading_overlay">
-                        
+
                                                  <span class="indicator-label">
                                                     <i class="las la-paper-plane" style="font-size: 30px;margin-right:-5px"></i>
                                                 </span>
-                                                
+
                                             </button>
                                             <!--begin::Page loading(append to body)-->
-                                                
-                                                
-                                            
+
+
+
                                             </form>
                                             <!--end::Send-->
                                         </div>
@@ -428,17 +430,17 @@
                             </div>
                             <!--end::Content-->
                         </div>
-                        
+
                     </div>
                     <!--end::Content container-->
 				</div>
 				<!--end::Content-->
 			</div>
 			<!--end::Content wrapper-->
-			
+
 
             {{-- Right toggle bar --}}
-            <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">	
+            <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">
                 <!--begin::Help drawer toggle-->
                 <button id="kt_expertise" class="engage-help-toggle btn engage-btn shadow-sm px-5 rounded-top-0" title="Expertise of Klevere Chat" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Expertise</button>
                 <!--end::Help drawer toggle-->
@@ -464,39 +466,39 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title">Start writing in 4 easy steps!</h2>
-        
+
                     <!--begin::Close-->
                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
                         <span class="svg-icon svg-icon-2x">...</span>
                     </div>
                     <!--end::Close-->
                 </div>
-        
+
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card-body started-modal">
-                                        
+
                                 <i class="fonticon-content-marketing" style="font-size: 35px; color: #2468FF;"></i>
-                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                    Write               
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">
+                                    Write
                                 </h3>
-                        
+
                                 <p class="fw-semibold fs-6">
-                                Write any topic names or questions in the chat box by selecting tone and language and other options.        
+                                Write any topic names or questions in the chat box by selecting tone and language and other options.
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="card-body started-modal">
-                                    
+
                                 <i class="fonticon-settings-1" style="font-size: 35px; color: #2468FF;"></i>
-                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                    Select                   
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">
+                                    Select
                                 </h3>
-                        
+
                                 <p class="fw-semibold fs-6">
-                                Select the options as per your needs for your language and tone to get the best results from Klevere.AI        
+                                Select the options as per your needs for your language and tone to get the best results from Klevere.AI
                                 </p>
                             </div>
                         </div>
@@ -504,33 +506,33 @@
                     <div class="row mt-10">
                         <div class="col-md-6">
                             <div class="card-body started-modal">
-                                        
+
                                 <i class="fonticon-send" style="font-size: 35px; color: #2468FF;"></i>
-                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                    Generate                   
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">
+                                    Generate
                                 </h3>
-                        
+
                                 <p class="fw-semibold fs-6">
-                                Click on generate button and wait for the results within seconds!        
+                                Click on generate button and wait for the results within seconds!
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="card-body started-modal">
-                                    
+
                                 <i class="fonticon-bookmark" style="font-size: 35px; color: #2468FF;"></i>
-                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
-                                    Save & Copy                   
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">
+                                    Save & Copy
                                 </h3>
-                        
+
                                 <p class="fw-semibold fs-6">
-                                After the generate save or copy your results for your use!        
+                                After the generate save or copy your results for your use!
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="modal-footer">
                     <a href="#" type="button" class="btn btn-light"><i class="bi bi-play-circle-fill" style="font-size: 18px;margin-top: -4px;"></i> Watch a demo</a>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Let's Go! 🚀</button>
@@ -547,14 +549,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Prompt suggestions</h3>
-    
+
                     <!--begin::Close-->
                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
                         <span class="svg-icon svg-icon-1"></span>
                     </div>
                     <!--end::Close-->
                 </div>
-    
+
                 <div class="modal-body">
                     <span class="badge badge-light-warning badge-lg">1. What is the longest river in the world?</span>
                     <span class="badge badge-light-warning badge-lg mt-5">2. What is the tallest mountain in the world?</span>
@@ -562,7 +564,7 @@
                     <span class="badge badge-light-warning badge-lg mt-5">4. What is the capital city of the United States?</span>
                     <span class="badge badge-light-warning badge-lg mt-5">5. What is the most populous country in the world?</span>
                 </div>
-    
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Let's Go! 🚀</button>
                 </div>
@@ -598,7 +600,7 @@
 				<div class="card-body" id="kt_help_body">
 					<!--begin::Content-->
 					<div id="kt_help_scroll" class="hover-scroll-overlay-y" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_help_body" data-kt-scroll-dependencies="#kt_help_header" data-kt-scroll-offset="5px">
-						
+
 						<!--begin::Link-->
 						<div class="d-flex align-items-center mb-7">
 							<!--begin::Icon-->
@@ -691,7 +693,7 @@
 							<!--end::Info-->
 						</div>
 						<!--end::Link-->
-                        
+
 					</div>
 					<!--end::Content-->
 				</div>
@@ -707,14 +709,14 @@
         function myFunction() {
         // Get the text field
         var copyText = document.getElementById("myResult");
-    
+
         // Select the text field
         copyText.select();
         copyText.setSelectionRange(0, 99999); // For mobile devices
-    
+
         // Copy the text inside the text field
         navigator.clipboard.writeText(copyText.value);
-        
+
         // Alert the copied text
         alert("Copied the text: " + copyText.value);
     }

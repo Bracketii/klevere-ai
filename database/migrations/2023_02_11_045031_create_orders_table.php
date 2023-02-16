@@ -21,6 +21,7 @@ return new class extends Migration
             $table->decimal('total_price');
             $table->string('session_id');
             $table->string('package_name')->nullable();
+            $table->integer('word_limit')->nullable();
             $table->timestamps();
         });
     }

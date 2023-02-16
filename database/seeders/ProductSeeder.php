@@ -18,14 +18,17 @@ class ProductSeeder extends Seeder
         $product=[
               [
                 'name'=>'Basic',
-                'price'=>10
+                'price'=>10,
+                'word_limit'    => 1000,
               ],
               [
                 'name'=>'Standard',
-                'price'=>20
+                'word_limit'    => 2000,
+                'price'=>20,
               ],
               [
                 'name'=>'Premium',
+                'word_limit'    => 3000,
                 'price'=>30
               ],
 

@@ -23,7 +23,7 @@ class OrderController extends Controller
         $products=Product::find($id);
 
         $line_items=[];
-       
+
         $line_items[]=[
 
             'price_data' => [
@@ -31,7 +31,7 @@ class OrderController extends Controller
               'product_data' => [
                 'name' => $products->name,
                 'description'   => [],
-                
+
 
               ],
               'unit_amount' => $products->price*100,
@@ -48,11 +48,14 @@ class OrderController extends Controller
             'cancel_url' => route('checkout.cancel',[],true),
           ]);
           // user model
+          
           $order=Auth::user()->orders()->create([
                'status'=>'unpaid',
                'session_id'=>$checkout_session->id,
                'total_price'=>$products->price,
-               'package_name'=>$products->name
+               'package_name'=>$products->name,
+               'word_limit' => $products->word_limit,
+
 
           ]);
 
