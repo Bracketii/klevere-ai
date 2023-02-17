@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
+// use App\Models\User;
 use App\Models\User;
+
+use App\Models\Orders;
 use App\Notifications\UserAccountNotification;
 use Carbon\Carbon;
 use App\Models\History;
@@ -45,7 +48,8 @@ class UserAuthController extends Controller
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
             'access_token'  => $token,
-           ])->orders()->create();
+           ])->order()->create();
+            //   $orderr=Auth::user()->orders()->create();
         // Sending activation link to user email
         $user -> notify(new UserAccountNotification($user));
 

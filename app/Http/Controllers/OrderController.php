@@ -48,16 +48,23 @@ class OrderController extends Controller
             'cancel_url' => route('checkout.cancel',[],true),
           ]);
           // user model
-          
-          $order=Auth::user()->orders()->create([
-               'status'=>'unpaid',
-               'session_id'=>$checkout_session->id,
-               'total_price'=>$products->price,
-               'package_name'=>$products->name,
-               'word_limit' => $products->word_limit,
+         $order=Orders::where('user_id',Auth::id())->first();
+
+         $order->status='unpaid';
+         $order->session_id=$checkout_session->id;
+         $order->total_price=$products->price;
+         $order->package_name=$products->name;
+         $order->word_limit=$products->word_limit;
+         $order->save();
+        //   $order=Auth::user()->orders()->create([
+        //        'status'=>'unpaid',
+        //        'session_id'=>$checkout_session->id,
+        //        'total_price'=>$products->price,
+        //        'package_name'=>$products->name,
+        //        'word_limit' => $products->word_limit,
 
 
-          ]);
+        //   ]);
 
           return redirect($checkout_session->url);
     }
