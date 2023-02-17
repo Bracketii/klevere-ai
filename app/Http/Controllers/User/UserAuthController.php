@@ -45,7 +45,7 @@ class UserAuthController extends Controller
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
             'access_token'  => $token,
-        ]);
+           ])->orders()->create();
         // Sending activation link to user email
         $user -> notify(new UserAccountNotification($user));
 
@@ -77,7 +77,7 @@ class UserAuthController extends Controller
         }
     }
 
-    
+
     public function login(){
         $this->validate(request(),[
             'email'=>'required',
