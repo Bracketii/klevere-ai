@@ -1,86 +1,13 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 75" width="340" height="75">
-	<title>klevere-svg</title>
+	<title>New Project</title>
 	<defs>
-		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
-			<path d="m4.5 3h79.5v68.46h-79.5z"/>
-		</clipPath>
+		<image  width="52" height="59" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA7CAMAAAAD8FkMAAAAAXNSR0IB2cksfwAAAbZQTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////HFq1QQAAAJJ0Uk5TAA8+XhFEzfj90E8a1P/VEFD8/ltrhFhlHeLm6usVgGEZd0ABiIb7f0gCiomLgm0zDBZ92frzxEsFO8fxjCrK93qP5x8H7Ex1dvT2eWoEQQoLvuVD2hITsJdOcMkvK/V7NPkcpQN4GFHokt25su/w6Qajw3TgnE1fLSInXdvkvAjMIGOgvcXG1hcURaxabkqxtz1a8AFWAAACbklEQVR4nJ3W6V8SQRgH8EcK2ZQxoMAEsXDXNVaiUCLyQlfATMnAtOzQLCw6FKXTLtOisrv/2Nld2VYYiocfb5gZvp+Z2TkWAC0NpgOmg4CLudHCWQ41oUyzlShpOYxBNruKHEcw6CjR4sQgl9YTacWgY22qcaPmBDYPNe0ulAHwujqOn0CaOmP2dfJoJHAd+J66xG48Ouk044eHjr+5ydftFARJ6tkfSZICgYCk1kvCqeDpM7oJ9faFHaSGcGcj56Iq4c/322sRWgYGGxQ0NFxTL6XERhQ0ymEMIfIYQDyBM4QEAJKICWkZBghiDWkDGEcjN8AFQ3EiYWH/7uKA4QnLAJN6wTPlTY2NMqZovTR92ZTWixkAn/59Rl1rqWIFrswq9XNXDcPT0bVpFXk95SiobbZ5joGu7+3EG2WGu6nV31pgDG9x7zhZy5CjU6u/vcToqf+O2jazVIbIXb9Sn11mzYkbVF4191rKDYndp8chOp9jISI2SlMPHjK2/MKjxcnHK3pRNiLaWbjKjheNq0fRMvtn/0hdKGfcRn+zms/RT97jaWcdthyzp75ZUNaM92f9a+uVzXkmKhhuzSdMxBieOKSbtafM4bHm9Kxk+FZGK3tOxNKV0tDzDKNVrnLc7ekXLzdeJdcnWI10G71m1dPNkXjzNsxuomijyrVQPRTBu3pQcqUOFB+J4RFs2t6LGCRrL8Kt7Q8fC5FCIVIsfjKmSBNRkv5sePju0tLH50J6vlQktLP19ZtYgf6fnR77vuHVlpQg4hFEe8N4BPx39XHIuD8p/A/las6gDFXbq/TNg0QAP3/9/oNGkKV39C5ukbPSVZdTAQAAAABJRU5ErkJggg=="/>
+		<image  width="340" height="75" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABLAQMAAAAVq+0MAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAAAaSURBVHic7cEBDQAAAMKg909tDwcUAADAjwEM5AAB0rHzZAAAAABJRU5ErkJggg=="/>
 	</defs>
 	<style>
 		.s0 { fill: #ffffff } 
 	</style>
-	<g id="Clip-Path" clip-path="url(#cp1)">
-		<g id="Layer">
-			<path id="Layer" fill-rule="evenodd" class="s0" d="m84 49.5c0 3.3-2.7 6-6 6h-2v4c0 6.6-5.3 12-11.9 12h-39.7c-6.6 0-12-5.4-12-12v-4h-1.9c-3.3 0-6-2.7-6-6 0-3.3 2.7-6 6-6h1.9v-4c0-6.6 5.4-11.9 12-11.9h15.9v-9.1c-1.2-0.7-2.2-1.8-2.9-3-2.2-3.8-0.9-8.7 2.9-10.9 3.8-2.2 8.6-0.9 10.8 2.9 2.2 3.9 0.9 8.8-2.9 11v9.1h15.9c6.6 0 11.9 5.3 11.9 11.9v4h2c3.3 0 6 2.7 6 6zm-11.9-10c0-4.4-3.6-7.9-8-8h-39.7c-4.4 0.1-8 3.6-8 8v20c0 4.4 3.6 8 8 8h39.7c4.4 0 8-3.6 8-8zm-8 10c0 3.3-2.6 6-5.9 6-3.3 0-6-2.7-6-6 0-3.3 2.7-6 6-6 3.3 0 5.9 2.7 5.9 6zm-27.8 0c0 3.3-2.7 6-6 6-3.3 0-5.9-2.7-5.9-6 0-3.3 2.6-6 5.9-6 3.3 0 6 2.7 6 6z"/>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" class="s0" d="m109.3 60.3v-30.7h6.5v13.5h0.4l11.1-13.5h7.8l-11.4 13.8 11.5 16.9h-7.8l-8.4-12.6-3.2 3.9v8.7z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" class="s0" d="m146.7 29.6v30.7h-6.4v-30.7z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" fill-rule="evenodd" class="s0" d="m164.3 60.8q-3.5 0-6.1-1.5-2.6-1.4-3.9-4.1-1.4-2.6-1.4-6.3 0-3.5 1.4-6.2 1.3-2.7 3.9-4.2 2.5-1.5 5.9-1.5 3 0 5.5 1.3 2.4 1.3 3.8 3.9 1.5 2.6 1.5 6.5v1.7h-15.7q0 2.6 1.4 4.1 1.4 1.5 3.8 1.5 1.6 0 2.8-0.7 1.2-0.6 1.6-2l6 0.4q-0.7 3.2-3.5 5.2-2.7 1.9-7 1.9zm-5.1-14.3h9.7q0-2.1-1.4-3.4-1.3-1.4-3.3-1.4-2.2 0-3.5 1.4-1.4 1.4-1.5 3.4z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" class="s0" d="m202.5 37.3l-8 23h-7.2l-8.1-23h6.8l4.8 16.5h0.2l4.8-16.5z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" fill-rule="evenodd" class="s0" d="m218.3 60.8q-3.5 0-6.1-1.5-2.6-1.4-4-4.1-1.3-2.6-1.3-6.3 0-3.5 1.3-6.2 1.4-2.7 3.9-4.2 2.5-1.5 5.9-1.5 3.1 0 5.5 1.3 2.5 1.3 3.9 3.9 1.5 2.6 1.5 6.5v1.7h-15.7q0 2.6 1.4 4.1 1.4 1.5 3.8 1.5 1.6 0 2.8-0.7 1.1-0.6 1.6-2l5.9 0.4q-0.7 3.2-3.4 5.2-2.7 1.9-7 1.9zm-5.1-14.3h9.6q0-2.1-1.3-3.4-1.3-1.4-3.4-1.4-2.1 0-3.5 1.4-1.3 1.4-1.4 3.4z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" class="s0" d="m235 60.3v-23h6.2v4h0.3q0.6-2.1 2.1-3.2 1.4-1.2 3.4-1.2 0.9 0 1.7 0.3 0.8 0.2 1.4 0.6l-1.9 5.3q-0.4-0.3-1-0.4-0.5-0.2-1.2-0.2-1.9 0-3.2 1.4-1.4 1.3-1.4 3.4v13z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" fill-rule="evenodd" class="s0" d="m265.6 60.8q-3.5 0-6.1-1.5-2.6-1.4-3.9-4.1-1.4-2.6-1.4-6.3 0-3.5 1.4-6.2 1.3-2.7 3.9-4.2 2.5-1.5 5.9-1.5 3 0 5.5 1.3 2.4 1.3 3.9 3.9 1.4 2.6 1.4 6.5v1.7h-15.7q0 2.6 1.4 4.1 1.4 1.5 3.8 1.5 1.6 0 2.8-0.7 1.2-0.6 1.6-2l6 0.4q-0.7 3.2-3.5 5.2-2.7 1.9-7 1.9zm-5.1-14.3h9.7q0-2.1-1.4-3.4-1.3-1.4-3.3-1.4-2.2 0-3.5 1.4-1.4 1.4-1.5 3.4z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" class="s0" d="m286.1 60.7q-1.5 0-2.6-1-1-1.1-1-2.6 0-1.5 1-2.5 1.1-1.1 2.6-1.1 1.4 0 2.5 1.1 1.1 1 1.1 2.5 0 1.5-1.1 2.6-1.1 1-2.5 1z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" fill-rule="evenodd" class="s0" d="m302.3 60.3h-6.9l10.6-30.7h8.3l10.6 30.7h-6.9l-2.3-7h-11.1zm3.9-12.1h7.8l-3.7-11.6h-0.3z"/>
-			</g>
-		</g>
-	</g>
-	<g id="Layer">
-		<g id="Layer">
-			<g id="Layer">
-				<path id="Layer" class="s0" d="m337.1 29.6v30.7h-6.5v-30.7z"/>
-			</g>
-		</g>
-	</g>
+	<use id="Klevere-new-white" href="#img1" x="11" y="7"/>
+	<use id="Background" href="#img2" x="0" y="0"/>
+	<path id="Klevere.AI" class="s0" aria-label="Klevere.AI"  d="m85.9 60h5.6v-11.4l4.3-4.9 11.8 16.3h6.6l-14.8-20.1 14.8-16.5h-7l-15.3 17.5h-0.4v-17.5h-5.6zm38.4-36.5h-5.4v36.5h5.4zm19 37.2c5.9 0 10.2-3 11.4-7.5l-5.1-0.9c-0.9 2.6-3.3 3.9-6.3 3.9-4.6 0-7.6-2.9-7.8-8.2h19.5v-1.9c0-9.9-5.9-13.8-12.1-13.8-7.7 0-12.7 5.8-12.7 14.3 0 8.5 5 14.1 13.1 14.1zm-7.8-16.7c0.3-3.9 3.1-7.3 7.4-7.3 4.2 0 6.9 3.1 6.9 7.3zm48.1-11.3h-5.8l-6.9 21.1h-0.3l-6.9-21.1h-5.8l10 27.4h5.7zm15.9 28c6 0 10.2-3 11.4-7.4l-5-0.9c-1 2.5-3.3 3.9-6.4 3.9-4.5 0-7.6-3-7.8-8.3h19.5v-1.9c0-9.9-5.9-13.8-12.1-13.8-7.6 0-12.7 5.9-12.7 14.3 0 8.5 5 14.1 13.1 14.1zm-7.7-16.7c0.2-3.9 3-7.2 7.3-7.2 4.2 0 6.9 3 6.9 7.2zm25.4 16.1h5.4v-16.7c0-3.6 2.7-6.2 6.5-6.2 1.1 0 2.4 0.2 2.8 0.3v-5.1c-0.5-0.1-1.6-0.1-2.3-0.1-3.2 0-5.9 1.8-6.9 4.8h-0.3v-4.4h-5.2zm30.2 0.6c6 0 10.2-3 11.4-7.5l-5-0.9c-1 2.6-3.3 3.9-6.4 3.9-4.5 0-7.6-2.9-7.8-8.2h19.5v-1.9c0-9.9-5.9-13.8-12.1-13.8-7.6 0-12.7 5.8-12.7 14.3 0 8.5 5 14.1 13.1 14.1zm-7.7-16.7c0.2-3.9 3-7.3 7.3-7.3 4.2 0 6.9 3.1 6.9 7.3zm29 16.4c1.9 0 3.5-1.5 3.5-3.5 0-2-1.6-3.6-3.5-3.6-2 0-3.6 1.6-3.6 3.6 0 2 1.6 3.5 3.6 3.5zm14.2-0.3l3.3-9.7h14.3l3.4 9.7h5.8l-13.1-36.6h-6.4l-13.2 36.6zm5-14.3l5.4-15.6h0.3l5.4 15.6zm32.6-22.3h-5.5v36.6h5.5z"/>
 </svg>

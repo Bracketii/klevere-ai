@@ -4,7 +4,7 @@
         <!--begin::Logo image-->
         <a href="{{ route('user.dashboard') }}">
             <img alt="Logo" src="assets/media/logos/klevere.svg" class="app-sidebar-logo-default" style="height: 36px" />
-            <img alt="Logo" src="assets/media/logos/klevereLogoIcon.svg" class="h-30px app-sidebar-logo-minimize" />
+            <img alt="Logo" src="assets/media/logos/klevereLogoIcon.svg" class="h-30px app-sidebar-logo-minimize" style="margin-left: 5px;" />
         </a>
         <!--end::Logo image-->
         <!--begin::Sidebar toggle-->
@@ -61,32 +61,16 @@
                 </div>
                 <!--end::Menu Item-->
 
-                <!--begin::Menu Item-->
-                <div class="menu-item">
-                    <!--begin::Menu link-->
-                    <a href="{{ route('user.projects') }}" class="menu-link">
-                        <!--begin::Icon-->
-                        <span class="menu-icon">
-                            <i class="fonticon-pin dashboard-icons"></i>
-                        </span>
-                        <!--end::Icon-->
-                        <!--begin::Title-->
-                        <span class="menu-title dashboard-menu-title">Saved Files</span>
-                        <!--end::Title-->
-                    </a>
-                    <!--end:::Menu link-->
-                </div>
-                <!--end::Menu Item-->
 
                 <!--begin:Menu item-->
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <!--begin:Menu link-->
                     <span class="menu-link">
                         <span class="menu-icon">
-                            <i class="fa-solid fa-robot " style="font-size: 17px !important;
-                            margin-top: -8px;"></i>
+                            <i class="fonticon-layers dashboard-icons" ></i>
+
                         </span>
-                        <span class="menu-title dashboard-menu-title">Avatars</span>
+                        <span class="menu-title dashboard-menu-title">Functions</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -99,11 +83,11 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Bryan</span><br>
+                                <span class="menu-title">Marketing</span><br>
                                 <!--begin::Badge-->
-                                <span class="menu-badge">
+                                {{-- <span class="menu-badge">
                                     <span class="badge badge-primary">Marketing</span>
-                                </span>
+                                </span> --}}
                                 <!--end::Badge-->
                             </a>
                             <!--end:Menu link-->
@@ -117,12 +101,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Amanda</span><br>
-                                <!--begin::Badge-->
-                                <span class="menu-badge">
-                                    <span class="badge badge-primary">Sales</span>
-                                </span>
-                                <!--end::Badge-->
+                                <span class="menu-title">Sales</span><br>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -135,34 +114,12 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Aaron</span><br>
-                                <!--begin::Badge-->
-                                <span class="menu-badge">
-                                    <span class="badge badge-primary">HR</span>
-                                </span>
-                                <!--end::Badge-->
+                                <span class="menu-title">HR</span><br>
                             </a>
                             <!--end:Menu link-->
                         </div>
                         <!--end:Menu item-->
 
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link" href="{{ route('guidance.chat') }}" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Ryan</span><br>
-                                <!--begin::Badge-->
-                                <span class="menu-badge">
-                                    <span class="badge badge-primary">Guidance Coach</span>
-                                </span>
-                                <!--end::Badge-->
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
 
                         <!--begin:Menu item-->
                         <div class="menu-item">
@@ -171,12 +128,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Jack</span><br>
-                                <!--begin::Badge-->
-                                <span class="menu-badge">
-                                    <span class="badge badge-primary">Artist</span>
-                                </span>
-                                <!--end::Badge-->
+                                <span class="menu-title">Image Generation</span><br>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -189,12 +141,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Sam</span><br>
-                                <!--begin::Badge-->
-                                <span class="menu-badge">
-                                    <span class="badge badge-primary">Tech Specialist</span>
-                                </span>
-                                <!--end::Badge-->
+                                <span class="menu-title">General</span><br>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -218,7 +165,7 @@
                         </span>
                         <!--end::Icon-->
                         <!--begin::Title-->
-                        <span class="menu-title dashboard-menu-title">Jack</span>
+                        <span class="menu-title dashboard-menu-title">Chat</span>
                         <!--end::Title-->
                         <!--begin::Badge-->
                         <span class="menu-badge">
@@ -229,6 +176,23 @@
                     <!--end:::Menu link-->
                 </div>
                 <!--end::Menu Item-->
+
+                <!--begin::Menu Item-->
+                <div class="menu-item">
+                    <!--begin::Menu link-->
+                    <a href="{{ route('user.projects') }}" class="menu-link">
+                        <!--begin::Icon-->
+                        <span class="menu-icon">
+                            <i class="fonticon-pin dashboard-icons"></i>
+                        </span>
+                        <!--end::Icon-->
+                        <!--begin::Title-->
+                        <span class="menu-title dashboard-menu-title">Saved Files</span>
+                        <!--end::Title-->
+                    </a>
+                    <!--end:::Menu link-->
+                </div>
+                <!--end::Menu Item-->                
 
                 
 
@@ -241,6 +205,23 @@
                     <!--end:Menu content-->
                 </div>
                 <!--end:Menu item-->
+
+                <!--begin::Menu Item-->
+                <div class="menu-item">
+                    <!--begin::Menu link-->
+                    <a href="{{ route('order') }}" class="menu-link">
+                        <!--begin::Icon-->
+                        <span class="menu-icon">
+                            <i class="fonticon-repeat dashboard-icons"></i>
+                        </span>
+                        <!--end::Icon-->
+                        <!--begin::Title-->
+                        <span class="menu-title dashboard-menu-title">Upgrade</span>
+                        <!--end::Title-->
+                    </a>
+                    <!--end:::Menu link-->
+                </div>
+                <!--end::Menu Item--> 
 
 
                 <!--begin::Menu Item-->

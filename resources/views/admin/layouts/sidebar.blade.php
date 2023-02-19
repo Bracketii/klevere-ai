@@ -5,7 +5,7 @@
         <!--begin::Logo image-->
         <a href="{{ route('admin.dashboard') }}">
             <img alt="Logo" src="assets/media/logos/klevere.svg" class="app-sidebar-logo-default" style="height: 36px" />
-            <img alt="Logo" src="assets/media/logos/klevereLogoIcon.svg" class="h-30px app-sidebar-logo-minimize" />
+            <img alt="Logo" src="assets/media/logos/klevereLogoIcon.svg" class="h-30px app-sidebar-logo-minimize" style="margin-left: 5px;" />
         </a>
         <!--end::Logo image-->
         <!--begin::Sidebar toggle-->
