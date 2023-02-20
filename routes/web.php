@@ -19,6 +19,7 @@ use App\Http\Controllers\User\UserAuthController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
+use App\Http\Controllers\Marketing\BlogController;
 use App\Http\Controllers\OrderController;
 
 /**---------------------------------------------------------- */
@@ -253,4 +254,8 @@ Route::get('linkedin/callback', function () {
  */
 // API Test routes
 
+Route::get('new', function(){
+    return view('user.pages.new');
+});
 
+Route::post('blog', [BlogController::class, 'textCompletion'])->name('blog');

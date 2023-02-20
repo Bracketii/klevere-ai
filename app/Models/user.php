@@ -18,6 +18,6 @@ class User extends Authenticatable
         return $this->hasMany(History::class);
     }
     public function orders(){
-        return $this->hasMany(Orders::class);
+        return $this->hasOne(Orders::class);
     }
 }

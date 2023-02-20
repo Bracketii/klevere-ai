@@ -15,22 +15,25 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $product=[
-              [
-                'name'=>'Basic',
-                'price'=>10
-              ],
-              [
-                'name'=>'Standard',
-                'price'=>20
-              ],
-              [
-                'name'=>'Premium',
-                'price'=>30
-              ],
+      $product=[
+        [
+          'name'=>'Basic',
+          'price'=>10,
+          'word_limit'    => 1000,
+        ],
+        [
+          'name'=>'Standard',
+          'word_limit'    => 2000,
+          'price'=>20,
+        ],
+        [
+          'name'=>'Premium',
+          'word_limit'    => 3000,
+          'price'=>30
+        ],
 
 
-            ];
+      ];
             foreach($product as $product){
                 Product::create($product);
             }

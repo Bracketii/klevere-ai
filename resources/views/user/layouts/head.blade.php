@@ -27,6 +27,7 @@
 		<link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
-        {{-- Custom JS --}}
+        {{-- TinyMCE CDN --}}
+        <script src="https://cdn.tiny.cloud/1/qy9vq7c8krrgq80n4yel4kk2c0t59yi4dr5zwpvk7avtcovi/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
         
 </head>

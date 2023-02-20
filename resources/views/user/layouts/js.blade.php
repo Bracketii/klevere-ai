@@ -1,4 +1,4 @@
-
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 <!--begin::Javascript-->
 <script>var hostUrl = "assets/";</script>
 <!--begin::Global Javascript Bundle(mandatory for all pages)-->

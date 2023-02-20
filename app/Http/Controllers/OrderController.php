@@ -12,8 +12,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class OrderController extends Controller
 {
 
-    //showing product blade
-    public function index(){
+     //showing product blade
+     public function index(){
         //seeder/productSeeder
         $product=Product::all();
         return view('product.product',compact('product'));//resources/product/product.blade
@@ -23,7 +23,7 @@ class OrderController extends Controller
         $products=Product::find($id);
 
         $line_items=[];
-       
+
         $line_items[]=[
 
             'price_data' => [
@@ -31,7 +31,7 @@ class OrderController extends Controller
               'product_data' => [
                 'name' => $products->name,
                 'description'   => [],
-                
+
 
               ],
               'unit_amount' => $products->price*100,
@@ -48,13 +48,23 @@ class OrderController extends Controller
             'cancel_url' => route('checkout.cancel',[],true),
           ]);
           // user model
-          $order=Auth::user()->orders()->create([
-               'status'=>'unpaid',
-               'session_id'=>$checkout_session->id,
-               'total_price'=>$products->price,
-               'package_name'=>$products->name
+         $order=Orders::where('user_id',Auth::id())->first();
 
-          ]);
+         $order->status='unpaid';
+         $order->session_id=$checkout_session->id;
+         $order->total_price=$products->price;
+         $order->package_name=$products->name;
+         $order->word_limit=$products->word_limit;
+         $order->save();
+        //   $order=Auth::user()->orders()->create([
+        //        'status'=>'unpaid',
+        //        'session_id'=>$checkout_session->id,
+        //        'total_price'=>$products->price,
+        //        'package_name'=>$products->name,
+        //        'word_limit' => $products->word_limit,
+
+
+        //   ]);
 
           return redirect($checkout_session->url);
     }
@@ -87,4 +97,5 @@ class OrderController extends Controller
     public function cancel(){
         return "cancel";
    }
+
 }

@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->constrained()->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('status');
-            $table->decimal('total_price');
-            $table->string('session_id');
+            $table->string('status')->nullable();
+            $table->decimal('total_price')->nullable();
+            $table->string('session_id')->nullable();
             $table->string('package_name')->nullable();
+            $table->integer('word_limit')->nullable();
             $table->timestamps();
         });
     }

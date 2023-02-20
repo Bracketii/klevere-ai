@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
 use App\Models\Models\user as ModelsModelsUser;
+use App\Models\Orders;
 
 class UserAuthController extends Controller
 {
@@ -45,7 +46,8 @@ class UserAuthController extends Controller
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
             'access_token'  => $token,
-        ]);
+           ])->orders()->create();
+            //   $orderr=Auth::user()->orders()->create();
         // Sending activation link to user email
         $user -> notify(new UserAccountNotification($user));
 
