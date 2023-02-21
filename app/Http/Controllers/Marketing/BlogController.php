@@ -22,7 +22,7 @@ class BlogController extends Controller
     public function textCompletion(Request $request){
         
 
-        $this->validate(\request(),[
+        $this->validate(request(),[
             'word_input'=>'required',
 
         ]);
@@ -42,9 +42,9 @@ class BlogController extends Controller
         $tone = $request->tone;
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' => 'Act as a ' . 'Marketing Blog Post Writer' . 'Generate ' . $word_input . ' words ' . 'with ' . $output . ' variations' . '. In ' . $language . ' language, ' . 'in ' . $tone . ' tone. ' . 'This is my prompt: ' . $text . '. Use these keywords: ' . $keywords . '. Give results in HTML Format',
+            'prompt' => 'Act as a ' . 'Marketing Blog Post Writer' . 'Must generate ' . $word_input . ' words ' . 'with ' . $output . ' variations' . '. In ' . $language . ' language, ' . 'in ' . $tone . ' tone. ' . 'This is my prompt: ' . $text . '. Use these keywords: ' . $keywords . '. Give results in HTML Format',
             "temperature" => 0.7,
-            "max_tokens" => $word_input * 1.33,
+            "max_tokens" => intval($word_input * 1.5),
             "top_p"=> 1,
             "frequency_penalty"=> 0,
             "presence_penalty"=> 0,

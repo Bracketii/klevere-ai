@@ -15,8 +15,10 @@ class UserPagesController extends Controller
     // Functions for showing User pages and sub-pages
     public function showUserDashboard(){
         
-
-        return view('user.pages.dashboard');
+        $user_data = Orders::where("user_id",Auth::id())->latest()->get();
+        return view('user.pages.dashboard', [
+            'user_data'     => $user_data,
+        ]);
 
     }
 

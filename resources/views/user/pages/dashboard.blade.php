@@ -112,260 +112,70 @@
 
 						<div class="row g-6 g-xl-9 pt-10">
 							<!--begin::Col-->
-							<div class="col-md-6 col-xl-8">
-								<div class="card-title pb-2"><h3>Recommended Avatars</h3></div>
+							<div class="col-md-6 col-xl-4">
+								<div class="card-title pb-2"><h3>Recommended Functions</h3></div>
 								<!--begin::Card-->
-											<!--begin::Table widget 14-->
-											<div class="card card-flush h-md-100">
-												<!--begin::Body-->
-												<div class="card-body pt-6">
-													<!--begin::Table container-->
-													<div class="table-responsive">
-														<!--begin::Table-->
-														<table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-															<!--begin::Table head-->
-															<thead>
-																<tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-																	<th class="p-0 pb-3 min-w-175px text-start">AVATAR</th>
-																	<th class="p-0 pb-3 min-w-100px text-end">PROMPTS</th>
-																	<th class="p-0 pb-3 min-w-100px text-end">POPULARITY</th>
-																	<th class="p-0 pb-3 w-125px text-end pe-7">CHART</th>
-																	<th class="p-0 pb-3 w-50px text-end">VIEW</th>
-																</tr>
-															</thead>
-															<!--end::Table head-->
-															<!--begin::Table body-->
-															<tbody>
-																<tr>
-																	<td>
-																		<div class="d-flex align-items-center">
-																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/media/avatars/300-23.jpg" class="" alt="" />
-																			</div>
-																			<div class="d-flex justify-content-start flex-column">
-																				<a href="" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Bryan</a>
-																				<span class="text-gray-400 fw-semibold d-block fs-7">Marketing</span>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="text-end pe-0">
-																		<span class="text-gray-600 fw-bold fs-6">400</span>
-																	</td>
-																	<td class="text-end pe-0">
-																		<!--begin::Label-->
-																		<span class="badge badge-light-success fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-																				<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-																			</svg>
-																		</span>
-																		<!--end::Svg Icon-->9.2%</span>
-																		<!--end::Label-->
-																	</td>
-																	<td class="text-end pe-0">
-																		<div id="kt_table_widget_14_chart_1" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-																			<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																					<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<div class="d-flex align-items-center">
-																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/media/avatars/300-2.jpg" class="" alt="" />
-																			</div>
-																			<div class="d-flex justify-content-start flex-column">
-																				<a href="" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Amanda</a>
-																				<span class="text-gray-400 fw-semibold d-block fs-7">Sales</span>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="text-end pe-0">
-																		<span class="text-gray-600 fw-bold fs-6">256</span>
-																	</td>
-																	<td class="text-end pe-0">
-																		<!--begin::Label-->
-																		<span class="badge badge-light-danger fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-																				<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
-																			</svg>
-																		</span>
-																		<!--end::Svg Icon-->0.4%</span>
-																		<!--end::Label-->
-																	</td>
-																	<td class="text-end pe-0">
-																		<div id="kt_table_widget_14_chart_2" class="h-50px mt-n8 pe-7" data-kt-chart-color="danger"></div>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-																			<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																					<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<div class="d-flex align-items-center">
-																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/media/avatars/300-3.jpg" class="" alt="" />
-																			</div>
-																			<div class="d-flex justify-content-start flex-column">
-																				<a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Aaron</a>
-																				<span class="text-gray-400 fw-semibold d-block fs-7">HR</span>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="text-end pe-0">
-																		<span class="text-gray-600 fw-bold fs-6">820</span>
-																	</td>
-																	<td class="text-end pe-0">
-																		<!--begin::Label-->
-																		<span class="badge badge-light-success fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-																				<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-																			</svg>
-																		</span>
-																		<!--end::Svg Icon-->9.2%</span>
-																		<!--end::Label-->
-																	</td>
-																	<td class="text-end pe-0">
-																		<div id="kt_table_widget_14_chart_3" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-																			<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																					<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<div class="d-flex align-items-center">
-																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/media/avatars/300-4.jpg" class="" alt="" />
-																			</div>
-																			<div class="d-flex justify-content-start flex-column">
-																				<a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Ryan</a>
-																				<span class="text-gray-400 fw-semibold d-block fs-7">Guidance Coach</span>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="text-end pe-0">
-																		<span class="text-gray-600 fw-bold fs-6">740</span>
-																	</td>
-																	<td class="text-end pe-0">
-																		<!--begin::Label-->
-																		<span class="badge badge-light-success fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-																				<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-																			</svg>
-																		</span>
-																		<!--end::Svg Icon-->9.2%</span>
-																		<!--end::Label-->
-																	</td>
-																	<td class="text-end pe-0">
-																		<div id="kt_table_widget_14_chart_4" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-																			<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																					<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<div class="d-flex align-items-center">
-																			<div class="symbol symbol-50px me-3">
-																				<img src="assets/media/avatars/300-5.jpg" class="" alt="" />
-																			</div>
-																			<div class="d-flex justify-content-start flex-column">
-																				<a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Jack</a>
-																				<span class="text-gray-400 fw-semibold d-block fs-7">Ask me anything</span>
-																			</div>
-																		</div>
-																	</td>
-																	<td class="text-end pe-0">
-																		<span class="text-gray-600 fw-bold fs-6">640</span>
-																	</td>
-																	<td class="text-end pe-0">
-																		<!--begin::Label-->
-																		<span class="badge badge-light-danger fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-																				<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
-																			</svg>
-																		</span>
-																		<!--end::Svg Icon-->0.4%</span>
-																		<!--end::Label-->
-																	</td>
-																	<td class="text-end pe-0">
-																		<div id="kt_table_widget_14_chart_5" class="h-50px mt-n8 pe-7" data-kt-chart-color="danger"></div>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-																			<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																					<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-													</div>
-													<!--end::Table-->
-												</div>
-												<!--end: Card Body-->
+								<a href="{{ route('blog.show') }}">
+									<div class="card shadow-sm hover-elevate-up" style="padding: 11px 0">
+										<div class="card-body">
+											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<!--end::Table widget 14-->
+											<h3 class="mt-3">Marketing</h3>
+											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</div>
+									</div>
+								</a>
 								<!--end::Card-->
+								<a href="{{ route('blog.show') }}">
+									<div class="card shadow-sm hover-elevate-up mt-10" style="padding: 11px 0">
+										<div class="card-body">
+											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-person-up text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+											<h3 class="mt-3">HR</h3>
+											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</div>
+									</div>
+								</a>
+
+
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="card-title pb-2"><h3 style="color: transparent">Recommended Functions</h3></div>
+								<!--begin::Card-->
+								<a href="{{ route('blog.show') }}">
+									<div class="card shadow-sm hover-elevate-up" style="padding: 11px 0">
+										<div class="card-body">
+											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-receipt text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+											<h3 class="mt-3">Sales</h3>
+											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</div>
+									</div>
+								</a>
+								<!--end::Card-->
+
+								<!--begin::Card-->
+								<a href="{{ route('blog.show') }}">
+									<div class="card shadow-sm hover-elevate-up mt-10" style="padding: 11px 0">
+										<div class="card-body">
+											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-card-image text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+											<h3 class="mt-3">Image Generation</h3>
+											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</div>
+									</div>
+								</a>
+								<!--end::Card-->
+
+								
 
 							</div>
 							<!--end::Col-->
@@ -407,17 +217,27 @@
 								<!--end::Card-->
 
 								<!--begin::Card-->
-								<div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-50 mb-5 mb-xl-10 pb-5 mt-10" style="background-color: #C6FF00;background-image:url('/metronic8/demo1/assets/media/patterns/vector-1.png')">
+								<div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end mb-5 mb-xl-10 pb-5 mt-10" style="height: 43.3%;background-color: #2666F9;background-image:url('/metronic8/demo1/assets/media/patterns/vector-1.png')">
 									<!--begin::Header-->
 									<div class="card-header pt-5">
 										<!--begin::Title-->
 										<div class="card-title d-flex flex-column">
 											<!--begin::Amount-->
-											<span class="fs-2hx fw-bold text-black me-2 lh-1 ls-n2">690</span>
+											<span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@php 
+												if ($user_data[0]->package_name == 'Basic') {
+												echo 1000 - $user_data[0]->word_limit;
+											}
+											if ($user_data[0]->package_name == 'Standard') {
+												echo 2000 - $user_data[0]->word_limit;
+											} 
+											if ($user_data[0]->package_name == 'Premium') {
+												echo 3000 - $user_data[0]->word_limit;
+											}
+											@endphp</span>
 											<!--end::Amount-->
 
 											<!--begin::Subtitle-->
-											<span class="text-black opacity-85 pt-1 fw-semibold fs-6">Words Generated</span>
+											<span class="text-white opacity-85 pt-1 fw-semibold fs-6">Words Used</span>
 											<!--end::Subtitle-->
 										</div>
 										<!--end::Title-->
@@ -436,13 +256,46 @@
 										<!--begin::Progress-->
 										<div class="d-flex align-items-center flex-column mt-3 w-100">
 											<div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-85 w-100 mt-auto mb-2">
-												<span class="text-black">Words</span>
-												<span class="text-black">690 of 10000 Used</span>
+												<span class="text-white">Words</span>
+												<span class="text-white"> 
+													@php 
+													if ($user_data[0]->package_name == 'Basic') {
+													echo 1000 - $user_data[0]->word_limit;
+												}
+												if ($user_data[0]->package_name == 'Standard') {
+													echo 2000 - $user_data[0]->word_limit;
+												} 
+												if ($user_data[0]->package_name == 'Premium') {
+													echo 3000 - $user_data[0]->word_limit;
+												}
+												@endphp of 
+													@if ($user_data[0]->package_name == 'Basic')
+													1000 
+													@endif
+
+													@if ($user_data[0]->package_name == 'Standard')
+													2000 
+													@endif
+													
+
+													@if ($user_data[0]->package_name == 'Premium')
+													3000 
+													@endif Used</span>
 											</div>
 
-											<div class="h-8px mx-3 w-100 bg-black bg-opacity-50 rounded">
-												<div class="bg-black rounded h-8px" role="progressbar" style="width: 72%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-												<div class="text-black fw-semibold mb-10">9310 Words remaining.</div>
+											<div class="h-8px mx-3 w-100 bg-white bg-opacity-50 rounded">
+												<div class="bg-white rounded h-8px" role="progressbar" style="width: @php 
+												if ($user_data[0]->package_name == 'Basic') {
+												echo 100 - $user_data[0]->word_limit / 1000 * 100;
+											}
+											if ($user_data[0]->package_name == 'Standard') {
+												echo 100 - $user_data[0]->word_limit / 2000 * 100;
+											} 
+											if ($user_data[0]->package_name == 'Premium') {
+												echo 100 - $user_data[0]->word_limit / 3000 * 100;
+											}
+											@endphp%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												<div class="text-white fw-semibold mb-10">{{ $user_data[0]->word_limit }} Words remaining.</div>
 											</div>
 
 										</div>
