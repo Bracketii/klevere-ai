@@ -51,3 +51,33 @@ tinymce.init({
     tinycomments_author: 'Author name',
     height: 550,
   });
+
+
+
+  // Overlay Loader
+  const button = document.querySelector("#kt_page_loading_overlay");
+// Handle toggle click event
+button.addEventListener("click", function() {
+    // Populate the page loading element dynamically.
+    // Optionally you can skipt this part and place the HTML
+    // code in the body element by refer to the above HTML code tab.
+    const loadingEl = document.createElement("div");
+    document.body.prepend(loadingEl);
+    loadingEl.classList.add("page-loader");
+    loadingEl.classList.add("flex-column");
+    loadingEl.classList.add("bg-dark");
+    loadingEl.classList.add("bg-opacity-25");
+    loadingEl.innerHTML = `
+        <span class="spinner-border text-primary" style="width:50px; height:50px;border-width:4px" role="status"></span>
+        <span class="text-white-800 fs-6 fw-semibold mt-5" style="color:white !important; font-size:22px !important">Generating...</span>
+    `;
+
+    // Show page loading
+    KTApp.showPageLoading();
+
+    // Hide after 3 seconds
+    setTimeout(function() {
+        KTApp.hidePageLoading();
+        loadingEl.remove();
+    }, 500000);
+});

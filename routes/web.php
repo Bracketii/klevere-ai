@@ -21,6 +21,7 @@ use App\Http\Controllers\User\UserPagesController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\Marketing\BlogController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Sales\ColdEmailController;
 
 /**---------------------------------------------------------- */
 
@@ -94,7 +95,9 @@ Route::group(['middleware'=>'userauth'],function(){
     Route::post('blog', [BlogController::class, 'textCompletion'])->name('blog.generate');
 
     //  Sales
-    
+    Route::get('sales', [ColdEmailController::class, 'index'])->name('sales.list');
+    Route::get('cold-email', [ColdEmailController::class, 'show'])->name('cold-email.show');
+    Route::post('cold-email', [ColdEmailController::class, 'textCompletion'])->name('cold-email.generate');
 
 
     // Chat

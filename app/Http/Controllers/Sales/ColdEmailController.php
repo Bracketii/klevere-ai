@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Marketing;
+namespace App\Http\Controllers\Sales;
 
 use App\Http\Controllers\Controller;
 use App\Models\Orders;
@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use OpenAI\Laravel\Facades\OpenAI;
 
-class BlogController extends Controller
+class ColdEmailController extends Controller
 {
     public function index(){
-        return view('user.pages.marketing.index');
+        return view('user.pages.sales.index');
     }
 
     public function show(){
-        return view('user.pages.marketing.blog');
+        return view('user.pages.sales.cold-email');
     }
 
 
@@ -40,11 +40,12 @@ class BlogController extends Controller
         $text=$request->text;
         $language = $request->language;
         $tone = $request->tone;
+        // $personality = $request->personality;
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
             'prompt' => 'Act as a ' . 'Marketing Blog Post Writer' . 'Generate ' . $word_input . ' words ' . 'with ' . $output . ' variations' . '. In ' . $language . ' language, ' . 'in ' . $tone . ' tone. ' . 'This is my prompt: ' . $text . '. Use these keywords: ' . $keywords . '. Give results in HTML Format',
             "temperature" => 0.7,
-            "max_tokens" => $word_input * 1.33,
+            "max_tokens" => $word_input,
             "top_p"=> 1,
             "frequency_penalty"=> 0,
             "presence_penalty"=> 0,
@@ -60,7 +61,7 @@ class BlogController extends Controller
 
                 'word_limit'=>$oldlimit - $word_input,
             ]);
-            return view('user.pages.marketing.blog',['generate'=> $text, 'type' => 'main','title'=>$title]);
+            return view('user.pages.sales.cold-email',['generate'=> $text, 'type' => 'main','title'=>$title]);
         }
 
         

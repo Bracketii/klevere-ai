@@ -47,7 +47,7 @@
 				</div>
 				<!--end::Page title-->
 				<!--begin::Action-->
-				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Get Started</a>
+				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#get_started_modal">Get Started</a>
 				<!--end::Action-->
 			</div>
 			<!--end::Header wrapper-->
@@ -262,6 +262,16 @@
 			</div>
 			<!--end::Content wrapper-->
 			
+
+            {{-- Right toggle bar --}}
+            <div class="engage-toolbar d-flex position-fixed px-5 fw-bold zindex-2 top-50 end-0 transform-90 mt-5 mt-lg-20 gap-2">	
+                <!--begin::Help drawer toggle-->
+                <button id="kt_expertise" class="engage-help-toggle btn engage-btn shadow-sm px-5 rounded-top-0" title="Expertise of Klevere Chat" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">Expertise</button>
+                <!--end::Help drawer toggle-->
+                <!--begin::Help drawer toggle-->
+                <button id="" class="engage-help-toggle btn btn-primary engage-btn shadow-sm px-5 rounded-top-0" data-bs-target="#suggestions_modal" data-bs-toggle="modal">Suggestions</button>
+                <!--end::Help drawer toggle-->
+            </div>
 			<!--begin::Footer-->
 				@include('user.layouts.footer')
 			<!--end::Footer-->
@@ -274,34 +284,252 @@
 
 
 
-{{-- Overlay Loading --}}
-<script>
-    // Toggle
-const button = document.querySelector("#kt_page_loading_overlay");
-// Handle toggle click event
-button.addEventListener("click", function() {
-    // Populate the page loading element dynamically.
-    // Optionally you can skipt this part and place the HTML
-    // code in the body element by refer to the above HTML code tab.
-    const loadingEl = document.createElement("div");
-    document.body.prepend(loadingEl);
-    loadingEl.classList.add("page-loader");
-    loadingEl.classList.add("flex-column");
-    loadingEl.classList.add("bg-dark");
-    loadingEl.classList.add("bg-opacity-25");
-    loadingEl.innerHTML = `
-        <span class="spinner-border text-primary" style="width:50px; height:50px;border-width:4px" role="status"></span>
-        <span class="text-white-800 fs-6 fw-semibold mt-5" style="color:white !important; font-size:22px !important">Generating...</span>
-    `;
 
-    // Show page loading
-    KTApp.showPageLoading();
 
-    // Hide after 3 seconds
-    setTimeout(function() {
-        KTApp.hidePageLoading();
-        loadingEl.remove();
-    }, 500000);
-});
-</script>
+
+
+
+    {{-- Get started Modal --}}
+    <div class="modal fade" tabindex="-1" id="get_started_modal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Start writing in 4 easy steps!</h2>
+        
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="svg-icon svg-icon-2x">...</span>
+                    </div>
+                    <!--end::Close-->
+                </div>
+        
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
+                                        
+                                <i class="fonticon-content-marketing" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Write               
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                Write any topic names or questions in the chat box by selecting tone and language and other options.        
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
+                                    
+                                <i class="fonticon-settings-1" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Select                   
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                Select the options as per your needs for your language and tone to get the best results from Klevere.AI        
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-10">
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
+                                        
+                                <i class="fonticon-send" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Generate                   
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                Click on generate button and wait for the results within seconds!        
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body started-modal">
+                                    
+                                <i class="fonticon-bookmark" style="font-size: 35px; color: #2468FF;"></i>
+                                <h3 class="fw-bold fs-2 mb-2 mt-5">           
+                                    Save & Copy                   
+                                </h3>
+                        
+                                <p class="fw-semibold fs-6">
+                                After the generate save or copy your results for your use!        
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="modal-footer">
+                    <a href="#" type="button" class="btn btn-light"><i class="bi bi-play-circle-fill" style="font-size: 18px;margin-top: -4px;"></i> Watch a demo</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Let's Go! 🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- end::Get started Modal --}}
+
+
+    {{-- Suggestions Modal --}}
+    <div class="modal fade" tabindex="-1" id="suggestions_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Prompt suggestions</h3>
+    
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="svg-icon svg-icon-1"></span>
+                    </div>
+                    <!--end::Close-->
+                </div>
+    
+                <div class="modal-body">
+                    <span class="badge badge-light-warning badge-lg">1. What is the longest river in the world?</span>
+                    <span class="badge badge-light-warning badge-lg mt-5">2. What is the tallest mountain in the world?</span>
+                    <span class="badge badge-light-warning badge-lg mt-5">3. What is the name of the largest ocean on Earth?</span>
+                    <span class="badge badge-light-warning badge-lg mt-5">4. What is the capital city of the United States?</span>
+                    <span class="badge badge-light-warning badge-lg mt-5">5. What is the most populous country in the world?</span>
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Let's Go! 🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- end:: Suggestions Modal --}}
+
+
+    {{-- Expertise Drawer --}}
+    <!--begin::Ex drawer-->
+		<div id="kt_expertise" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="help" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'350px', 'md': '525px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_expertise" data-kt-drawer-close="#kt_help_close">
+			<!--begin::Card-->
+			<div class="card shadow-none rounded-0 w-100">
+				<!--begin::Header-->
+				<div class="card-header" id="kt_help_header">
+					<h5 class="card-title fw-semibold text-gray-600">Klevere.AI Chat Expertise</h5>
+					<div class="card-toolbar">
+						<button type="button" class="btn btn-sm btn-icon explore-btn-dismiss me-n5" id="kt_help_close">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</button>
+					</div>
+				</div>
+				<!--end::Header-->
+				<!--begin::Body-->
+				<div class="card-body" id="kt_help_body">
+					<!--begin::Content-->
+					<div id="kt_help_scroll" class="hover-scroll-overlay-y" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_help_body" data-kt-scroll-dependencies="#kt_help_header" data-kt-scroll-offset="5px">
+						
+						<!--begin::Link-->
+						<div class="d-flex align-items-center mb-7">
+							<!--begin::Icon-->
+							<div class="d-flex flex-center w-30px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-primary">
+									<i class="fa-solid fa-brain expertise-icons" ></i>
+							</div>
+							<!--end::Icon-->
+							<!--begin::Info-->
+							<div class="d-flex flex-stack flex-grow-1 ms-4 ms-lg-6">
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column me-2 me-lg-5">
+									<!--begin::Title-->
+									<a href="#" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Powered by AI</a>
+									<!--end::Title-->
+									<!--begin::Description-->
+									<div class="text-muted fw-semibold fs-7 fs-lg-6">The GPT-3 AI language model is nothing like you've seen before: natural, unique and creative.</div>
+									<!--end::Description-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Info-->
+						</div>
+						<!--end::Link-->
+						<!--begin::Link-->
+						<div class="d-flex align-items-center mb-7">
+							<!--begin::Icon-->
+							<div class="d-flex flex-center w-30px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-primary">
+								<i class="fa-solid fa-sliders expertise-icons"></i>
+							</div>
+							<!--end::Icon-->
+							<!--begin::Info-->
+							<div class="d-flex flex-stack flex-grow-1 ms-4 ms-lg-6">
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column me-2 me-lg-5">
+									<!--begin::Title-->
+									<a href="#" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Powerful settings</a>
+									<!--end::Title-->
+									<!--begin::Description-->
+									<div class="text-muted fw-semibold fs-7 fs-lg-6">Adjust the creativity level or the tone of voice to generate the perfect copy for your business..</div>
+									<!--end::Description-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Info-->
+						</div>
+						<!--end::Link-->
+                        <!--begin::Link-->
+						<div class="d-flex align-items-center mb-7">
+							<!--begin::Icon-->
+							<div class="d-flex flex-center w-30px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-primary">
+                                <i class="fa-sharp fa-solid fa-gears expertise-icons"></i>
+							</div>
+							<!--end::Icon-->
+							<!--begin::Info-->
+							<div class="d-flex flex-stack flex-grow-1 ms-4 ms-lg-6">
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column me-2 me-lg-5">
+									<!--begin::Title-->
+									<a href="#" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Optimized for conversions</a>
+									<!--end::Title-->
+									<!--begin::Description-->
+									<div class="text-muted fw-semibold fs-7 fs-lg-6">The GPT-3 AI language model is nothing like you've seen before: natural, unique and creative.</div>
+									<!--end::Description-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Info-->
+						</div>
+						<!--end::Link-->
+                        <!--begin::Link-->
+						<div class="d-flex align-items-center mb-7">
+							<!--begin::Icon-->
+							<div class="d-flex flex-center w-30px h-50px w-lg-75px h-lg-75px flex-shrink-0 rounded bg-light-primary">
+									<i class="fa-solid fa-layer-group expertise-icons" ></i>
+							</div>
+							<!--end::Icon-->
+							<!--begin::Info-->
+							<div class="d-flex flex-stack flex-grow-1 ms-4 ms-lg-6">
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column me-2 me-lg-5">
+									<!--begin::Title-->
+									<a href="#" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">7+ Available Tools</a>
+									<!--end::Title-->
+									<!--begin::Description-->
+									<div class="text-muted fw-semibold fs-7 fs-lg-6">The GPT-3 AI language model is nothing like you've seen before: natural, unique and creative.</div>
+									<!--end::Description-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Info-->
+						</div>
+						<!--end::Link-->
+                        
+					</div>
+					<!--end::Content-->
+				</div>
+				<!--end::Body-->
+			</div>
+			<!--end::Card-->
+		</div>
+		<!--end::Help drawer-->
+    {{-- end:: Expertise Drawer --}}
 @endsection
