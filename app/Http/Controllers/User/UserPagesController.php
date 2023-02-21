@@ -47,7 +47,10 @@ class UserPagesController extends Controller
     }
     public function showUserBilling(){
 
-        return view('user.pages.account.billing');
+        $user_data = Orders::where("user_id",Auth::id())->latest()->get();
+        return view('user.pages.account.billing', [
+            'user_data'     => $user_data,
+        ]);
 
     }
 

@@ -49,5 +49,5 @@ tinymce.init({
     toolbar: 'bold italic underline strikethrough | blocks | fontfamily | fontsize | undo redo | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap',
     tinycomments_mode: 'embedded',
     tinycomments_author: 'Author name',
-    height: 620,
+    height: 550,
   });

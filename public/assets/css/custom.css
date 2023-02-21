@@ -1,5 +1,9 @@
 /* Add your custom CSS Here! */
 
+.bg-primary{
+    background-color: #2468FF !important ;
+}
+
 .expertise-icons{
     font-size: 28px !important;
     color: #2468FF !important;

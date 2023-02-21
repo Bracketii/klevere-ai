@@ -79,7 +79,7 @@
                                     <!--begin::Content-->
                                     <div id="kt_account_settings_profile_details" class="collapse show">
                                         <!--begin::Form-->
-                                        <form action="{{ route('blog')}}" method="POST" id="kt_account_profile_details_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
+                                        <form action="{{ route('blog.generate')}}" method="POST" id="kt_account_profile_details_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
                                             @csrf
                                             <!--begin::Card body-->
                                             <div class="card-body border-top px-9 py-5">
@@ -203,7 +203,7 @@
                                                         <!--end::Label-->
                                                 
                                                         <!--begin::Select-->
-                                                        <select name="output" data-control="select2" data-placeholder="Select a tone..." class="form-select form-select-solid " data-select2-id="select2-data-1-o0c1" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
+                                                        <select name="output" data-control="select2" data-placeholder="" class="form-select form-select-solid " data-select2-id="select2-data-1-o0c1" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
                                                             <option value="1" selected="">1</option>
                                                             <option value="2">2</option>
                                                         </select>
@@ -242,7 +242,13 @@
                                 </div>
                                 @else
 
-                                <h3>Your result will be shown here</h3>
+                                <div class="d-block justify-content-center" style="margin: 0;
+                                position: relative;
+                                top: 40%; text-align:center">
+                                    <i class="bi bi-file-earmark" style="font-size: 30px;"></i>
+                                    <h3 class="mt-1">No posts generated</h3>
+                                    <p>Describe your topic to our AI to start <br>generating creative blog posts</p>
+                                </div>
 
                                 @endif
                             </div>

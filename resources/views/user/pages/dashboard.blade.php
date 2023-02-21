@@ -143,7 +143,7 @@
 																				<img src="assets/media/avatars/300-23.jpg" class="" alt="" />
 																			</div>
 																			<div class="d-flex justify-content-start flex-column">
-																				<a href="{{ route('marketing.chat') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Bryan</a>
+																				<a href="" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Bryan</a>
 																				<span class="text-gray-400 fw-semibold d-block fs-7">Marketing</span>
 																			</div>
 																		</div>
@@ -187,7 +187,7 @@
 																				<img src="assets/media/avatars/300-2.jpg" class="" alt="" />
 																			</div>
 																			<div class="d-flex justify-content-start flex-column">
-																				<a href="{{ route('sales.chat') }}" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Amanda</a>
+																				<a href="" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Amanda</a>
 																				<span class="text-gray-400 fw-semibold d-block fs-7">Sales</span>
 																			</div>
 																		</div>

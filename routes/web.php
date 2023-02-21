@@ -87,33 +87,21 @@ Route::group(['middleware'=>'userauth'],function(){
     /**
      * AI routes
      */
+
+    //  Marketing
+    Route::get('marketing', [BlogController::class, 'index'])->name('marketing.list');
+    Route::get('blog', [BlogController::class, 'show'])->name('blog.show');
+    Route::post('blog', [BlogController::class, 'textCompletion'])->name('blog.generate');
+
+    //  Sales
+    
+
+
     // Chat
     Route::get('chat', [AIController::class, 'index'])->name('chat');
     Route::post('chat-text', [AIController::class, 'textCompletion'])->name('chat.text');
 
-    // Marketing
-    Route::get('marketing', [MarketingController::class, 'index'])->name('marketing.chat');
-    Route::post('marketing-result', [MarketingController::class, 'textCompletion'])->name('marketing.result');
 
-    // Sales
-    Route::get('sales', [SalesController::class, 'index'])->name('sales.chat');
-    Route::post('sales-result', [SalesController::class, 'textCompletion'])->name('sales.result');
-
-    // HR
-    Route::get('hr', [hrController::class, 'index'])->name('hr.chat');
-    Route::post('hr-result', [hrController::class, 'textCompletion'])->name('hr.result');
-
-    // Guidance
-    Route::get('guidance', [GuidanceController::class, 'index'])->name('guidance.chat');
-    Route::post('guidance-result', [GuidanceController::class, 'textCompletion'])->name('guidance.result');
-
-    // Artist
-    Route::get('artist', [ArtistController::class, 'index'])->name('artist.chat');
-    Route::post('artist-result', [ArtistController::class, 'textCompletion'])->name('artist.result');
-
-    // Tech
-    Route::get('tech', [TechController::class, 'index'])->name('tech.chat');
-    Route::post('tech-result', [TechController::class, 'textCompletion'])->name('tech.result');
 
 
     //history saving routes
@@ -254,8 +242,5 @@ Route::get('linkedin/callback', function () {
  */
 // API Test routes
 
-Route::get('new', function(){
-    return view('user.pages.new');
-});
 
-Route::post('blog', [BlogController::class, 'textCompletion'])->name('blog');
+

@@ -10,6 +10,15 @@ use OpenAI\Laravel\Facades\OpenAI;
 
 class BlogController extends Controller
 {
+    public function index(){
+        return view('user.pages.marketing.index');
+    }
+
+    public function show(){
+        return view('user.pages.marketing.blog');
+    }
+
+
     public function textCompletion(Request $request){
         
 
@@ -26,6 +35,7 @@ class BlogController extends Controller
 
 
         $output=$request->output;
+        $keywords=$request->keywords;
         $title=$request->text;
         $text=$request->text;
         $language = $request->language;
@@ -33,7 +43,7 @@ class BlogController extends Controller
         // $personality = $request->personality;
         $result = OpenAI::completions()->create([
             'model' => 'text-davinci-003',
-            'prompt' => 'Act as a ' . 'Marketing Blog Post Writer' . 'Generate ' . $word_input . ' words ' . 'with ' . $output . ' variations' . '. In ' . $language . ' language, ' . 'in ' . $tone . ' tone. ' . 'This is my prompt: ' . $text . '. Give results in HTML Format',
+            'prompt' => 'Act as a ' . 'Marketing Blog Post Writer' . 'Generate ' . $word_input . ' words ' . 'with ' . $output . ' variations' . '. In ' . $language . ' language, ' . 'in ' . $tone . ' tone. ' . 'This is my prompt: ' . $text . '. Use these keywords: ' . $keywords . '. Give results in HTML Format',
             "temperature" => 0.7,
             "max_tokens" => $word_input,
             "top_p"=> 1,
@@ -51,7 +61,7 @@ class BlogController extends Controller
 
                 'word_limit'=>$oldlimit - $word_input,
             ]);
-            return view('user.pages.new',['generate'=> $text, 'type' => 'main','title'=>$title]);
+            return view('user.pages.marketing.blog',['generate'=> $text, 'type' => 'main','title'=>$title]);
         }
 
         

@@ -37,19 +37,19 @@
 					</li>
 					<!--end::Item-->
 					<!--begin::Item-->
-					<li class="breadcrumb-item text-gray-600 fw-bold lh-1">User Dashboard</li>
+					<li class="breadcrumb-item text-gray-600 fw-bold lh-1">Account</li>
 					<!--end::Item-->
 					</ul>
 					<!--end::Breadcrumb-->
 					<!--begin::Title-->
-					<h1 class="text-gray-900 fw-bolder m-0">Dashboard</h1>
+					<h1 class="text-gray-900 fw-bolder m-0">Billing</h1>
 					<!--end::Title-->
 				</div>
 				<!--end::Page title-->
-				<!--begin::Action-->
+				{{-- <!--begin::Action-->
 				<a href="#" class="btn btn-primary d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Create
 				<span class="d-none d-sm-inline ps-2">Project</span></a>
-				<!--end::Action-->
+				<!--end::Action--> --}}
 			</div>
 			<!--end::Header wrapper-->
 		</div>
@@ -81,41 +81,45 @@
 											<div class="row">
 												<!--begin::Col-->
 												<div class="col-lg-7">
-													<!--begin::Heading-->
-													<h3 class="mb-2">Active until Dec 09, 2022</h3>
-													
-													<!--end::Heading-->
 													<!--begin::Info-->
 													<div class="fs-5 mb-2">
-														<span class="text-gray-800 fw-bold me-1">$24.99</span>
-														<span class="text-gray-600 fw-semibold">Per Month</span>
+														<h1 class="text-gray-800 fw-bold me-1">
+															${{ $user_data[0]->total_price }}	
+														</h1>
+														<h3 class="text-gray-600 fw-semibold">Per Month</h3>
 													</div>
 													<!--end::Info-->
 													<!--begin::Notice-->
-													<div class="fs-6 text-gray-600 fw-semibold">Extended Pro Package. Up to 10000 Words</div>
+													<div class="fs-6 text-gray-600 fw-semibold">{{ $user_data[0]->package_name }} Package. Up to 
+
+														@if ($user_data[0]->package_name == 'Basic')
+														1000 Words
+														@endif
+
+														@if ($user_data[0]->package_name == 'Standard')
+														2000 Words
+														@endif
+														
+
+														@if ($user_data[0]->package_name == 'Premium')
+														3000 Words
+														@endif
+													</div>
 													<!--end::Notice-->
 												</div>
 												<!--end::Col-->
 												<!--begin::Col-->
 												<div class="col-lg-5">
 													<!--begin::Heading-->
-													<div class="d-flex text-muted fw-bold fs-5 mb-3">
-														<span class="flex-grow-1 text-gray-800">Words</span>
-														<span class="text-gray-800">860 of 10000 Used</span>
+													<div class="d-flex text-muted fw-bold fs-5 mb-3 justify-content-end">
+														<h1 class="text-gray-800"><span class="badge badge-light-warning dashboard-menu-badge" style="font-size: 27px;">{{ $user_data[0]->word_limit }}</span><span style="margin-left:10px">words remaining</span><h1>
 													</div>
 													<!--end::Heading-->
-													<!--begin::Progress-->
-													<div class="progress h-8px bg-light-primary mb-2">
-														<div class="progress-bar bg-primary" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
-													</div>
-													<!--end::Progress-->
-													<!--begin::Description-->
-													<div class="fs-6 text-gray-600 fw-semibold mb-10">9345 Words remaining until your plan requires update</div>
-													<!--end::Description-->
+
 													<!--begin::Action-->
-													<div class="d-flex justify-content-end pb-0 px-0">
-														<a href="#" class="btn btn-light btn-active-light-primary me-2" id="kt_account_billing_cancel_subscription_btn">Cancel Subscription</a>
-														<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Upgrade Plan</button>
+													<div class="d-flex justify-content-end pb-0 px-0 pt-5">
+														<a href="#" class="btn btn-light btn-active-light-primary me-2" id="">Cancel Subscription</a>
+														<a href="{{ route('order') }}" class="btn btn-primary">Upgrade Plan</a>
 													</div>
 													<!--end::Action-->
 												</div>
