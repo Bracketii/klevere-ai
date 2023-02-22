@@ -7,6 +7,7 @@ use App\Models\Orders;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AdminPagesController extends Controller
@@ -31,9 +32,11 @@ class AdminPagesController extends Controller
     public function showAdminUsers(){
 
         $all_users = User::latest()->get();
+        // $all_orders = Orders::where("user_id", Auth::id())->latest()->get();
 
         return view('admin.pages.users', [
             'all_users'     => $all_users,
+            // 'all_orders'    => $all_orders,
         ]);
 
     }

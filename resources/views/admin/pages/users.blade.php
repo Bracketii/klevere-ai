@@ -195,11 +195,11 @@
 											<!--begin::Last login=-->
 											<td>
 												<div class="text-center badge badge-light-warning fw-bold">
-													@forelse(json_decode($item ->orders) as $order)
-													{{ $order->package_name }}
+													{{-- @forelse(json_decode($item ->orders) as $order)
+													{{ $order->firstname }}
 													@empty
 													Not Subscribed
-													@endforelse
+													@endforelse --}}
 													
 												</div>
 											</td>

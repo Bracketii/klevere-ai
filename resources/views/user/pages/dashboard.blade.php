@@ -284,7 +284,8 @@
 											</div>
 
 											<div class="h-8px mx-3 w-100 bg-white bg-opacity-50 rounded">
-												<div class="bg-white rounded h-8px" role="progressbar" style="width: @php 
+												<div class="bg-white rounded h-8px" role="progressbar" style="width: 
+												@php 
 												if ($user_data[0]->package_name == 'Basic') {
 												echo 100 - $user_data[0]->word_limit / 1000 * 100;
 											}
