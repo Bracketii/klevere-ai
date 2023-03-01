@@ -19,7 +19,7 @@ class OrderController extends Controller
         return view('product.product',compact('product'));//resources/product/product.blade
     }
     public function checkout($id){
-        $stripe = new \Stripe\StripeClient('sk_test_51IT0nQGeSSGDH3mHPHA0HzZzjSbiNES8tvsTLIS98jdAOVoqx0ZvZEaFdIgCtdmLP8j0BOEFmwWFGnFyg1JA48Mb00ywyj4zV5');
+        $stripe = new \Stripe\StripeClient(env('STRIPE_KEY'));
         $products=Product::find($id);
 
         $line_items=[];
@@ -70,7 +70,7 @@ class OrderController extends Controller
     }
 
     public function success(Request $request){
-        $stripe = new \Stripe\StripeClient('sk_test_51IT0nQGeSSGDH3mHPHA0HzZzjSbiNES8tvsTLIS98jdAOVoqx0ZvZEaFdIgCtdmLP8j0BOEFmwWFGnFyg1JA48Mb00ywyj4zV5');
+        $stripe = new \Stripe\StripeClient(env('STRIPE_KEY'));
 
          $sessionId=$request->get('session_id');
          try{
