@@ -77,91 +77,60 @@
 
 						<!--begin::Row-->
 						<div class="row pt-10">
+							<div class="card-title pb-2"><h3>Tasks</h3></div>
 							<div class="col-md-4">
-								<a href="{{ route('blog.show') }}">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+								<a href="{{ route('blog.show') }}" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
 											<div class="symbol symbol-40px me-4">
 												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<h3 class="mt-3">Blog Writing</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Blog Writing
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
 											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-file-earmark-text text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<h3 class="mt-3">Article Writing</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Article Writing
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
 											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-newspaper text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<h3 class="mt-3">Press Release</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<!--end::Row-->		
-
-						<!--begin::Row-->
-						<div class="row pt-10">
-							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
-											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
-											</div>
-											<h3 class="mt-3">Newsletter</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
-											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
-											</div>
-											<h3 class="mt-3">Social Media Post</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
-											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
-											</div>
-											<h3 class="mt-3">Digital Ads</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Press Release
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
 										</div>
 									</div>
 								</a>
@@ -170,51 +139,174 @@
 						<!--end::Row-->		
 
 						<!--begin::Row-->
-						<div class="row pt-10">
+						<div class="row pt-5">
 							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
 											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-envelope-paper text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<h3 class="mt-3">Product Descriptions</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Newsletter
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
 											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-facebook text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<h3 class="mt-3">Create Marketing Strategy</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Social Media Post
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-4">
-								<a href="#">
-									<div class="card shadow-sm hover-elevate-up">
-										<div class="card-body">
-											{{-- <i class="bi bi-pencil rounded" style="font-size: 1.5rem"></i> --}}
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
 											<div class="symbol symbol-40px me-4">
-												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-badge-ad-fill text-light" style="font-size: 1.5rem"></i></div>
 											</div>
-											<h3 class="mt-3">Marketing Research</h3>
-											<p class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Digital Ads
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
 										</div>
 									</div>
 								</a>
 							</div>
 						</div>
-						<!--end::Row-->
+						<!--end::Row-->	
+						
+						<!--begin::Row-->
+						<div class="row pt-5">
+							<div class="col-md-4">
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-card-text text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Product Descriptions
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-4">
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-bar-chart text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Create Marketing Strategy
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-4">
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-search text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Marketing Research
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!--end::Row-->	
+
+						{{-- Strategic Conversations --}}
+						<!--begin::Row-->
+						<div class="row pt-10">
+							<div class="card-title pb-2"><h3>Strategic Conversations</h3></div>
+							<div class="col-md-6">
+								<a href="{{ route('blog.show') }}" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-pencil text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Blog Writing
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-6">
+								<a href="#" class="card hover-elevate-up shadow-sm parent-hover">
+									<div class="card-body d-flex align-items pb-0">
+										<span class="svg-icon svg-icon-1">
+											<div class="symbol symbol-40px me-4">
+												<div class="symbol-label fs-2 fw-semibold bg-primary text-inverse-primary"><i class="bi bi-file-earmark-text text-light" style="font-size: 1.5rem"></i></div>
+											</div>
+										</span>
+										<div class="d-flex flex-column bd-highlight mb-3">
+											<h3 class="ms-3 parent-hover-primary fw-bold">
+												Article Writing
+											</h3>
+											<p class="ms-3 text-gray-700 parent-hover-primary">
+												Write an article from start to finish with guided workflow
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							
+						</div>
+						<!--end::Row-->	
                         
                         
                         

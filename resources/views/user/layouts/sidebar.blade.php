@@ -252,9 +252,20 @@
         <!--begin::User menu-->
         <div class="">
             <!--begin::Menu wrapper-->
+            
+
+            <div class="d-flex align-items-center" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-overflow="true" data-kt-menu-placement="top-start">
             <div class="cursor-pointer symbol symbol-circle symbol-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-overflow="true" data-kt-menu-placement="top-start">
                 <span class="bg-primary w-px-60 h-px-60 rounded-circle" style="font-size:16px; padding:10px 15px;color:#fff">{{Auth::guard('web') -> user()->firstname[0] }}</span>
             </div>
+
+            <!--begin::Name-->
+            <div class="d-flex flex-column align-items-start justify-content-center ms-3 overflow-hidden">
+                <span class="text-gray-500  fs-8 fw-semibold">Hello</span>
+                <span class="text-white-800 fs-7 fw-bold text-hover-primary" style="color: #fff">{{ Auth::guard('web')->user()->firstname}}</span>
+            </div>
+            <!--end::Name-->
+        </div>
             
             <!--begin::User account menu-->
             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color  fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
