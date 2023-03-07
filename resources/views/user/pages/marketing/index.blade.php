@@ -77,7 +77,7 @@
 
 						<!--begin::Row-->
 						<div class="row pt-10">
-							<div class="card-title pb-2"><h3>Tasks</h3></div>
+							<div class="card-title pb-2"><h3 style="font-weight:600">Tasks</h3></div>
 							<div class="col-md-4">
 								<a href="{{ route('blog.show') }}" class="card hover-elevate-up shadow-sm parent-hover">
 									<div class="card-body d-flex align-items pb-0">
